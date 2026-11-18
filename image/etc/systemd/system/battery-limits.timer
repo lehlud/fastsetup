@@ -1,0 +1,9 @@
+[Unit]
+Description=Apply battery limits after boot
+
+[Timer]
+OnBootSec=15s
+Unit=battery-limits.service
+
+[Install]
+WantedBy=timers.target

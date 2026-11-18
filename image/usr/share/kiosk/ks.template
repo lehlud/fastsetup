@@ -1,0 +1,162 @@
+# Generated in tmpfs, root-only. This file must never be copied to the target.
+cmdline
+lang en_US.UTF-8
+keyboard --vckeymap=@@VCKEYMAP@@ --xlayouts='@@LAYOUT@@'
+timezone @@TZ@@ --utc
+network --hostname=@@HOSTNAME@@
+url --url=https://dl.fedoraproject.org/pub/fedora/linux/releases/44/Everything/x86_64/os/
+repo --name=updates --baseurl=https://dl.fedoraproject.org/pub/fedora/linux/updates/44/Everything/x86_64/
+rootpw --lock
+user --name=@@USER@@ --groups=wheel,kvm,libvirt --password=@@USERHASH@@ --iscrypted --shell=/usr/bin/fish
+@@SSHKEYBLOCK@@
+ignoredisk --only-use=@@DISKNAME@@
+zerombr
+clearpart --all --initlabel --drives=@@DISKNAME@@
+bootloader --location=mbr --boot-drive=@@DISKNAME@@ --timeout=0
+autopart --type=btrfs --nohome --noswap
+selinux --enforcing
+firewall --enabled --service=ssh
+services --enabled=sshd,chronyd,NetworkManager,libvirtd,podman.socket,fstrim.timer
+skipx
+firstboot --disable
+eula --agreed
+poweroff
+
+%packages --exclude-weakdeps
+@core
+kernel
+kernel-modules-extra
+shim-x64
+grub2-efi-x64
+grub2-efi-x64-modules
+grub2-pc
+grub2-pc-modules
+efibootmgr
+mokutil
+btrfs-progs
+git
+curl
+wget
+openssh-server
+openssh-clients
+fish
+tmux
+htop
+neovim
+bash-completion
+dnf5-plugin-automatic
+openvpn
+wireguard-tools
+systemd-resolved
+chrony
+NetworkManager
+NetworkManager-wifi
+NetworkManager-tui
+linux-firmware
+# Keep WLAN working after installation, even with weak deps disabled.
+atheros-firmware
+atmel-firmware
+brcmfmac-firmware
+iwlegacy-firmware
+iwlwifi-dvm-firmware
+iwlwifi-mld-firmware
+iwlwifi-mvm-firmware
+libertas-firmware
+mt7xxx-firmware
+nxpwireless-firmware
+realtek-firmware
+tiwilink-firmware
+zd1211-firmware
+firewalld
+policycoreutils
+sudo
+python3
+kbd
+kbd-misc
+kbd-legacy
+terminus-fonts-console
+tlp
+podman
+buildah
+skopeo
+podman-compose
+slirp4netns
+passt
+fuse-overlayfs
+qemu-kvm
+qemu-kvm-core
+qemu-img
+libvirt-daemon
+libvirt-daemon-kvm
+libvirt-client
+virt-install
+edk2-ovmf
+swtpm
+genisoimage
+libguestfs-tools-c
+%end
+
+%post --nochroot --interpreter=/usr/bin/python3 --erroronfail
+import base64
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+sys.path.insert(0, '/usr/local/lib')
+from kiosk import target_policy
+root = Path('/mnt/sysroot')
+payload = json.loads(base64.b64decode('@@PAYLOAD_B64@@'))
+for name, item in payload.items():
+    relative = Path(name)
+    if relative.is_absolute() or '..' in relative.parts:
+        raise ValueError('Invalid target payload path')
+    path = root / relative
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(base64.b64decode(item['data']))
+    path.chmod(item['mode'])
+connections = root / 'etc/NetworkManager/system-connections'
+connections.mkdir(mode=0o700, parents=True, exist_ok=True)
+for old in connections.glob('*.nmconnection'):
+    old.unlink()
+profile = connections / 'kiosk.nmconnection'
+profile.write_bytes(base64.b64decode('@@NETWORK_B64@@'))
+profile.chmod(0o600)
+policy = json.loads(base64.b64decode('@@SERVER_POLICY_B64@@') or b'{}')
+updates = policy.get('updates', target_policy.DEFAULT_UPDATES)
+target_policy.write_updates(root, updates['hours'], updates['reboot'])
+subprocess.run(['chroot', str(root), 'systemctl', 'enable' if updates['hours'] else 'disable',
+                target_policy.TIMER], check=True)
+vpn = policy.get('vpn')
+if vpn:
+    enable = [target_policy.write_vpn(root, vpn)]
+    if vpn['kind'] == 'wireguard':
+        enable.append('systemd-resolved.service')
+    subprocess.run(['chroot', str(root), 'systemctl', 'enable', *enable], check=True)
+target_policy.write_ssh(root, '@@SSH_PASSWORD@@')
+# Decode both contract fields to verify their encoding, without printing them.
+base64.b64decode('@@SSID_B64@@', validate=True)
+base64.b64decode('@@PSK_B64@@', validate=True)
+(root / 'etc/battery-limits-decision').write_bytes(base64.b64decode('@@BATTERY_B64@@'))
+(root / 'etc/kiosk-server-user').write_text('@@USER@@\n')
+(root / 'etc/vconsole.conf').write_text('KEYMAP=@@VCKEYMAP@@\nFONT=ter-v24n\n')
+sudoers = root / 'etc/sudoers.d/10-server-wheel'
+sudoers.write_text('%wheel ALL=(ALL) ALL\n')
+sudoers.chmod(0o440)
+subprocess.run(['chroot', str(root), 'visudo', '-c'], check=True)
+with (root / 'etc/libvirt/libvirtd.conf').open('a') as stream:
+    stream.write('\nunix_sock_group = "libvirt"\nunix_sock_rw_perms = "0770"\nauth_unix_rw = "none"\n')
+# Disable modular libvirt socket activation when choosing monolithic libvirtd.
+subprocess.run(['chroot', str(root), 'systemctl', 'disable', 'virtqemud.socket', 'virtqemud-ro.socket',
+                'virtqemud-admin.socket', 'virtproxyd.socket', 'virtproxyd-ro.socket', 'virtproxyd-admin.socket'],
+               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+for unit in ('sshd.service', 'chronyd.service', 'NetworkManager.service', 'libvirtd.service',
+             'podman.socket', 'fstrim.timer', 'battery-limits.timer', 'battery-guard.timer', 'server-self-check.service'):
+    subprocess.run(['chroot', str(root), 'systemctl', 'enable', unit], check=True)
+for unit in ('sleep.target', 'suspend.target', 'hibernate.target', 'hybrid-sleep.target'):
+    subprocess.run(['chroot', str(root), 'systemctl', 'mask', unit], check=True)
+# TLP is a fallback tool, not a competing boot-time policy daemon.
+subprocess.run(['chroot', str(root), 'systemctl', 'disable', 'tlp.service'], check=True)
+subprocess.run(['chroot', str(root), 'systemctl', 'set-default', 'multi-user.target'], check=True)
+subprocess.run(['chroot', str(root), 'restorecon', '-RF', '/etc', '/usr/local'], check=True)
+%end

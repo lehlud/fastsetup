@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+import sys
+sys.path.insert(0, '/usr/local/lib')
+from kiosk.battery import main
+from kiosk.common import Failure
+try:
+    sys.exit(main() or 0)
+except Failure as error:
+    print(str(error), file=sys.stderr)
+    sys.exit(1)

@@ -1,0 +1,5 @@
+#!/bin/bash
+# A unit stop, including an uncatchable SIGKILL, always reaches this hook.
+/usr/bin/timeout 0.5 /usr/bin/sync || :
+/usr/bin/timeout 0.5 /usr/sbin/poweroff -i || :
+/usr/sbin/poweroff -f

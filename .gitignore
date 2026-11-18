@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+out/
+.pytest_cache/
+.venv/
+.kiosk-source-*/
+*.iso
+*.qcow2
+*.fd

@@ -1,0 +1,8248 @@
+layout	evdev	character	keysym	printed_digit
+us	1		Escape	
+us	2	1	1	1
+us	3	2	2	2
+us	4	3	3	3
+us	5	4	4	4
+us	6	5	5	5
+us	7	6	6	6
+us	8	7	7	7
+us	9	8	8	8
+us	10	9	9	9
+us	11	0	0	0
+us	12	-	minus	
+us	13	=	equal	
+us	14		BackSpace	
+us	15		Tab	
+us	16	q	q	
+us	17	w	w	
+us	18	e	e	
+us	19	r	r	
+us	20	t	t	
+us	21	y	y	
+us	22	u	u	
+us	23	i	i	
+us	24	o	o	
+us	25	p	p	
+us	26	[	bracketleft	
+us	27	]	bracketright	
+us	28		Return	
+us	29		Control_L	
+us	30	a	a	
+us	31	s	s	
+us	32	d	d	
+us	33	f	f	
+us	34	g	g	
+us	35	h	h	
+us	36	j	j	
+us	37	k	k	
+us	38	l	l	
+us	39	;	semicolon	
+us	40	'	apostrophe	
+us	41	`	grave	
+us	42		Shift_L	
+us	43	\	backslash	
+us	44	z	z	
+us	45	x	x	
+us	46	c	c	
+us	47	v	v	
+us	48	b	b	
+us	49	n	n	
+us	50	m	m	
+us	51	,	comma	
+us	52	.	period	
+us	53	/	slash	
+us	54		Shift_R	
+us	55	*	KP_Multiply	
+us	56		Alt_L	
+us	57	 	space	
+us	58		Caps_Lock	
+us	59		F1	
+us	60		F2	
+us	61		F3	
+us	62		F4	
+us	63		F5	
+us	64		F6	
+us	65		F7	
+us	66		F8	
+us	67		F9	
+us	68		F10	
+us	69		Num_Lock	
+us	70		Scroll_Lock	
+us	71		KP_Home	7
+us	72		KP_Up	8
+us	73		KP_Prior	9
+us	74	-	KP_Subtract	
+us	75		KP_Left	4
+us	76		KP_Begin	5
+us	77		KP_Right	6
+us	78	+	KP_Add	
+us	79		KP_End	1
+us	80		KP_Down	2
+us	81		KP_Next	3
+us	82		KP_Insert	0
+us	83		KP_Delete	
+us	84		ISO_Level3_Shift	
+us	85		F24	
+us	86	<	less	
+us	87		F11	
+us	88		F12	
+us	90		Katakana	
+us	91		Hiragana	
+us	92		Henkan_Mode	
+us	93		Hiragana_Katakana	
+us	94		Muhenkan	
+us	96		KP_Enter	
+us	97		Control_R	
+us	98	/	KP_Divide	
+us	99		Print	
+us	100		Alt_R	
+us	101		Linefeed	
+us	102		Home	
+us	103		Up	
+us	104		Prior	
+us	105		Left	
+us	106		Right	
+us	107		End	
+us	108		Down	
+us	109		Next	
+us	110		Insert	
+us	111		Delete	
+us	113		XF86AudioMute	
+us	114		XF86AudioLowerVolume	
+us	115		XF86AudioRaiseVolume	
+us	116		XF86PowerOff	
+us	117	=	KP_Equal	
+us	118	±	plusminus	
+us	119		Pause	
+us	120		XF86LaunchA	
+us	121	.	KP_Decimal	
+us	122		Hangul	
+us	123		Hangul_Hanja	
+us	125		Super_L	
+us	126		Super_R	
+us	127		Menu	
+us	128		Cancel	
+us	129		Redo	
+us	130		SunProps	
+us	131		Undo	
+us	132		SunFront	
+us	133		XF86Copy	
+us	134		XF86Open	
+us	135		XF86Paste	
+us	136		Find	
+us	137		XF86Cut	
+us	138		Help	
+us	139		XF86MenuKB	
+us	140		XF86Calculator	
+us	142		XF86Sleep	
+us	143		XF86WakeUp	
+us	144		XF86Explorer	
+us	145		XF86Send	
+us	147		XF86Xfer	
+us	148		XF86Launch1	
+us	149		XF86Launch2	
+us	150		XF86WWW	
+us	151		XF86DOS	
+us	152		XF86ScreenSaver	
+us	153		XF86RotateWindows	
+us	154		XF86TaskPane	
+us	155		XF86Mail	
+us	156		XF86Favorites	
+us	157		XF86MyComputer	
+us	158		XF86Back	
+us	159		XF86Forward	
+us	161		XF86Eject	
+us	162		XF86Eject	
+us	163		XF86AudioNext	
+us	164		XF86AudioPlay	
+us	165		XF86AudioPrev	
+us	166		XF86AudioStop	
+us	167		XF86AudioRecord	
+us	168		XF86AudioRewind	
+us	169		XF86Phone	
+us	171		XF86Tools	
+us	172		XF86HomePage	
+us	173		XF86Reload	
+us	174		XF86Close	
+us	177		XF86ScrollUp	
+us	178		XF86ScrollDown	
+us	179	(	parenleft	
+us	180	)	parenright	
+us	181		XF86New	
+us	182		Redo	
+us	183		XF86Tools	
+us	184		XF86Launch5	
+us	185		XF86Launch6	
+us	186		XF86Launch7	
+us	187		XF86Launch8	
+us	188		XF86Launch9	
+us	189		F19	
+us	190		XF86AudioMicMute	
+us	191		XF86TouchpadToggle	
+us	192		XF86TouchpadOn	
+us	193		F23	
+us	194		F24	
+us	195		ISO_Level5_Shift	
+us	200		XF86AudioPlay	
+us	201		XF86AudioPause	
+us	202		XF86Launch3	
+us	203		XF86Launch4	
+us	204		XF86LaunchB	
+us	205		XF86Suspend	
+us	206		XF86Close	
+us	207		XF86AudioPlay	
+us	208		XF86AudioForward	
+us	209		XF86AudioBassBoost	
+us	210		Print	
+us	212		XF86WebCam	
+us	213		XF86AudioPreset	
+us	215		XF86Mail	
+us	216		XF86Messenger	
+us	217		XF86Search	
+us	218		XF86Go	
+us	219		XF86Finance	
+us	220		XF86Game	
+us	221		XF86Shop	
+us	223		Cancel	
+us	224		XF86MonBrightnessDown	
+us	225		XF86MonBrightnessUp	
+us	226		XF86AudioMedia	
+us	227		XF86Display	
+us	228		XF86KbdLightOnOff	
+us	229		XF86KbdBrightnessDown	
+us	230		XF86KbdBrightnessUp	
+us	231		XF86Send	
+us	232		XF86Reply	
+us	233		XF86MailForward	
+us	234		XF86Save	
+us	235		XF86Documents	
+us	236		XF86Battery	
+us	237		XF86Bluetooth	
+us	238		XF86WLAN	
+us	239		XF86UWB	
+us	241		XF86Next_VMode	
+us	242		XF86Prev_VMode	
+us	243		XF86MonBrightnessCycle	
+us	244		XF86BrightnessAuto	
+us	245		XF86DisplayOff	
+us	246		XF86WWAN	
+us	247		XF86RFKill	
+us-intl	1		Escape	
+us-intl	2	1	1	1
+us-intl	3	2	2	2
+us-intl	4	3	3	3
+us-intl	5	4	4	4
+us-intl	6	5	5	5
+us-intl	7	6	6	6
+us-intl	8	7	7	7
+us-intl	9	8	8	8
+us-intl	10	9	9	9
+us-intl	11	0	0	0
+us-intl	12	-	minus	
+us-intl	13	=	equal	
+us-intl	14		BackSpace	
+us-intl	15		Tab	
+us-intl	16	q	q	
+us-intl	17	w	w	
+us-intl	18	e	e	
+us-intl	19	r	r	
+us-intl	20	t	t	
+us-intl	21	y	y	
+us-intl	22	u	u	
+us-intl	23	i	i	
+us-intl	24	o	o	
+us-intl	25	p	p	
+us-intl	26	[	bracketleft	
+us-intl	27	]	bracketright	
+us-intl	28		Return	
+us-intl	29		Control_L	
+us-intl	30	a	a	
+us-intl	31	s	s	
+us-intl	32	d	d	
+us-intl	33	f	f	
+us-intl	34	g	g	
+us-intl	35	h	h	
+us-intl	36	j	j	
+us-intl	37	k	k	
+us-intl	38	l	l	
+us-intl	39	;	semicolon	
+us-intl	40		dead_acute	
+us-intl	41		dead_grave	
+us-intl	42		Shift_L	
+us-intl	43	\	backslash	
+us-intl	44	z	z	
+us-intl	45	x	x	
+us-intl	46	c	c	
+us-intl	47	v	v	
+us-intl	48	b	b	
+us-intl	49	n	n	
+us-intl	50	m	m	
+us-intl	51	,	comma	
+us-intl	52	.	period	
+us-intl	53	/	slash	
+us-intl	54		Shift_R	
+us-intl	55	*	KP_Multiply	
+us-intl	56		Alt_L	
+us-intl	57	 	space	
+us-intl	58		Caps_Lock	
+us-intl	59		F1	
+us-intl	60		F2	
+us-intl	61		F3	
+us-intl	62		F4	
+us-intl	63		F5	
+us-intl	64		F6	
+us-intl	65		F7	
+us-intl	66		F8	
+us-intl	67		F9	
+us-intl	68		F10	
+us-intl	69		Num_Lock	
+us-intl	70		Scroll_Lock	
+us-intl	71		KP_Home	7
+us-intl	72		KP_Up	8
+us-intl	73		KP_Prior	9
+us-intl	74	-	KP_Subtract	
+us-intl	75		KP_Left	4
+us-intl	76		KP_Begin	5
+us-intl	77		KP_Right	6
+us-intl	78	+	KP_Add	
+us-intl	79		KP_End	1
+us-intl	80		KP_Down	2
+us-intl	81		KP_Next	3
+us-intl	82		KP_Insert	0
+us-intl	83		KP_Delete	
+us-intl	84		ISO_Level3_Shift	
+us-intl	85		F24	
+us-intl	86	\	backslash	
+us-intl	87		F11	
+us-intl	88		F12	
+us-intl	90		Katakana	
+us-intl	91		Hiragana	
+us-intl	92		Henkan_Mode	
+us-intl	93		Hiragana_Katakana	
+us-intl	94		Muhenkan	
+us-intl	96		KP_Enter	
+us-intl	97		Control_R	
+us-intl	98	/	KP_Divide	
+us-intl	99		Print	
+us-intl	100		ISO_Level3_Shift	
+us-intl	101		Linefeed	
+us-intl	102		Home	
+us-intl	103		Up	
+us-intl	104		Prior	
+us-intl	105		Left	
+us-intl	106		Right	
+us-intl	107		End	
+us-intl	108		Down	
+us-intl	109		Next	
+us-intl	110		Insert	
+us-intl	111		Delete	
+us-intl	113		XF86AudioMute	
+us-intl	114		XF86AudioLowerVolume	
+us-intl	115		XF86AudioRaiseVolume	
+us-intl	116		XF86PowerOff	
+us-intl	117	=	KP_Equal	
+us-intl	118	±	plusminus	
+us-intl	119		Pause	
+us-intl	120		XF86LaunchA	
+us-intl	121	.	KP_Decimal	
+us-intl	122		Hangul	
+us-intl	123		Hangul_Hanja	
+us-intl	125		Super_L	
+us-intl	126		Super_R	
+us-intl	127		Menu	
+us-intl	128		Cancel	
+us-intl	129		Redo	
+us-intl	130		SunProps	
+us-intl	131		Undo	
+us-intl	132		SunFront	
+us-intl	133		XF86Copy	
+us-intl	134		XF86Open	
+us-intl	135		XF86Paste	
+us-intl	136		Find	
+us-intl	137		XF86Cut	
+us-intl	138		Help	
+us-intl	139		XF86MenuKB	
+us-intl	140		XF86Calculator	
+us-intl	142		XF86Sleep	
+us-intl	143		XF86WakeUp	
+us-intl	144		XF86Explorer	
+us-intl	145		XF86Send	
+us-intl	147		XF86Xfer	
+us-intl	148		XF86Launch1	
+us-intl	149		XF86Launch2	
+us-intl	150		XF86WWW	
+us-intl	151		XF86DOS	
+us-intl	152		XF86ScreenSaver	
+us-intl	153		XF86RotateWindows	
+us-intl	154		XF86TaskPane	
+us-intl	155		XF86Mail	
+us-intl	156		XF86Favorites	
+us-intl	157		XF86MyComputer	
+us-intl	158		XF86Back	
+us-intl	159		XF86Forward	
+us-intl	161		XF86Eject	
+us-intl	162		XF86Eject	
+us-intl	163		XF86AudioNext	
+us-intl	164		XF86AudioPlay	
+us-intl	165		XF86AudioPrev	
+us-intl	166		XF86AudioStop	
+us-intl	167		XF86AudioRecord	
+us-intl	168		XF86AudioRewind	
+us-intl	169		XF86Phone	
+us-intl	171		XF86Tools	
+us-intl	172		XF86HomePage	
+us-intl	173		XF86Reload	
+us-intl	174		XF86Close	
+us-intl	177		XF86ScrollUp	
+us-intl	178		XF86ScrollDown	
+us-intl	179	(	parenleft	
+us-intl	180	)	parenright	
+us-intl	181		XF86New	
+us-intl	182		Redo	
+us-intl	183		XF86Tools	
+us-intl	184		XF86Launch5	
+us-intl	185		XF86Launch6	
+us-intl	186		XF86Launch7	
+us-intl	187		XF86Launch8	
+us-intl	188		XF86Launch9	
+us-intl	189		F19	
+us-intl	190		XF86AudioMicMute	
+us-intl	191		XF86TouchpadToggle	
+us-intl	192		XF86TouchpadOn	
+us-intl	193		F23	
+us-intl	194		F24	
+us-intl	195		ISO_Level5_Shift	
+us-intl	200		XF86AudioPlay	
+us-intl	201		XF86AudioPause	
+us-intl	202		XF86Launch3	
+us-intl	203		XF86Launch4	
+us-intl	204		XF86LaunchB	
+us-intl	205		XF86Suspend	
+us-intl	206		XF86Close	
+us-intl	207		XF86AudioPlay	
+us-intl	208		XF86AudioForward	
+us-intl	209		XF86AudioBassBoost	
+us-intl	210		Print	
+us-intl	212		XF86WebCam	
+us-intl	213		XF86AudioPreset	
+us-intl	215		XF86Mail	
+us-intl	216		XF86Messenger	
+us-intl	217		XF86Search	
+us-intl	218		XF86Go	
+us-intl	219		XF86Finance	
+us-intl	220		XF86Game	
+us-intl	221		XF86Shop	
+us-intl	223		Cancel	
+us-intl	224		XF86MonBrightnessDown	
+us-intl	225		XF86MonBrightnessUp	
+us-intl	226		XF86AudioMedia	
+us-intl	227		XF86Display	
+us-intl	228		XF86KbdLightOnOff	
+us-intl	229		XF86KbdBrightnessDown	
+us-intl	230		XF86KbdBrightnessUp	
+us-intl	231		XF86Send	
+us-intl	232		XF86Reply	
+us-intl	233		XF86MailForward	
+us-intl	234		XF86Save	
+us-intl	235		XF86Documents	
+us-intl	236		XF86Battery	
+us-intl	237		XF86Bluetooth	
+us-intl	238		XF86WLAN	
+us-intl	239		XF86UWB	
+us-intl	241		XF86Next_VMode	
+us-intl	242		XF86Prev_VMode	
+us-intl	243		XF86MonBrightnessCycle	
+us-intl	244		XF86BrightnessAuto	
+us-intl	245		XF86DisplayOff	
+us-intl	246		XF86WWAN	
+us-intl	247		XF86RFKill	
+gb	1		Escape	
+gb	2	1	1	1
+gb	3	2	2	2
+gb	4	3	3	3
+gb	5	4	4	4
+gb	6	5	5	5
+gb	7	6	6	6
+gb	8	7	7	7
+gb	9	8	8	8
+gb	10	9	9	9
+gb	11	0	0	0
+gb	12	-	minus	
+gb	13	=	equal	
+gb	14		BackSpace	
+gb	15		Tab	
+gb	16	q	q	
+gb	17	w	w	
+gb	18	e	e	
+gb	19	r	r	
+gb	20	t	t	
+gb	21	y	y	
+gb	22	u	u	
+gb	23	i	i	
+gb	24	o	o	
+gb	25	p	p	
+gb	26	[	bracketleft	
+gb	27	]	bracketright	
+gb	28		Return	
+gb	29		Control_L	
+gb	30	a	a	
+gb	31	s	s	
+gb	32	d	d	
+gb	33	f	f	
+gb	34	g	g	
+gb	35	h	h	
+gb	36	j	j	
+gb	37	k	k	
+gb	38	l	l	
+gb	39	;	semicolon	
+gb	40	'	apostrophe	
+gb	41	`	grave	
+gb	42		Shift_L	
+gb	43	#	numbersign	
+gb	44	z	z	
+gb	45	x	x	
+gb	46	c	c	
+gb	47	v	v	
+gb	48	b	b	
+gb	49	n	n	
+gb	50	m	m	
+gb	51	,	comma	
+gb	52	.	period	
+gb	53	/	slash	
+gb	54		Shift_R	
+gb	55	*	KP_Multiply	
+gb	56		Alt_L	
+gb	57	 	space	
+gb	58		Caps_Lock	
+gb	59		F1	
+gb	60		F2	
+gb	61		F3	
+gb	62		F4	
+gb	63		F5	
+gb	64		F6	
+gb	65		F7	
+gb	66		F8	
+gb	67		F9	
+gb	68		F10	
+gb	69		Num_Lock	
+gb	70		Scroll_Lock	
+gb	71		KP_Home	7
+gb	72		KP_Up	8
+gb	73		KP_Prior	9
+gb	74	-	KP_Subtract	
+gb	75		KP_Left	4
+gb	76		KP_Begin	5
+gb	77		KP_Right	6
+gb	78	+	KP_Add	
+gb	79		KP_End	1
+gb	80		KP_Down	2
+gb	81		KP_Next	3
+gb	82		KP_Insert	0
+gb	83		KP_Delete	
+gb	84		ISO_Level3_Shift	
+gb	85		F24	
+gb	86	\	backslash	
+gb	87		F11	
+gb	88		F12	
+gb	90		Katakana	
+gb	91		Hiragana	
+gb	92		Henkan_Mode	
+gb	93		Hiragana_Katakana	
+gb	94		Muhenkan	
+gb	96		KP_Enter	
+gb	97		Control_R	
+gb	98	/	KP_Divide	
+gb	99		Print	
+gb	100		ISO_Level3_Shift	
+gb	101		Linefeed	
+gb	102		Home	
+gb	103		Up	
+gb	104		Prior	
+gb	105		Left	
+gb	106		Right	
+gb	107		End	
+gb	108		Down	
+gb	109		Next	
+gb	110		Insert	
+gb	111		Delete	
+gb	113		XF86AudioMute	
+gb	114		XF86AudioLowerVolume	
+gb	115		XF86AudioRaiseVolume	
+gb	116		XF86PowerOff	
+gb	117	=	KP_Equal	
+gb	118	±	plusminus	
+gb	119		Pause	
+gb	120		XF86LaunchA	
+gb	121	.	KP_Decimal	
+gb	122		Hangul	
+gb	123		Hangul_Hanja	
+gb	125		Super_L	
+gb	126		Super_R	
+gb	127		Menu	
+gb	128		Cancel	
+gb	129		Redo	
+gb	130		SunProps	
+gb	131		Undo	
+gb	132		SunFront	
+gb	133		XF86Copy	
+gb	134		XF86Open	
+gb	135		XF86Paste	
+gb	136		Find	
+gb	137		XF86Cut	
+gb	138		Help	
+gb	139		XF86MenuKB	
+gb	140		XF86Calculator	
+gb	142		XF86Sleep	
+gb	143		XF86WakeUp	
+gb	144		XF86Explorer	
+gb	145		XF86Send	
+gb	147		XF86Xfer	
+gb	148		XF86Launch1	
+gb	149		XF86Launch2	
+gb	150		XF86WWW	
+gb	151		XF86DOS	
+gb	152		XF86ScreenSaver	
+gb	153		XF86RotateWindows	
+gb	154		XF86TaskPane	
+gb	155		XF86Mail	
+gb	156		XF86Favorites	
+gb	157		XF86MyComputer	
+gb	158		XF86Back	
+gb	159		XF86Forward	
+gb	161		XF86Eject	
+gb	162		XF86Eject	
+gb	163		XF86AudioNext	
+gb	164		XF86AudioPlay	
+gb	165		XF86AudioPrev	
+gb	166		XF86AudioStop	
+gb	167		XF86AudioRecord	
+gb	168		XF86AudioRewind	
+gb	169		XF86Phone	
+gb	171		XF86Tools	
+gb	172		XF86HomePage	
+gb	173		XF86Reload	
+gb	174		XF86Close	
+gb	177		XF86ScrollUp	
+gb	178		XF86ScrollDown	
+gb	179	(	parenleft	
+gb	180	)	parenright	
+gb	181		XF86New	
+gb	182		Redo	
+gb	183		XF86Tools	
+gb	184		XF86Launch5	
+gb	185		XF86Launch6	
+gb	186		XF86Launch7	
+gb	187		XF86Launch8	
+gb	188		XF86Launch9	
+gb	189		F19	
+gb	190		XF86AudioMicMute	
+gb	191		XF86TouchpadToggle	
+gb	192		XF86TouchpadOn	
+gb	193		F23	
+gb	194		F24	
+gb	195		ISO_Level5_Shift	
+gb	200		XF86AudioPlay	
+gb	201		XF86AudioPause	
+gb	202		XF86Launch3	
+gb	203		XF86Launch4	
+gb	204		XF86LaunchB	
+gb	205		XF86Suspend	
+gb	206		XF86Close	
+gb	207		XF86AudioPlay	
+gb	208		XF86AudioForward	
+gb	209		XF86AudioBassBoost	
+gb	210		Print	
+gb	212		XF86WebCam	
+gb	213		XF86AudioPreset	
+gb	215		XF86Mail	
+gb	216		XF86Messenger	
+gb	217		XF86Search	
+gb	218		XF86Go	
+gb	219		XF86Finance	
+gb	220		XF86Game	
+gb	221		XF86Shop	
+gb	223		Cancel	
+gb	224		XF86MonBrightnessDown	
+gb	225		XF86MonBrightnessUp	
+gb	226		XF86AudioMedia	
+gb	227		XF86Display	
+gb	228		XF86KbdLightOnOff	
+gb	229		XF86KbdBrightnessDown	
+gb	230		XF86KbdBrightnessUp	
+gb	231		XF86Send	
+gb	232		XF86Reply	
+gb	233		XF86MailForward	
+gb	234		XF86Save	
+gb	235		XF86Documents	
+gb	236		XF86Battery	
+gb	237		XF86Bluetooth	
+gb	238		XF86WLAN	
+gb	239		XF86UWB	
+gb	241		XF86Next_VMode	
+gb	242		XF86Prev_VMode	
+gb	243		XF86MonBrightnessCycle	
+gb	244		XF86BrightnessAuto	
+gb	245		XF86DisplayOff	
+gb	246		XF86WWAN	
+gb	247		XF86RFKill	
+de	1		Escape	
+de	2	1	1	1
+de	3	2	2	2
+de	4	3	3	3
+de	5	4	4	4
+de	6	5	5	5
+de	7	6	6	6
+de	8	7	7	7
+de	9	8	8	8
+de	10	9	9	9
+de	11	0	0	0
+de	12	ß	ssharp	
+de	13		dead_acute	
+de	14		BackSpace	
+de	15		Tab	
+de	16	q	q	
+de	17	w	w	
+de	18	e	e	
+de	19	r	r	
+de	20	t	t	
+de	21	z	z	
+de	22	u	u	
+de	23	i	i	
+de	24	o	o	
+de	25	p	p	
+de	26	ü	udiaeresis	
+de	27	+	plus	
+de	28		Return	
+de	29		Control_L	
+de	30	a	a	
+de	31	s	s	
+de	32	d	d	
+de	33	f	f	
+de	34	g	g	
+de	35	h	h	
+de	36	j	j	
+de	37	k	k	
+de	38	l	l	
+de	39	ö	odiaeresis	
+de	40	ä	adiaeresis	
+de	41		dead_circumflex	
+de	42		Shift_L	
+de	43	#	numbersign	
+de	44	y	y	
+de	45	x	x	
+de	46	c	c	
+de	47	v	v	
+de	48	b	b	
+de	49	n	n	
+de	50	m	m	
+de	51	,	comma	
+de	52	.	period	
+de	53	-	minus	
+de	54		Shift_R	
+de	55	*	KP_Multiply	
+de	56		Alt_L	
+de	57	 	space	
+de	58		Caps_Lock	
+de	59		F1	
+de	60		F2	
+de	61		F3	
+de	62		F4	
+de	63		F5	
+de	64		F6	
+de	65		F7	
+de	66		F8	
+de	67		F9	
+de	68		F10	
+de	69		Num_Lock	
+de	70		Scroll_Lock	
+de	71		KP_Home	7
+de	72		KP_Up	8
+de	73		KP_Prior	9
+de	74	-	KP_Subtract	
+de	75		KP_Left	4
+de	76		KP_Begin	5
+de	77		KP_Right	6
+de	78	+	KP_Add	
+de	79		KP_End	1
+de	80		KP_Down	2
+de	81		KP_Next	3
+de	82		KP_Insert	0
+de	83		KP_Delete	
+de	84		ISO_Level3_Shift	
+de	85		F24	
+de	86	<	less	
+de	87		F11	
+de	88		F12	
+de	90		Katakana	
+de	91		Hiragana	
+de	92		Henkan_Mode	
+de	93		Hiragana_Katakana	
+de	94		Muhenkan	
+de	96		KP_Enter	
+de	97		Control_R	
+de	98	/	KP_Divide	
+de	99		Print	
+de	100		ISO_Level3_Shift	
+de	101		Linefeed	
+de	102		Home	
+de	103		Up	
+de	104		Prior	
+de	105		Left	
+de	106		Right	
+de	107		End	
+de	108		Down	
+de	109		Next	
+de	110		Insert	
+de	111		Delete	
+de	113		XF86AudioMute	
+de	114		XF86AudioLowerVolume	
+de	115		XF86AudioRaiseVolume	
+de	116		XF86PowerOff	
+de	117	=	KP_Equal	
+de	118	±	plusminus	
+de	119		Pause	
+de	120		XF86LaunchA	
+de	121	.	KP_Decimal	
+de	122		Hangul	
+de	123		Hangul_Hanja	
+de	125		Super_L	
+de	126		Super_R	
+de	127		Menu	
+de	128		Cancel	
+de	129		Redo	
+de	130		SunProps	
+de	131		Undo	
+de	132		SunFront	
+de	133		XF86Copy	
+de	134		XF86Open	
+de	135		XF86Paste	
+de	136		Find	
+de	137		XF86Cut	
+de	138		Help	
+de	139		XF86MenuKB	
+de	140		XF86Calculator	
+de	142		XF86Sleep	
+de	143		XF86WakeUp	
+de	144		XF86Explorer	
+de	145		XF86Send	
+de	147		XF86Xfer	
+de	148		XF86Launch1	
+de	149		XF86Launch2	
+de	150		XF86WWW	
+de	151		XF86DOS	
+de	152		XF86ScreenSaver	
+de	153		XF86RotateWindows	
+de	154		XF86TaskPane	
+de	155		XF86Mail	
+de	156		XF86Favorites	
+de	157		XF86MyComputer	
+de	158		XF86Back	
+de	159		XF86Forward	
+de	161		XF86Eject	
+de	162		XF86Eject	
+de	163		XF86AudioNext	
+de	164		XF86AudioPlay	
+de	165		XF86AudioPrev	
+de	166		XF86AudioStop	
+de	167		XF86AudioRecord	
+de	168		XF86AudioRewind	
+de	169		XF86Phone	
+de	171		XF86Tools	
+de	172		XF86HomePage	
+de	173		XF86Reload	
+de	174		XF86Close	
+de	177		XF86ScrollUp	
+de	178		XF86ScrollDown	
+de	179	(	parenleft	
+de	180	)	parenright	
+de	181		XF86New	
+de	182		Redo	
+de	183		XF86Tools	
+de	184		XF86Launch5	
+de	185		XF86Launch6	
+de	186		XF86Launch7	
+de	187		XF86Launch8	
+de	188		XF86Launch9	
+de	189		F19	
+de	190		XF86AudioMicMute	
+de	191		XF86TouchpadToggle	
+de	192		XF86TouchpadOn	
+de	193		F23	
+de	194		F24	
+de	195		ISO_Level5_Shift	
+de	200		XF86AudioPlay	
+de	201		XF86AudioPause	
+de	202		XF86Launch3	
+de	203		XF86Launch4	
+de	204		XF86LaunchB	
+de	205		XF86Suspend	
+de	206		XF86Close	
+de	207		XF86AudioPlay	
+de	208		XF86AudioForward	
+de	209		XF86AudioBassBoost	
+de	210		Print	
+de	212		XF86WebCam	
+de	213		XF86AudioPreset	
+de	215		XF86Mail	
+de	216		XF86Messenger	
+de	217		XF86Search	
+de	218		XF86Go	
+de	219		XF86Finance	
+de	220		XF86Game	
+de	221		XF86Shop	
+de	223		Cancel	
+de	224		XF86MonBrightnessDown	
+de	225		XF86MonBrightnessUp	
+de	226		XF86AudioMedia	
+de	227		XF86Display	
+de	228		XF86KbdLightOnOff	
+de	229		XF86KbdBrightnessDown	
+de	230		XF86KbdBrightnessUp	
+de	231		XF86Send	
+de	232		XF86Reply	
+de	233		XF86MailForward	
+de	234		XF86Save	
+de	235		XF86Documents	
+de	236		XF86Battery	
+de	237		XF86Bluetooth	
+de	238		XF86WLAN	
+de	239		XF86UWB	
+de	241		XF86Next_VMode	
+de	242		XF86Prev_VMode	
+de	243		XF86MonBrightnessCycle	
+de	244		XF86BrightnessAuto	
+de	245		XF86DisplayOff	
+de	246		XF86WWAN	
+de	247		XF86RFKill	
+de-nodeadkeys	1		Escape	
+de-nodeadkeys	2	1	1	1
+de-nodeadkeys	3	2	2	2
+de-nodeadkeys	4	3	3	3
+de-nodeadkeys	5	4	4	4
+de-nodeadkeys	6	5	5	5
+de-nodeadkeys	7	6	6	6
+de-nodeadkeys	8	7	7	7
+de-nodeadkeys	9	8	8	8
+de-nodeadkeys	10	9	9	9
+de-nodeadkeys	11	0	0	0
+de-nodeadkeys	12	ß	ssharp	
+de-nodeadkeys	13	´	acute	
+de-nodeadkeys	14		BackSpace	
+de-nodeadkeys	15		Tab	
+de-nodeadkeys	16	q	q	
+de-nodeadkeys	17	w	w	
+de-nodeadkeys	18	e	e	
+de-nodeadkeys	19	r	r	
+de-nodeadkeys	20	t	t	
+de-nodeadkeys	21	z	z	
+de-nodeadkeys	22	u	u	
+de-nodeadkeys	23	i	i	
+de-nodeadkeys	24	o	o	
+de-nodeadkeys	25	p	p	
+de-nodeadkeys	26	ü	udiaeresis	
+de-nodeadkeys	27	+	plus	
+de-nodeadkeys	28		Return	
+de-nodeadkeys	29		Control_L	
+de-nodeadkeys	30	a	a	
+de-nodeadkeys	31	s	s	
+de-nodeadkeys	32	d	d	
+de-nodeadkeys	33	f	f	
+de-nodeadkeys	34	g	g	
+de-nodeadkeys	35	h	h	
+de-nodeadkeys	36	j	j	
+de-nodeadkeys	37	k	k	
+de-nodeadkeys	38	l	l	
+de-nodeadkeys	39	ö	odiaeresis	
+de-nodeadkeys	40	ä	adiaeresis	
+de-nodeadkeys	41	^	asciicircum	
+de-nodeadkeys	42		Shift_L	
+de-nodeadkeys	43	#	numbersign	
+de-nodeadkeys	44	y	y	
+de-nodeadkeys	45	x	x	
+de-nodeadkeys	46	c	c	
+de-nodeadkeys	47	v	v	
+de-nodeadkeys	48	b	b	
+de-nodeadkeys	49	n	n	
+de-nodeadkeys	50	m	m	
+de-nodeadkeys	51	,	comma	
+de-nodeadkeys	52	.	period	
+de-nodeadkeys	53	-	minus	
+de-nodeadkeys	54		Shift_R	
+de-nodeadkeys	55	*	KP_Multiply	
+de-nodeadkeys	56		Alt_L	
+de-nodeadkeys	57	 	space	
+de-nodeadkeys	58		Caps_Lock	
+de-nodeadkeys	59		F1	
+de-nodeadkeys	60		F2	
+de-nodeadkeys	61		F3	
+de-nodeadkeys	62		F4	
+de-nodeadkeys	63		F5	
+de-nodeadkeys	64		F6	
+de-nodeadkeys	65		F7	
+de-nodeadkeys	66		F8	
+de-nodeadkeys	67		F9	
+de-nodeadkeys	68		F10	
+de-nodeadkeys	69		Num_Lock	
+de-nodeadkeys	70		Scroll_Lock	
+de-nodeadkeys	71		KP_Home	7
+de-nodeadkeys	72		KP_Up	8
+de-nodeadkeys	73		KP_Prior	9
+de-nodeadkeys	74	-	KP_Subtract	
+de-nodeadkeys	75		KP_Left	4
+de-nodeadkeys	76		KP_Begin	5
+de-nodeadkeys	77		KP_Right	6
+de-nodeadkeys	78	+	KP_Add	
+de-nodeadkeys	79		KP_End	1
+de-nodeadkeys	80		KP_Down	2
+de-nodeadkeys	81		KP_Next	3
+de-nodeadkeys	82		KP_Insert	0
+de-nodeadkeys	83		KP_Delete	
+de-nodeadkeys	84		ISO_Level3_Shift	
+de-nodeadkeys	85		F24	
+de-nodeadkeys	86	<	less	
+de-nodeadkeys	87		F11	
+de-nodeadkeys	88		F12	
+de-nodeadkeys	90		Katakana	
+de-nodeadkeys	91		Hiragana	
+de-nodeadkeys	92		Henkan_Mode	
+de-nodeadkeys	93		Hiragana_Katakana	
+de-nodeadkeys	94		Muhenkan	
+de-nodeadkeys	96		KP_Enter	
+de-nodeadkeys	97		Control_R	
+de-nodeadkeys	98	/	KP_Divide	
+de-nodeadkeys	99		Print	
+de-nodeadkeys	100		ISO_Level3_Shift	
+de-nodeadkeys	101		Linefeed	
+de-nodeadkeys	102		Home	
+de-nodeadkeys	103		Up	
+de-nodeadkeys	104		Prior	
+de-nodeadkeys	105		Left	
+de-nodeadkeys	106		Right	
+de-nodeadkeys	107		End	
+de-nodeadkeys	108		Down	
+de-nodeadkeys	109		Next	
+de-nodeadkeys	110		Insert	
+de-nodeadkeys	111		Delete	
+de-nodeadkeys	113		XF86AudioMute	
+de-nodeadkeys	114		XF86AudioLowerVolume	
+de-nodeadkeys	115		XF86AudioRaiseVolume	
+de-nodeadkeys	116		XF86PowerOff	
+de-nodeadkeys	117	=	KP_Equal	
+de-nodeadkeys	118	±	plusminus	
+de-nodeadkeys	119		Pause	
+de-nodeadkeys	120		XF86LaunchA	
+de-nodeadkeys	121	.	KP_Decimal	
+de-nodeadkeys	122		Hangul	
+de-nodeadkeys	123		Hangul_Hanja	
+de-nodeadkeys	125		Super_L	
+de-nodeadkeys	126		Super_R	
+de-nodeadkeys	127		Menu	
+de-nodeadkeys	128		Cancel	
+de-nodeadkeys	129		Redo	
+de-nodeadkeys	130		SunProps	
+de-nodeadkeys	131		Undo	
+de-nodeadkeys	132		SunFront	
+de-nodeadkeys	133		XF86Copy	
+de-nodeadkeys	134		XF86Open	
+de-nodeadkeys	135		XF86Paste	
+de-nodeadkeys	136		Find	
+de-nodeadkeys	137		XF86Cut	
+de-nodeadkeys	138		Help	
+de-nodeadkeys	139		XF86MenuKB	
+de-nodeadkeys	140		XF86Calculator	
+de-nodeadkeys	142		XF86Sleep	
+de-nodeadkeys	143		XF86WakeUp	
+de-nodeadkeys	144		XF86Explorer	
+de-nodeadkeys	145		XF86Send	
+de-nodeadkeys	147		XF86Xfer	
+de-nodeadkeys	148		XF86Launch1	
+de-nodeadkeys	149		XF86Launch2	
+de-nodeadkeys	150		XF86WWW	
+de-nodeadkeys	151		XF86DOS	
+de-nodeadkeys	152		XF86ScreenSaver	
+de-nodeadkeys	153		XF86RotateWindows	
+de-nodeadkeys	154		XF86TaskPane	
+de-nodeadkeys	155		XF86Mail	
+de-nodeadkeys	156		XF86Favorites	
+de-nodeadkeys	157		XF86MyComputer	
+de-nodeadkeys	158		XF86Back	
+de-nodeadkeys	159		XF86Forward	
+de-nodeadkeys	161		XF86Eject	
+de-nodeadkeys	162		XF86Eject	
+de-nodeadkeys	163		XF86AudioNext	
+de-nodeadkeys	164		XF86AudioPlay	
+de-nodeadkeys	165		XF86AudioPrev	
+de-nodeadkeys	166		XF86AudioStop	
+de-nodeadkeys	167		XF86AudioRecord	
+de-nodeadkeys	168		XF86AudioRewind	
+de-nodeadkeys	169		XF86Phone	
+de-nodeadkeys	171		XF86Tools	
+de-nodeadkeys	172		XF86HomePage	
+de-nodeadkeys	173		XF86Reload	
+de-nodeadkeys	174		XF86Close	
+de-nodeadkeys	177		XF86ScrollUp	
+de-nodeadkeys	178		XF86ScrollDown	
+de-nodeadkeys	179	(	parenleft	
+de-nodeadkeys	180	)	parenright	
+de-nodeadkeys	181		XF86New	
+de-nodeadkeys	182		Redo	
+de-nodeadkeys	183		XF86Tools	
+de-nodeadkeys	184		XF86Launch5	
+de-nodeadkeys	185		XF86Launch6	
+de-nodeadkeys	186		XF86Launch7	
+de-nodeadkeys	187		XF86Launch8	
+de-nodeadkeys	188		XF86Launch9	
+de-nodeadkeys	189		F19	
+de-nodeadkeys	190		XF86AudioMicMute	
+de-nodeadkeys	191		XF86TouchpadToggle	
+de-nodeadkeys	192		XF86TouchpadOn	
+de-nodeadkeys	193		F23	
+de-nodeadkeys	194		F24	
+de-nodeadkeys	195		ISO_Level5_Shift	
+de-nodeadkeys	200		XF86AudioPlay	
+de-nodeadkeys	201		XF86AudioPause	
+de-nodeadkeys	202		XF86Launch3	
+de-nodeadkeys	203		XF86Launch4	
+de-nodeadkeys	204		XF86LaunchB	
+de-nodeadkeys	205		XF86Suspend	
+de-nodeadkeys	206		XF86Close	
+de-nodeadkeys	207		XF86AudioPlay	
+de-nodeadkeys	208		XF86AudioForward	
+de-nodeadkeys	209		XF86AudioBassBoost	
+de-nodeadkeys	210		Print	
+de-nodeadkeys	212		XF86WebCam	
+de-nodeadkeys	213		XF86AudioPreset	
+de-nodeadkeys	215		XF86Mail	
+de-nodeadkeys	216		XF86Messenger	
+de-nodeadkeys	217		XF86Search	
+de-nodeadkeys	218		XF86Go	
+de-nodeadkeys	219		XF86Finance	
+de-nodeadkeys	220		XF86Game	
+de-nodeadkeys	221		XF86Shop	
+de-nodeadkeys	223		Cancel	
+de-nodeadkeys	224		XF86MonBrightnessDown	
+de-nodeadkeys	225		XF86MonBrightnessUp	
+de-nodeadkeys	226		XF86AudioMedia	
+de-nodeadkeys	227		XF86Display	
+de-nodeadkeys	228		XF86KbdLightOnOff	
+de-nodeadkeys	229		XF86KbdBrightnessDown	
+de-nodeadkeys	230		XF86KbdBrightnessUp	
+de-nodeadkeys	231		XF86Send	
+de-nodeadkeys	232		XF86Reply	
+de-nodeadkeys	233		XF86MailForward	
+de-nodeadkeys	234		XF86Save	
+de-nodeadkeys	235		XF86Documents	
+de-nodeadkeys	236		XF86Battery	
+de-nodeadkeys	237		XF86Bluetooth	
+de-nodeadkeys	238		XF86WLAN	
+de-nodeadkeys	239		XF86UWB	
+de-nodeadkeys	241		XF86Next_VMode	
+de-nodeadkeys	242		XF86Prev_VMode	
+de-nodeadkeys	243		XF86MonBrightnessCycle	
+de-nodeadkeys	244		XF86BrightnessAuto	
+de-nodeadkeys	245		XF86DisplayOff	
+de-nodeadkeys	246		XF86WWAN	
+de-nodeadkeys	247		XF86RFKill	
+at	1		Escape	
+at	2	1	1	1
+at	3	2	2	2
+at	4	3	3	3
+at	5	4	4	4
+at	6	5	5	5
+at	7	6	6	6
+at	8	7	7	7
+at	9	8	8	8
+at	10	9	9	9
+at	11	0	0	0
+at	12	ß	ssharp	
+at	13		dead_acute	
+at	14		BackSpace	
+at	15		Tab	
+at	16	q	q	
+at	17	w	w	
+at	18	e	e	
+at	19	r	r	
+at	20	t	t	
+at	21	z	z	
+at	22	u	u	
+at	23	i	i	
+at	24	o	o	
+at	25	p	p	
+at	26	ü	udiaeresis	
+at	27	+	plus	
+at	28		Return	
+at	29		Control_L	
+at	30	a	a	
+at	31	s	s	
+at	32	d	d	
+at	33	f	f	
+at	34	g	g	
+at	35	h	h	
+at	36	j	j	
+at	37	k	k	
+at	38	l	l	
+at	39	ö	odiaeresis	
+at	40	ä	adiaeresis	
+at	41		dead_circumflex	
+at	42		Shift_L	
+at	43	#	numbersign	
+at	44	y	y	
+at	45	x	x	
+at	46	c	c	
+at	47	v	v	
+at	48	b	b	
+at	49	n	n	
+at	50	m	m	
+at	51	,	comma	
+at	52	.	period	
+at	53	-	minus	
+at	54		Shift_R	
+at	55	*	KP_Multiply	
+at	56		Alt_L	
+at	57	 	space	
+at	58		Caps_Lock	
+at	59		F1	
+at	60		F2	
+at	61		F3	
+at	62		F4	
+at	63		F5	
+at	64		F6	
+at	65		F7	
+at	66		F8	
+at	67		F9	
+at	68		F10	
+at	69		Num_Lock	
+at	70		Scroll_Lock	
+at	71		KP_Home	7
+at	72		KP_Up	8
+at	73		KP_Prior	9
+at	74	-	KP_Subtract	
+at	75		KP_Left	4
+at	76		KP_Begin	5
+at	77		KP_Right	6
+at	78	+	KP_Add	
+at	79		KP_End	1
+at	80		KP_Down	2
+at	81		KP_Next	3
+at	82		KP_Insert	0
+at	83		KP_Delete	
+at	84		ISO_Level3_Shift	
+at	85		F24	
+at	86	<	less	
+at	87		F11	
+at	88		F12	
+at	90		Katakana	
+at	91		Hiragana	
+at	92		Henkan_Mode	
+at	93		Hiragana_Katakana	
+at	94		Muhenkan	
+at	96		KP_Enter	
+at	97		Control_R	
+at	98	/	KP_Divide	
+at	99		Print	
+at	100		ISO_Level3_Shift	
+at	101		Linefeed	
+at	102		Home	
+at	103		Up	
+at	104		Prior	
+at	105		Left	
+at	106		Right	
+at	107		End	
+at	108		Down	
+at	109		Next	
+at	110		Insert	
+at	111		Delete	
+at	113		XF86AudioMute	
+at	114		XF86AudioLowerVolume	
+at	115		XF86AudioRaiseVolume	
+at	116		XF86PowerOff	
+at	117	=	KP_Equal	
+at	118	±	plusminus	
+at	119		Pause	
+at	120		XF86LaunchA	
+at	121	.	KP_Decimal	
+at	122		Hangul	
+at	123		Hangul_Hanja	
+at	125		Super_L	
+at	126		Super_R	
+at	127		Menu	
+at	128		Cancel	
+at	129		Redo	
+at	130		SunProps	
+at	131		Undo	
+at	132		SunFront	
+at	133		XF86Copy	
+at	134		XF86Open	
+at	135		XF86Paste	
+at	136		Find	
+at	137		XF86Cut	
+at	138		Help	
+at	139		XF86MenuKB	
+at	140		XF86Calculator	
+at	142		XF86Sleep	
+at	143		XF86WakeUp	
+at	144		XF86Explorer	
+at	145		XF86Send	
+at	147		XF86Xfer	
+at	148		XF86Launch1	
+at	149		XF86Launch2	
+at	150		XF86WWW	
+at	151		XF86DOS	
+at	152		XF86ScreenSaver	
+at	153		XF86RotateWindows	
+at	154		XF86TaskPane	
+at	155		XF86Mail	
+at	156		XF86Favorites	
+at	157		XF86MyComputer	
+at	158		XF86Back	
+at	159		XF86Forward	
+at	161		XF86Eject	
+at	162		XF86Eject	
+at	163		XF86AudioNext	
+at	164		XF86AudioPlay	
+at	165		XF86AudioPrev	
+at	166		XF86AudioStop	
+at	167		XF86AudioRecord	
+at	168		XF86AudioRewind	
+at	169		XF86Phone	
+at	171		XF86Tools	
+at	172		XF86HomePage	
+at	173		XF86Reload	
+at	174		XF86Close	
+at	177		XF86ScrollUp	
+at	178		XF86ScrollDown	
+at	179	(	parenleft	
+at	180	)	parenright	
+at	181		XF86New	
+at	182		Redo	
+at	183		XF86Tools	
+at	184		XF86Launch5	
+at	185		XF86Launch6	
+at	186		XF86Launch7	
+at	187		XF86Launch8	
+at	188		XF86Launch9	
+at	189		F19	
+at	190		XF86AudioMicMute	
+at	191		XF86TouchpadToggle	
+at	192		XF86TouchpadOn	
+at	193		F23	
+at	194		F24	
+at	195		ISO_Level5_Shift	
+at	200		XF86AudioPlay	
+at	201		XF86AudioPause	
+at	202		XF86Launch3	
+at	203		XF86Launch4	
+at	204		XF86LaunchB	
+at	205		XF86Suspend	
+at	206		XF86Close	
+at	207		XF86AudioPlay	
+at	208		XF86AudioForward	
+at	209		XF86AudioBassBoost	
+at	210		Print	
+at	212		XF86WebCam	
+at	213		XF86AudioPreset	
+at	215		XF86Mail	
+at	216		XF86Messenger	
+at	217		XF86Search	
+at	218		XF86Go	
+at	219		XF86Finance	
+at	220		XF86Game	
+at	221		XF86Shop	
+at	223		Cancel	
+at	224		XF86MonBrightnessDown	
+at	225		XF86MonBrightnessUp	
+at	226		XF86AudioMedia	
+at	227		XF86Display	
+at	228		XF86KbdLightOnOff	
+at	229		XF86KbdBrightnessDown	
+at	230		XF86KbdBrightnessUp	
+at	231		XF86Send	
+at	232		XF86Reply	
+at	233		XF86MailForward	
+at	234		XF86Save	
+at	235		XF86Documents	
+at	236		XF86Battery	
+at	237		XF86Bluetooth	
+at	238		XF86WLAN	
+at	239		XF86UWB	
+at	241		XF86Next_VMode	
+at	242		XF86Prev_VMode	
+at	243		XF86MonBrightnessCycle	
+at	244		XF86BrightnessAuto	
+at	245		XF86DisplayOff	
+at	246		XF86WWAN	
+at	247		XF86RFKill	
+ch-de	1		Escape	
+ch-de	2	1	1	1
+ch-de	3	2	2	2
+ch-de	4	3	3	3
+ch-de	5	4	4	4
+ch-de	6	5	5	5
+ch-de	7	6	6	6
+ch-de	8	7	7	7
+ch-de	9	8	8	8
+ch-de	10	9	9	9
+ch-de	11	0	0	0
+ch-de	12	'	apostrophe	
+ch-de	13		dead_circumflex	
+ch-de	14		BackSpace	
+ch-de	15		Tab	
+ch-de	16	q	q	
+ch-de	17	w	w	
+ch-de	18	e	e	
+ch-de	19	r	r	
+ch-de	20	t	t	
+ch-de	21	z	z	
+ch-de	22	u	u	
+ch-de	23	i	i	
+ch-de	24	o	o	
+ch-de	25	p	p	
+ch-de	26	ü	udiaeresis	
+ch-de	27		dead_diaeresis	
+ch-de	28		Return	
+ch-de	29		Control_L	
+ch-de	30	a	a	
+ch-de	31	s	s	
+ch-de	32	d	d	
+ch-de	33	f	f	
+ch-de	34	g	g	
+ch-de	35	h	h	
+ch-de	36	j	j	
+ch-de	37	k	k	
+ch-de	38	l	l	
+ch-de	39	ö	odiaeresis	
+ch-de	40	ä	adiaeresis	
+ch-de	41	§	section	
+ch-de	42		Shift_L	
+ch-de	43	$	dollar	
+ch-de	44	y	y	
+ch-de	45	x	x	
+ch-de	46	c	c	
+ch-de	47	v	v	
+ch-de	48	b	b	
+ch-de	49	n	n	
+ch-de	50	m	m	
+ch-de	51	,	comma	
+ch-de	52	.	period	
+ch-de	53	-	minus	
+ch-de	54		Shift_R	
+ch-de	55	*	KP_Multiply	
+ch-de	56		Alt_L	
+ch-de	57	 	space	
+ch-de	58		Caps_Lock	
+ch-de	59		F1	
+ch-de	60		F2	
+ch-de	61		F3	
+ch-de	62		F4	
+ch-de	63		F5	
+ch-de	64		F6	
+ch-de	65		F7	
+ch-de	66		F8	
+ch-de	67		F9	
+ch-de	68		F10	
+ch-de	69		Num_Lock	
+ch-de	70		Scroll_Lock	
+ch-de	71		KP_Home	7
+ch-de	72		KP_Up	8
+ch-de	73		KP_Prior	9
+ch-de	74	-	KP_Subtract	
+ch-de	75		KP_Left	4
+ch-de	76		KP_Begin	5
+ch-de	77		KP_Right	6
+ch-de	78	+	KP_Add	
+ch-de	79		KP_End	1
+ch-de	80		KP_Down	2
+ch-de	81		KP_Next	3
+ch-de	82		KP_Insert	0
+ch-de	83		KP_Delete	
+ch-de	84		ISO_Level3_Shift	
+ch-de	85		F24	
+ch-de	86	<	less	
+ch-de	87		F11	
+ch-de	88		F12	
+ch-de	90		Katakana	
+ch-de	91		Hiragana	
+ch-de	92		Henkan_Mode	
+ch-de	93		Hiragana_Katakana	
+ch-de	94		Muhenkan	
+ch-de	96		KP_Enter	
+ch-de	97		Control_R	
+ch-de	98	/	KP_Divide	
+ch-de	99		Print	
+ch-de	100		ISO_Level3_Shift	
+ch-de	101		Linefeed	
+ch-de	102		Home	
+ch-de	103		Up	
+ch-de	104		Prior	
+ch-de	105		Left	
+ch-de	106		Right	
+ch-de	107		End	
+ch-de	108		Down	
+ch-de	109		Next	
+ch-de	110		Insert	
+ch-de	111		Delete	
+ch-de	113		XF86AudioMute	
+ch-de	114		XF86AudioLowerVolume	
+ch-de	115		XF86AudioRaiseVolume	
+ch-de	116		XF86PowerOff	
+ch-de	117	=	KP_Equal	
+ch-de	118	±	plusminus	
+ch-de	119		Pause	
+ch-de	120		XF86LaunchA	
+ch-de	121	.	KP_Decimal	
+ch-de	122		Hangul	
+ch-de	123		Hangul_Hanja	
+ch-de	125		Super_L	
+ch-de	126		Super_R	
+ch-de	127		Menu	
+ch-de	128		Cancel	
+ch-de	129		Redo	
+ch-de	130		SunProps	
+ch-de	131		Undo	
+ch-de	132		SunFront	
+ch-de	133		XF86Copy	
+ch-de	134		XF86Open	
+ch-de	135		XF86Paste	
+ch-de	136		Find	
+ch-de	137		XF86Cut	
+ch-de	138		Help	
+ch-de	139		XF86MenuKB	
+ch-de	140		XF86Calculator	
+ch-de	142		XF86Sleep	
+ch-de	143		XF86WakeUp	
+ch-de	144		XF86Explorer	
+ch-de	145		XF86Send	
+ch-de	147		XF86Xfer	
+ch-de	148		XF86Launch1	
+ch-de	149		XF86Launch2	
+ch-de	150		XF86WWW	
+ch-de	151		XF86DOS	
+ch-de	152		XF86ScreenSaver	
+ch-de	153		XF86RotateWindows	
+ch-de	154		XF86TaskPane	
+ch-de	155		XF86Mail	
+ch-de	156		XF86Favorites	
+ch-de	157		XF86MyComputer	
+ch-de	158		XF86Back	
+ch-de	159		XF86Forward	
+ch-de	161		XF86Eject	
+ch-de	162		XF86Eject	
+ch-de	163		XF86AudioNext	
+ch-de	164		XF86AudioPlay	
+ch-de	165		XF86AudioPrev	
+ch-de	166		XF86AudioStop	
+ch-de	167		XF86AudioRecord	
+ch-de	168		XF86AudioRewind	
+ch-de	169		XF86Phone	
+ch-de	171		XF86Tools	
+ch-de	172		XF86HomePage	
+ch-de	173		XF86Reload	
+ch-de	174		XF86Close	
+ch-de	177		XF86ScrollUp	
+ch-de	178		XF86ScrollDown	
+ch-de	179	(	parenleft	
+ch-de	180	)	parenright	
+ch-de	181		XF86New	
+ch-de	182		Redo	
+ch-de	183		XF86Tools	
+ch-de	184		XF86Launch5	
+ch-de	185		XF86Launch6	
+ch-de	186		XF86Launch7	
+ch-de	187		XF86Launch8	
+ch-de	188		XF86Launch9	
+ch-de	189		F19	
+ch-de	190		XF86AudioMicMute	
+ch-de	191		XF86TouchpadToggle	
+ch-de	192		XF86TouchpadOn	
+ch-de	193		F23	
+ch-de	194		F24	
+ch-de	195		ISO_Level5_Shift	
+ch-de	200		XF86AudioPlay	
+ch-de	201		XF86AudioPause	
+ch-de	202		XF86Launch3	
+ch-de	203		XF86Launch4	
+ch-de	204		XF86LaunchB	
+ch-de	205		XF86Suspend	
+ch-de	206		XF86Close	
+ch-de	207		XF86AudioPlay	
+ch-de	208		XF86AudioForward	
+ch-de	209		XF86AudioBassBoost	
+ch-de	210		Print	
+ch-de	212		XF86WebCam	
+ch-de	213		XF86AudioPreset	
+ch-de	215		XF86Mail	
+ch-de	216		XF86Messenger	
+ch-de	217		XF86Search	
+ch-de	218		XF86Go	
+ch-de	219		XF86Finance	
+ch-de	220		XF86Game	
+ch-de	221		XF86Shop	
+ch-de	223		Cancel	
+ch-de	224		XF86MonBrightnessDown	
+ch-de	225		XF86MonBrightnessUp	
+ch-de	226		XF86AudioMedia	
+ch-de	227		XF86Display	
+ch-de	228		XF86KbdLightOnOff	
+ch-de	229		XF86KbdBrightnessDown	
+ch-de	230		XF86KbdBrightnessUp	
+ch-de	231		XF86Send	
+ch-de	232		XF86Reply	
+ch-de	233		XF86MailForward	
+ch-de	234		XF86Save	
+ch-de	235		XF86Documents	
+ch-de	236		XF86Battery	
+ch-de	237		XF86Bluetooth	
+ch-de	238		XF86WLAN	
+ch-de	239		XF86UWB	
+ch-de	241		XF86Next_VMode	
+ch-de	242		XF86Prev_VMode	
+ch-de	243		XF86MonBrightnessCycle	
+ch-de	244		XF86BrightnessAuto	
+ch-de	245		XF86DisplayOff	
+ch-de	246		XF86WWAN	
+ch-de	247		XF86RFKill	
+ch-fr	1		Escape	
+ch-fr	2	1	1	1
+ch-fr	3	2	2	2
+ch-fr	4	3	3	3
+ch-fr	5	4	4	4
+ch-fr	6	5	5	5
+ch-fr	7	6	6	6
+ch-fr	8	7	7	7
+ch-fr	9	8	8	8
+ch-fr	10	9	9	9
+ch-fr	11	0	0	0
+ch-fr	12	'	apostrophe	
+ch-fr	13		dead_circumflex	
+ch-fr	14		BackSpace	
+ch-fr	15		Tab	
+ch-fr	16	q	q	
+ch-fr	17	w	w	
+ch-fr	18	e	e	
+ch-fr	19	r	r	
+ch-fr	20	t	t	
+ch-fr	21	z	z	
+ch-fr	22	u	u	
+ch-fr	23	i	i	
+ch-fr	24	o	o	
+ch-fr	25	p	p	
+ch-fr	26	è	egrave	
+ch-fr	27		dead_diaeresis	
+ch-fr	28		Return	
+ch-fr	29		Control_L	
+ch-fr	30	a	a	
+ch-fr	31	s	s	
+ch-fr	32	d	d	
+ch-fr	33	f	f	
+ch-fr	34	g	g	
+ch-fr	35	h	h	
+ch-fr	36	j	j	
+ch-fr	37	k	k	
+ch-fr	38	l	l	
+ch-fr	39	é	eacute	
+ch-fr	40	à	agrave	
+ch-fr	41	§	section	
+ch-fr	42		Shift_L	
+ch-fr	43	$	dollar	
+ch-fr	44	y	y	
+ch-fr	45	x	x	
+ch-fr	46	c	c	
+ch-fr	47	v	v	
+ch-fr	48	b	b	
+ch-fr	49	n	n	
+ch-fr	50	m	m	
+ch-fr	51	,	comma	
+ch-fr	52	.	period	
+ch-fr	53	-	minus	
+ch-fr	54		Shift_R	
+ch-fr	55	*	KP_Multiply	
+ch-fr	56		Alt_L	
+ch-fr	57	 	space	
+ch-fr	58		Caps_Lock	
+ch-fr	59		F1	
+ch-fr	60		F2	
+ch-fr	61		F3	
+ch-fr	62		F4	
+ch-fr	63		F5	
+ch-fr	64		F6	
+ch-fr	65		F7	
+ch-fr	66		F8	
+ch-fr	67		F9	
+ch-fr	68		F10	
+ch-fr	69		Num_Lock	
+ch-fr	70		Scroll_Lock	
+ch-fr	71		KP_Home	7
+ch-fr	72		KP_Up	8
+ch-fr	73		KP_Prior	9
+ch-fr	74	-	KP_Subtract	
+ch-fr	75		KP_Left	4
+ch-fr	76		KP_Begin	5
+ch-fr	77		KP_Right	6
+ch-fr	78	+	KP_Add	
+ch-fr	79		KP_End	1
+ch-fr	80		KP_Down	2
+ch-fr	81		KP_Next	3
+ch-fr	82		KP_Insert	0
+ch-fr	83		KP_Delete	
+ch-fr	84		ISO_Level3_Shift	
+ch-fr	85		F24	
+ch-fr	86	<	less	
+ch-fr	87		F11	
+ch-fr	88		F12	
+ch-fr	90		Katakana	
+ch-fr	91		Hiragana	
+ch-fr	92		Henkan_Mode	
+ch-fr	93		Hiragana_Katakana	
+ch-fr	94		Muhenkan	
+ch-fr	96		KP_Enter	
+ch-fr	97		Control_R	
+ch-fr	98	/	KP_Divide	
+ch-fr	99		Print	
+ch-fr	100		ISO_Level3_Shift	
+ch-fr	101		Linefeed	
+ch-fr	102		Home	
+ch-fr	103		Up	
+ch-fr	104		Prior	
+ch-fr	105		Left	
+ch-fr	106		Right	
+ch-fr	107		End	
+ch-fr	108		Down	
+ch-fr	109		Next	
+ch-fr	110		Insert	
+ch-fr	111		Delete	
+ch-fr	113		XF86AudioMute	
+ch-fr	114		XF86AudioLowerVolume	
+ch-fr	115		XF86AudioRaiseVolume	
+ch-fr	116		XF86PowerOff	
+ch-fr	117	=	KP_Equal	
+ch-fr	118	±	plusminus	
+ch-fr	119		Pause	
+ch-fr	120		XF86LaunchA	
+ch-fr	121	.	KP_Decimal	
+ch-fr	122		Hangul	
+ch-fr	123		Hangul_Hanja	
+ch-fr	125		Super_L	
+ch-fr	126		Super_R	
+ch-fr	127		Menu	
+ch-fr	128		Cancel	
+ch-fr	129		Redo	
+ch-fr	130		SunProps	
+ch-fr	131		Undo	
+ch-fr	132		SunFront	
+ch-fr	133		XF86Copy	
+ch-fr	134		XF86Open	
+ch-fr	135		XF86Paste	
+ch-fr	136		Find	
+ch-fr	137		XF86Cut	
+ch-fr	138		Help	
+ch-fr	139		XF86MenuKB	
+ch-fr	140		XF86Calculator	
+ch-fr	142		XF86Sleep	
+ch-fr	143		XF86WakeUp	
+ch-fr	144		XF86Explorer	
+ch-fr	145		XF86Send	
+ch-fr	147		XF86Xfer	
+ch-fr	148		XF86Launch1	
+ch-fr	149		XF86Launch2	
+ch-fr	150		XF86WWW	
+ch-fr	151		XF86DOS	
+ch-fr	152		XF86ScreenSaver	
+ch-fr	153		XF86RotateWindows	
+ch-fr	154		XF86TaskPane	
+ch-fr	155		XF86Mail	
+ch-fr	156		XF86Favorites	
+ch-fr	157		XF86MyComputer	
+ch-fr	158		XF86Back	
+ch-fr	159		XF86Forward	
+ch-fr	161		XF86Eject	
+ch-fr	162		XF86Eject	
+ch-fr	163		XF86AudioNext	
+ch-fr	164		XF86AudioPlay	
+ch-fr	165		XF86AudioPrev	
+ch-fr	166		XF86AudioStop	
+ch-fr	167		XF86AudioRecord	
+ch-fr	168		XF86AudioRewind	
+ch-fr	169		XF86Phone	
+ch-fr	171		XF86Tools	
+ch-fr	172		XF86HomePage	
+ch-fr	173		XF86Reload	
+ch-fr	174		XF86Close	
+ch-fr	177		XF86ScrollUp	
+ch-fr	178		XF86ScrollDown	
+ch-fr	179	(	parenleft	
+ch-fr	180	)	parenright	
+ch-fr	181		XF86New	
+ch-fr	182		Redo	
+ch-fr	183		XF86Tools	
+ch-fr	184		XF86Launch5	
+ch-fr	185		XF86Launch6	
+ch-fr	186		XF86Launch7	
+ch-fr	187		XF86Launch8	
+ch-fr	188		XF86Launch9	
+ch-fr	189		F19	
+ch-fr	190		XF86AudioMicMute	
+ch-fr	191		XF86TouchpadToggle	
+ch-fr	192		XF86TouchpadOn	
+ch-fr	193		F23	
+ch-fr	194		F24	
+ch-fr	195		ISO_Level5_Shift	
+ch-fr	200		XF86AudioPlay	
+ch-fr	201		XF86AudioPause	
+ch-fr	202		XF86Launch3	
+ch-fr	203		XF86Launch4	
+ch-fr	204		XF86LaunchB	
+ch-fr	205		XF86Suspend	
+ch-fr	206		XF86Close	
+ch-fr	207		XF86AudioPlay	
+ch-fr	208		XF86AudioForward	
+ch-fr	209		XF86AudioBassBoost	
+ch-fr	210		Print	
+ch-fr	212		XF86WebCam	
+ch-fr	213		XF86AudioPreset	
+ch-fr	215		XF86Mail	
+ch-fr	216		XF86Messenger	
+ch-fr	217		XF86Search	
+ch-fr	218		XF86Go	
+ch-fr	219		XF86Finance	
+ch-fr	220		XF86Game	
+ch-fr	221		XF86Shop	
+ch-fr	223		Cancel	
+ch-fr	224		XF86MonBrightnessDown	
+ch-fr	225		XF86MonBrightnessUp	
+ch-fr	226		XF86AudioMedia	
+ch-fr	227		XF86Display	
+ch-fr	228		XF86KbdLightOnOff	
+ch-fr	229		XF86KbdBrightnessDown	
+ch-fr	230		XF86KbdBrightnessUp	
+ch-fr	231		XF86Send	
+ch-fr	232		XF86Reply	
+ch-fr	233		XF86MailForward	
+ch-fr	234		XF86Save	
+ch-fr	235		XF86Documents	
+ch-fr	236		XF86Battery	
+ch-fr	237		XF86Bluetooth	
+ch-fr	238		XF86WLAN	
+ch-fr	239		XF86UWB	
+ch-fr	241		XF86Next_VMode	
+ch-fr	242		XF86Prev_VMode	
+ch-fr	243		XF86MonBrightnessCycle	
+ch-fr	244		XF86BrightnessAuto	
+ch-fr	245		XF86DisplayOff	
+ch-fr	246		XF86WWAN	
+ch-fr	247		XF86RFKill	
+fr	1		Escape	
+fr	2	&	ampersand	1
+fr	3	é	eacute	2
+fr	4	""""	quotedbl	3
+fr	5	'	apostrophe	4
+fr	6	(	parenleft	5
+fr	7	-	minus	6
+fr	8	è	egrave	7
+fr	9	_	underscore	8
+fr	10	ç	ccedilla	9
+fr	11	à	agrave	0
+fr	12	)	parenright	
+fr	13	=	equal	
+fr	14		BackSpace	
+fr	15		Tab	
+fr	16	a	a	
+fr	17	z	z	
+fr	18	e	e	
+fr	19	r	r	
+fr	20	t	t	
+fr	21	y	y	
+fr	22	u	u	
+fr	23	i	i	
+fr	24	o	o	
+fr	25	p	p	
+fr	26		dead_circumflex	
+fr	27	$	dollar	
+fr	28		Return	
+fr	29		Control_L	
+fr	30	q	q	
+fr	31	s	s	
+fr	32	d	d	
+fr	33	f	f	
+fr	34	g	g	
+fr	35	h	h	
+fr	36	j	j	
+fr	37	k	k	
+fr	38	l	l	
+fr	39	m	m	
+fr	40	ù	ugrave	
+fr	41	²	twosuperior	
+fr	42		Shift_L	
+fr	43	*	asterisk	
+fr	44	w	w	
+fr	45	x	x	
+fr	46	c	c	
+fr	47	v	v	
+fr	48	b	b	
+fr	49	n	n	
+fr	50	,	comma	
+fr	51	;	semicolon	
+fr	52	:	colon	
+fr	53	!	exclam	
+fr	54		Shift_R	
+fr	55	*	KP_Multiply	
+fr	56		Alt_L	
+fr	57	 	space	
+fr	58		Caps_Lock	
+fr	59		F1	
+fr	60		F2	
+fr	61		F3	
+fr	62		F4	
+fr	63		F5	
+fr	64		F6	
+fr	65		F7	
+fr	66		F8	
+fr	67		F9	
+fr	68		F10	
+fr	69		Num_Lock	
+fr	70		Scroll_Lock	
+fr	71		KP_Home	7
+fr	72		KP_Up	8
+fr	73		KP_Prior	9
+fr	74	-	KP_Subtract	
+fr	75		KP_Left	4
+fr	76		KP_Begin	5
+fr	77		KP_Right	6
+fr	78	+	KP_Add	
+fr	79		KP_End	1
+fr	80		KP_Down	2
+fr	81		KP_Next	3
+fr	82		KP_Insert	0
+fr	83		KP_Delete	
+fr	84		ISO_Level3_Shift	
+fr	85		F24	
+fr	86	<	less	
+fr	87		F11	
+fr	88		F12	
+fr	90		Katakana	
+fr	91		Hiragana	
+fr	92		Henkan_Mode	
+fr	93		Hiragana_Katakana	
+fr	94		Muhenkan	
+fr	96		KP_Enter	
+fr	97		Control_R	
+fr	98	/	KP_Divide	
+fr	99		Print	
+fr	100		ISO_Level3_Shift	
+fr	101		Linefeed	
+fr	102		Home	
+fr	103		Up	
+fr	104		Prior	
+fr	105		Left	
+fr	106		Right	
+fr	107		End	
+fr	108		Down	
+fr	109		Next	
+fr	110		Insert	
+fr	111		Delete	
+fr	113		XF86AudioMute	
+fr	114		XF86AudioLowerVolume	
+fr	115		XF86AudioRaiseVolume	
+fr	116		XF86PowerOff	
+fr	117	=	KP_Equal	
+fr	118	±	plusminus	
+fr	119		Pause	
+fr	120		XF86LaunchA	
+fr	121	.	KP_Decimal	
+fr	122		Hangul	
+fr	123		Hangul_Hanja	
+fr	125		Super_L	
+fr	126		Super_R	
+fr	127		Menu	
+fr	128		Cancel	
+fr	129		Redo	
+fr	130		SunProps	
+fr	131		Undo	
+fr	132		SunFront	
+fr	133		XF86Copy	
+fr	134		XF86Open	
+fr	135		XF86Paste	
+fr	136		Find	
+fr	137		XF86Cut	
+fr	138		Help	
+fr	139		XF86MenuKB	
+fr	140		XF86Calculator	
+fr	142		XF86Sleep	
+fr	143		XF86WakeUp	
+fr	144		XF86Explorer	
+fr	145		XF86Send	
+fr	147		XF86Xfer	
+fr	148		XF86Launch1	
+fr	149		XF86Launch2	
+fr	150		XF86WWW	
+fr	151		XF86DOS	
+fr	152		XF86ScreenSaver	
+fr	153		XF86RotateWindows	
+fr	154		XF86TaskPane	
+fr	155		XF86Mail	
+fr	156		XF86Favorites	
+fr	157		XF86MyComputer	
+fr	158		XF86Back	
+fr	159		XF86Forward	
+fr	161		XF86Eject	
+fr	162		XF86Eject	
+fr	163		XF86AudioNext	
+fr	164		XF86AudioPlay	
+fr	165		XF86AudioPrev	
+fr	166		XF86AudioStop	
+fr	167		XF86AudioRecord	
+fr	168		XF86AudioRewind	
+fr	169		XF86Phone	
+fr	171		XF86Tools	
+fr	172		XF86HomePage	
+fr	173		XF86Reload	
+fr	174		XF86Close	
+fr	177		XF86ScrollUp	
+fr	178		XF86ScrollDown	
+fr	179	(	parenleft	
+fr	180	)	parenright	
+fr	181		XF86New	
+fr	182		Redo	
+fr	183		XF86Tools	
+fr	184		XF86Launch5	
+fr	185		XF86Launch6	
+fr	186		XF86Launch7	
+fr	187		XF86Launch8	
+fr	188		XF86Launch9	
+fr	189		F19	
+fr	190		XF86AudioMicMute	
+fr	191		XF86TouchpadToggle	
+fr	192		XF86TouchpadOn	
+fr	193		F23	
+fr	194		F24	
+fr	195		ISO_Level5_Shift	
+fr	200		XF86AudioPlay	
+fr	201		XF86AudioPause	
+fr	202		XF86Launch3	
+fr	203		XF86Launch4	
+fr	204		XF86LaunchB	
+fr	205		XF86Suspend	
+fr	206		XF86Close	
+fr	207		XF86AudioPlay	
+fr	208		XF86AudioForward	
+fr	209		XF86AudioBassBoost	
+fr	210		Print	
+fr	212		XF86WebCam	
+fr	213		XF86AudioPreset	
+fr	215		XF86Mail	
+fr	216		XF86Messenger	
+fr	217		XF86Search	
+fr	218		XF86Go	
+fr	219		XF86Finance	
+fr	220		XF86Game	
+fr	221		XF86Shop	
+fr	223		Cancel	
+fr	224		XF86MonBrightnessDown	
+fr	225		XF86MonBrightnessUp	
+fr	226		XF86AudioMedia	
+fr	227		XF86Display	
+fr	228		XF86KbdLightOnOff	
+fr	229		XF86KbdBrightnessDown	
+fr	230		XF86KbdBrightnessUp	
+fr	231		XF86Send	
+fr	232		XF86Reply	
+fr	233		XF86MailForward	
+fr	234		XF86Save	
+fr	235		XF86Documents	
+fr	236		XF86Battery	
+fr	237		XF86Bluetooth	
+fr	238		XF86WLAN	
+fr	239		XF86UWB	
+fr	241		XF86Next_VMode	
+fr	242		XF86Prev_VMode	
+fr	243		XF86MonBrightnessCycle	
+fr	244		XF86BrightnessAuto	
+fr	245		XF86DisplayOff	
+fr	246		XF86WWAN	
+fr	247		XF86RFKill	
+fr-bepo	1		Escape	
+fr-bepo	2	""""	quotedbl	1
+fr-bepo	3	«	guillemotleft	2
+fr-bepo	4	»	guillemotright	3
+fr-bepo	5	(	parenleft	4
+fr-bepo	6	)	parenright	5
+fr-bepo	7	@	at	6
+fr-bepo	8	+	plus	7
+fr-bepo	9	-	minus	8
+fr-bepo	10	/	slash	9
+fr-bepo	11	*	asterisk	0
+fr-bepo	12	=	equal	
+fr-bepo	13	%	percent	
+fr-bepo	14		BackSpace	
+fr-bepo	15		Tab	
+fr-bepo	16	b	b	
+fr-bepo	17	é	eacute	
+fr-bepo	18	p	p	
+fr-bepo	19	o	o	
+fr-bepo	20	è	egrave	
+fr-bepo	21		dead_circumflex	
+fr-bepo	22	v	v	
+fr-bepo	23	d	d	
+fr-bepo	24	l	l	
+fr-bepo	25	j	j	
+fr-bepo	26	z	z	
+fr-bepo	27	w	w	
+fr-bepo	28		Return	
+fr-bepo	29		Control_L	
+fr-bepo	30	a	a	
+fr-bepo	31	u	u	
+fr-bepo	32	i	i	
+fr-bepo	33	e	e	
+fr-bepo	34	,	comma	
+fr-bepo	35	c	c	
+fr-bepo	36	t	t	
+fr-bepo	37	s	s	
+fr-bepo	38	r	r	
+fr-bepo	39	n	n	
+fr-bepo	40	m	m	
+fr-bepo	41	$	dollar	
+fr-bepo	42		Shift_L	
+fr-bepo	43	ç	ccedilla	
+fr-bepo	44	à	agrave	
+fr-bepo	45	y	y	
+fr-bepo	46	x	x	
+fr-bepo	47	.	period	
+fr-bepo	48	k	k	
+fr-bepo	49	'	apostrophe	
+fr-bepo	50	q	q	
+fr-bepo	51	g	g	
+fr-bepo	52	h	h	
+fr-bepo	53	f	f	
+fr-bepo	54		Shift_R	
+fr-bepo	55	*	KP_Multiply	
+fr-bepo	56		Alt_L	
+fr-bepo	57	 	space	
+fr-bepo	58		Caps_Lock	
+fr-bepo	59		F1	
+fr-bepo	60		F2	
+fr-bepo	61		F3	
+fr-bepo	62		F4	
+fr-bepo	63		F5	
+fr-bepo	64		F6	
+fr-bepo	65		F7	
+fr-bepo	66		F8	
+fr-bepo	67		F9	
+fr-bepo	68		F10	
+fr-bepo	69		Num_Lock	
+fr-bepo	70		Scroll_Lock	
+fr-bepo	71		KP_Home	7
+fr-bepo	72		KP_Up	8
+fr-bepo	73		KP_Prior	9
+fr-bepo	74	-	KP_Subtract	
+fr-bepo	75		KP_Left	4
+fr-bepo	76		KP_Begin	5
+fr-bepo	77		KP_Right	6
+fr-bepo	78	+	KP_Add	
+fr-bepo	79		KP_End	1
+fr-bepo	80		KP_Down	2
+fr-bepo	81		KP_Next	3
+fr-bepo	82		KP_Insert	0
+fr-bepo	83		KP_Delete	
+fr-bepo	84		ISO_Level3_Shift	
+fr-bepo	85		F24	
+fr-bepo	86	ê	ecircumflex	
+fr-bepo	87		F11	
+fr-bepo	88		F12	
+fr-bepo	90		Katakana	
+fr-bepo	91		Hiragana	
+fr-bepo	92		Henkan_Mode	
+fr-bepo	93		Hiragana_Katakana	
+fr-bepo	94		Muhenkan	
+fr-bepo	96		KP_Enter	
+fr-bepo	97		Control_R	
+fr-bepo	98	/	KP_Divide	
+fr-bepo	99		Print	
+fr-bepo	100		ISO_Level3_Shift	
+fr-bepo	101		Linefeed	
+fr-bepo	102		Home	
+fr-bepo	103		Up	
+fr-bepo	104		Prior	
+fr-bepo	105		Left	
+fr-bepo	106		Right	
+fr-bepo	107		End	
+fr-bepo	108		Down	
+fr-bepo	109		Next	
+fr-bepo	110		Insert	
+fr-bepo	111		Delete	
+fr-bepo	113		XF86AudioMute	
+fr-bepo	114		XF86AudioLowerVolume	
+fr-bepo	115		XF86AudioRaiseVolume	
+fr-bepo	116		XF86PowerOff	
+fr-bepo	117	=	KP_Equal	
+fr-bepo	118	±	plusminus	
+fr-bepo	119		Pause	
+fr-bepo	120		XF86LaunchA	
+fr-bepo	121	.	KP_Decimal	
+fr-bepo	122		Hangul	
+fr-bepo	123		Hangul_Hanja	
+fr-bepo	125		Super_L	
+fr-bepo	126		Super_R	
+fr-bepo	127		Menu	
+fr-bepo	128		Cancel	
+fr-bepo	129		Redo	
+fr-bepo	130		SunProps	
+fr-bepo	131		Undo	
+fr-bepo	132		SunFront	
+fr-bepo	133		XF86Copy	
+fr-bepo	134		XF86Open	
+fr-bepo	135		XF86Paste	
+fr-bepo	136		Find	
+fr-bepo	137		XF86Cut	
+fr-bepo	138		Help	
+fr-bepo	139		XF86MenuKB	
+fr-bepo	140		XF86Calculator	
+fr-bepo	142		XF86Sleep	
+fr-bepo	143		XF86WakeUp	
+fr-bepo	144		XF86Explorer	
+fr-bepo	145		XF86Send	
+fr-bepo	147		XF86Xfer	
+fr-bepo	148		XF86Launch1	
+fr-bepo	149		XF86Launch2	
+fr-bepo	150		XF86WWW	
+fr-bepo	151		XF86DOS	
+fr-bepo	152		XF86ScreenSaver	
+fr-bepo	153		XF86RotateWindows	
+fr-bepo	154		XF86TaskPane	
+fr-bepo	155		XF86Mail	
+fr-bepo	156		XF86Favorites	
+fr-bepo	157		XF86MyComputer	
+fr-bepo	158		XF86Back	
+fr-bepo	159		XF86Forward	
+fr-bepo	161		XF86Eject	
+fr-bepo	162		XF86Eject	
+fr-bepo	163		XF86AudioNext	
+fr-bepo	164		XF86AudioPlay	
+fr-bepo	165		XF86AudioPrev	
+fr-bepo	166		XF86AudioStop	
+fr-bepo	167		XF86AudioRecord	
+fr-bepo	168		XF86AudioRewind	
+fr-bepo	169		XF86Phone	
+fr-bepo	171		XF86Tools	
+fr-bepo	172		XF86HomePage	
+fr-bepo	173		XF86Reload	
+fr-bepo	174		XF86Close	
+fr-bepo	177		XF86ScrollUp	
+fr-bepo	178		XF86ScrollDown	
+fr-bepo	179	(	parenleft	
+fr-bepo	180	)	parenright	
+fr-bepo	181		XF86New	
+fr-bepo	182		Redo	
+fr-bepo	183		XF86Tools	
+fr-bepo	184		XF86Launch5	
+fr-bepo	185		XF86Launch6	
+fr-bepo	186		XF86Launch7	
+fr-bepo	187		XF86Launch8	
+fr-bepo	188		XF86Launch9	
+fr-bepo	189		F19	
+fr-bepo	190		XF86AudioMicMute	
+fr-bepo	191		XF86TouchpadToggle	
+fr-bepo	192		XF86TouchpadOn	
+fr-bepo	193		F23	
+fr-bepo	194		F24	
+fr-bepo	195		ISO_Level5_Shift	
+fr-bepo	200		XF86AudioPlay	
+fr-bepo	201		XF86AudioPause	
+fr-bepo	202		XF86Launch3	
+fr-bepo	203		XF86Launch4	
+fr-bepo	204		XF86LaunchB	
+fr-bepo	205		XF86Suspend	
+fr-bepo	206		XF86Close	
+fr-bepo	207		XF86AudioPlay	
+fr-bepo	208		XF86AudioForward	
+fr-bepo	209		XF86AudioBassBoost	
+fr-bepo	210		Print	
+fr-bepo	212		XF86WebCam	
+fr-bepo	213		XF86AudioPreset	
+fr-bepo	215		XF86Mail	
+fr-bepo	216		XF86Messenger	
+fr-bepo	217		XF86Search	
+fr-bepo	218		XF86Go	
+fr-bepo	219		XF86Finance	
+fr-bepo	220		XF86Game	
+fr-bepo	221		XF86Shop	
+fr-bepo	223		Cancel	
+fr-bepo	224		XF86MonBrightnessDown	
+fr-bepo	225		XF86MonBrightnessUp	
+fr-bepo	226		XF86AudioMedia	
+fr-bepo	227		XF86Display	
+fr-bepo	228		XF86KbdLightOnOff	
+fr-bepo	229		XF86KbdBrightnessDown	
+fr-bepo	230		XF86KbdBrightnessUp	
+fr-bepo	231		XF86Send	
+fr-bepo	232		XF86Reply	
+fr-bepo	233		XF86MailForward	
+fr-bepo	234		XF86Save	
+fr-bepo	235		XF86Documents	
+fr-bepo	236		XF86Battery	
+fr-bepo	237		XF86Bluetooth	
+fr-bepo	238		XF86WLAN	
+fr-bepo	239		XF86UWB	
+fr-bepo	241		XF86Next_VMode	
+fr-bepo	242		XF86Prev_VMode	
+fr-bepo	243		XF86MonBrightnessCycle	
+fr-bepo	244		XF86BrightnessAuto	
+fr-bepo	245		XF86DisplayOff	
+fr-bepo	246		XF86WWAN	
+fr-bepo	247		XF86RFKill	
+es	1		Escape	
+es	2	1	1	1
+es	3	2	2	2
+es	4	3	3	3
+es	5	4	4	4
+es	6	5	5	5
+es	7	6	6	6
+es	8	7	7	7
+es	9	8	8	8
+es	10	9	9	9
+es	11	0	0	0
+es	12	'	apostrophe	
+es	13	¡	exclamdown	
+es	14		BackSpace	
+es	15		Tab	
+es	16	q	q	
+es	17	w	w	
+es	18	e	e	
+es	19	r	r	
+es	20	t	t	
+es	21	y	y	
+es	22	u	u	
+es	23	i	i	
+es	24	o	o	
+es	25	p	p	
+es	26		dead_grave	
+es	27	+	plus	
+es	28		Return	
+es	29		Control_L	
+es	30	a	a	
+es	31	s	s	
+es	32	d	d	
+es	33	f	f	
+es	34	g	g	
+es	35	h	h	
+es	36	j	j	
+es	37	k	k	
+es	38	l	l	
+es	39	ñ	ntilde	
+es	40		dead_acute	
+es	41	º	masculine	
+es	42		Shift_L	
+es	43	ç	ccedilla	
+es	44	z	z	
+es	45	x	x	
+es	46	c	c	
+es	47	v	v	
+es	48	b	b	
+es	49	n	n	
+es	50	m	m	
+es	51	,	comma	
+es	52	.	period	
+es	53	-	minus	
+es	54		Shift_R	
+es	55	*	KP_Multiply	
+es	56		Alt_L	
+es	57	 	space	
+es	58		Caps_Lock	
+es	59		F1	
+es	60		F2	
+es	61		F3	
+es	62		F4	
+es	63		F5	
+es	64		F6	
+es	65		F7	
+es	66		F8	
+es	67		F9	
+es	68		F10	
+es	69		Num_Lock	
+es	70		Scroll_Lock	
+es	71		KP_Home	7
+es	72		KP_Up	8
+es	73		KP_Prior	9
+es	74	-	KP_Subtract	
+es	75		KP_Left	4
+es	76		KP_Begin	5
+es	77		KP_Right	6
+es	78	+	KP_Add	
+es	79		KP_End	1
+es	80		KP_Down	2
+es	81		KP_Next	3
+es	82		KP_Insert	0
+es	83		KP_Delete	
+es	84		ISO_Level3_Shift	
+es	85		F24	
+es	86	<	less	
+es	87		F11	
+es	88		F12	
+es	90		Katakana	
+es	91		Hiragana	
+es	92		Henkan_Mode	
+es	93		Hiragana_Katakana	
+es	94		Muhenkan	
+es	96		KP_Enter	
+es	97		Control_R	
+es	98	/	KP_Divide	
+es	99		Print	
+es	100		ISO_Level3_Shift	
+es	101		Linefeed	
+es	102		Home	
+es	103		Up	
+es	104		Prior	
+es	105		Left	
+es	106		Right	
+es	107		End	
+es	108		Down	
+es	109		Next	
+es	110		Insert	
+es	111		Delete	
+es	113		XF86AudioMute	
+es	114		XF86AudioLowerVolume	
+es	115		XF86AudioRaiseVolume	
+es	116		XF86PowerOff	
+es	117	=	KP_Equal	
+es	118	±	plusminus	
+es	119		Pause	
+es	120		XF86LaunchA	
+es	121	.	KP_Decimal	
+es	122		Hangul	
+es	123		Hangul_Hanja	
+es	125		Super_L	
+es	126		Super_R	
+es	127		Menu	
+es	128		Cancel	
+es	129		Redo	
+es	130		SunProps	
+es	131		Undo	
+es	132		SunFront	
+es	133		XF86Copy	
+es	134		XF86Open	
+es	135		XF86Paste	
+es	136		Find	
+es	137		XF86Cut	
+es	138		Help	
+es	139		XF86MenuKB	
+es	140		XF86Calculator	
+es	142		XF86Sleep	
+es	143		XF86WakeUp	
+es	144		XF86Explorer	
+es	145		XF86Send	
+es	147		XF86Xfer	
+es	148		XF86Launch1	
+es	149		XF86Launch2	
+es	150		XF86WWW	
+es	151		XF86DOS	
+es	152		XF86ScreenSaver	
+es	153		XF86RotateWindows	
+es	154		XF86TaskPane	
+es	155		XF86Mail	
+es	156		XF86Favorites	
+es	157		XF86MyComputer	
+es	158		XF86Back	
+es	159		XF86Forward	
+es	161		XF86Eject	
+es	162		XF86Eject	
+es	163		XF86AudioNext	
+es	164		XF86AudioPlay	
+es	165		XF86AudioPrev	
+es	166		XF86AudioStop	
+es	167		XF86AudioRecord	
+es	168		XF86AudioRewind	
+es	169		XF86Phone	
+es	171		XF86Tools	
+es	172		XF86HomePage	
+es	173		XF86Reload	
+es	174		XF86Close	
+es	177		XF86ScrollUp	
+es	178		XF86ScrollDown	
+es	179	(	parenleft	
+es	180	)	parenright	
+es	181		XF86New	
+es	182		Redo	
+es	183		XF86Tools	
+es	184		XF86Launch5	
+es	185		XF86Launch6	
+es	186		XF86Launch7	
+es	187		XF86Launch8	
+es	188		XF86Launch9	
+es	189		F19	
+es	190		XF86AudioMicMute	
+es	191		XF86TouchpadToggle	
+es	192		XF86TouchpadOn	
+es	193		F23	
+es	194		F24	
+es	195		ISO_Level5_Shift	
+es	200		XF86AudioPlay	
+es	201		XF86AudioPause	
+es	202		XF86Launch3	
+es	203		XF86Launch4	
+es	204		XF86LaunchB	
+es	205		XF86Suspend	
+es	206		XF86Close	
+es	207		XF86AudioPlay	
+es	208		XF86AudioForward	
+es	209		XF86AudioBassBoost	
+es	210		Print	
+es	212		XF86WebCam	
+es	213		XF86AudioPreset	
+es	215		XF86Mail	
+es	216		XF86Messenger	
+es	217		XF86Search	
+es	218		XF86Go	
+es	219		XF86Finance	
+es	220		XF86Game	
+es	221		XF86Shop	
+es	223		Cancel	
+es	224		XF86MonBrightnessDown	
+es	225		XF86MonBrightnessUp	
+es	226		XF86AudioMedia	
+es	227		XF86Display	
+es	228		XF86KbdLightOnOff	
+es	229		XF86KbdBrightnessDown	
+es	230		XF86KbdBrightnessUp	
+es	231		XF86Send	
+es	232		XF86Reply	
+es	233		XF86MailForward	
+es	234		XF86Save	
+es	235		XF86Documents	
+es	236		XF86Battery	
+es	237		XF86Bluetooth	
+es	238		XF86WLAN	
+es	239		XF86UWB	
+es	241		XF86Next_VMode	
+es	242		XF86Prev_VMode	
+es	243		XF86MonBrightnessCycle	
+es	244		XF86BrightnessAuto	
+es	245		XF86DisplayOff	
+es	246		XF86WWAN	
+es	247		XF86RFKill	
+it	1		Escape	
+it	2	1	1	1
+it	3	2	2	2
+it	4	3	3	3
+it	5	4	4	4
+it	6	5	5	5
+it	7	6	6	6
+it	8	7	7	7
+it	9	8	8	8
+it	10	9	9	9
+it	11	0	0	0
+it	12	'	apostrophe	
+it	13	ì	igrave	
+it	14		BackSpace	
+it	15		Tab	
+it	16	q	q	
+it	17	w	w	
+it	18	e	e	
+it	19	r	r	
+it	20	t	t	
+it	21	y	y	
+it	22	u	u	
+it	23	i	i	
+it	24	o	o	
+it	25	p	p	
+it	26	è	egrave	
+it	27	+	plus	
+it	28		Return	
+it	29		Control_L	
+it	30	a	a	
+it	31	s	s	
+it	32	d	d	
+it	33	f	f	
+it	34	g	g	
+it	35	h	h	
+it	36	j	j	
+it	37	k	k	
+it	38	l	l	
+it	39	ò	ograve	
+it	40	à	agrave	
+it	41	\	backslash	
+it	42		Shift_L	
+it	43	ù	ugrave	
+it	44	z	z	
+it	45	x	x	
+it	46	c	c	
+it	47	v	v	
+it	48	b	b	
+it	49	n	n	
+it	50	m	m	
+it	51	,	comma	
+it	52	.	period	
+it	53	-	minus	
+it	54		Shift_R	
+it	55	*	KP_Multiply	
+it	56		Alt_L	
+it	57	 	space	
+it	58		Caps_Lock	
+it	59		F1	
+it	60		F2	
+it	61		F3	
+it	62		F4	
+it	63		F5	
+it	64		F6	
+it	65		F7	
+it	66		F8	
+it	67		F9	
+it	68		F10	
+it	69		Num_Lock	
+it	70		Scroll_Lock	
+it	71		KP_Home	7
+it	72		KP_Up	8
+it	73		KP_Prior	9
+it	74	-	KP_Subtract	
+it	75		KP_Left	4
+it	76		KP_Begin	5
+it	77		KP_Right	6
+it	78	+	KP_Add	
+it	79		KP_End	1
+it	80		KP_Down	2
+it	81		KP_Next	3
+it	82		KP_Insert	0
+it	83		KP_Delete	
+it	84		ISO_Level3_Shift	
+it	85		F24	
+it	86	<	less	
+it	87		F11	
+it	88		F12	
+it	90		Katakana	
+it	91		Hiragana	
+it	92		Henkan_Mode	
+it	93		Hiragana_Katakana	
+it	94		Muhenkan	
+it	96		KP_Enter	
+it	97		Control_R	
+it	98	/	KP_Divide	
+it	99		Print	
+it	100		ISO_Level3_Shift	
+it	101		Linefeed	
+it	102		Home	
+it	103		Up	
+it	104		Prior	
+it	105		Left	
+it	106		Right	
+it	107		End	
+it	108		Down	
+it	109		Next	
+it	110		Insert	
+it	111		Delete	
+it	113		XF86AudioMute	
+it	114		XF86AudioLowerVolume	
+it	115		XF86AudioRaiseVolume	
+it	116		XF86PowerOff	
+it	117	=	KP_Equal	
+it	118	±	plusminus	
+it	119		Pause	
+it	120		XF86LaunchA	
+it	121	.	KP_Decimal	
+it	122		Hangul	
+it	123		Hangul_Hanja	
+it	125		Super_L	
+it	126		Super_R	
+it	127		Menu	
+it	128		Cancel	
+it	129		Redo	
+it	130		SunProps	
+it	131		Undo	
+it	132		SunFront	
+it	133		XF86Copy	
+it	134		XF86Open	
+it	135		XF86Paste	
+it	136		Find	
+it	137		XF86Cut	
+it	138		Help	
+it	139		XF86MenuKB	
+it	140		XF86Calculator	
+it	142		XF86Sleep	
+it	143		XF86WakeUp	
+it	144		XF86Explorer	
+it	145		XF86Send	
+it	147		XF86Xfer	
+it	148		XF86Launch1	
+it	149		XF86Launch2	
+it	150		XF86WWW	
+it	151		XF86DOS	
+it	152		XF86ScreenSaver	
+it	153		XF86RotateWindows	
+it	154		XF86TaskPane	
+it	155		XF86Mail	
+it	156		XF86Favorites	
+it	157		XF86MyComputer	
+it	158		XF86Back	
+it	159		XF86Forward	
+it	161		XF86Eject	
+it	162		XF86Eject	
+it	163		XF86AudioNext	
+it	164		XF86AudioPlay	
+it	165		XF86AudioPrev	
+it	166		XF86AudioStop	
+it	167		XF86AudioRecord	
+it	168		XF86AudioRewind	
+it	169		XF86Phone	
+it	171		XF86Tools	
+it	172		XF86HomePage	
+it	173		XF86Reload	
+it	174		XF86Close	
+it	177		XF86ScrollUp	
+it	178		XF86ScrollDown	
+it	179	(	parenleft	
+it	180	)	parenright	
+it	181		XF86New	
+it	182		Redo	
+it	183		XF86Tools	
+it	184		XF86Launch5	
+it	185		XF86Launch6	
+it	186		XF86Launch7	
+it	187		XF86Launch8	
+it	188		XF86Launch9	
+it	189		F19	
+it	190		XF86AudioMicMute	
+it	191		XF86TouchpadToggle	
+it	192		XF86TouchpadOn	
+it	193		F23	
+it	194		F24	
+it	195		ISO_Level5_Shift	
+it	200		XF86AudioPlay	
+it	201		XF86AudioPause	
+it	202		XF86Launch3	
+it	203		XF86Launch4	
+it	204		XF86LaunchB	
+it	205		XF86Suspend	
+it	206		XF86Close	
+it	207		XF86AudioPlay	
+it	208		XF86AudioForward	
+it	209		XF86AudioBassBoost	
+it	210		Print	
+it	212		XF86WebCam	
+it	213		XF86AudioPreset	
+it	215		XF86Mail	
+it	216		XF86Messenger	
+it	217		XF86Search	
+it	218		XF86Go	
+it	219		XF86Finance	
+it	220		XF86Game	
+it	221		XF86Shop	
+it	223		Cancel	
+it	224		XF86MonBrightnessDown	
+it	225		XF86MonBrightnessUp	
+it	226		XF86AudioMedia	
+it	227		XF86Display	
+it	228		XF86KbdLightOnOff	
+it	229		XF86KbdBrightnessDown	
+it	230		XF86KbdBrightnessUp	
+it	231		XF86Send	
+it	232		XF86Reply	
+it	233		XF86MailForward	
+it	234		XF86Save	
+it	235		XF86Documents	
+it	236		XF86Battery	
+it	237		XF86Bluetooth	
+it	238		XF86WLAN	
+it	239		XF86UWB	
+it	241		XF86Next_VMode	
+it	242		XF86Prev_VMode	
+it	243		XF86MonBrightnessCycle	
+it	244		XF86BrightnessAuto	
+it	245		XF86DisplayOff	
+it	246		XF86WWAN	
+it	247		XF86RFKill	
+pt	1		Escape	
+pt	2	1	1	1
+pt	3	2	2	2
+pt	4	3	3	3
+pt	5	4	4	4
+pt	6	5	5	5
+pt	7	6	6	6
+pt	8	7	7	7
+pt	9	8	8	8
+pt	10	9	9	9
+pt	11	0	0	0
+pt	12	'	apostrophe	
+pt	13	«	guillemotleft	
+pt	14		BackSpace	
+pt	15		Tab	
+pt	16	q	q	
+pt	17	w	w	
+pt	18	e	e	
+pt	19	r	r	
+pt	20	t	t	
+pt	21	y	y	
+pt	22	u	u	
+pt	23	i	i	
+pt	24	o	o	
+pt	25	p	p	
+pt	26	+	plus	
+pt	27		dead_acute	
+pt	28		Return	
+pt	29		Control_L	
+pt	30	a	a	
+pt	31	s	s	
+pt	32	d	d	
+pt	33	f	f	
+pt	34	g	g	
+pt	35	h	h	
+pt	36	j	j	
+pt	37	k	k	
+pt	38	l	l	
+pt	39	ç	ccedilla	
+pt	40	º	masculine	
+pt	41	\	backslash	
+pt	42		Shift_L	
+pt	43		dead_tilde	
+pt	44	z	z	
+pt	45	x	x	
+pt	46	c	c	
+pt	47	v	v	
+pt	48	b	b	
+pt	49	n	n	
+pt	50	m	m	
+pt	51	,	comma	
+pt	52	.	period	
+pt	53	-	minus	
+pt	54		Shift_R	
+pt	55	*	KP_Multiply	
+pt	56		Alt_L	
+pt	57	 	space	
+pt	58		Caps_Lock	
+pt	59		F1	
+pt	60		F2	
+pt	61		F3	
+pt	62		F4	
+pt	63		F5	
+pt	64		F6	
+pt	65		F7	
+pt	66		F8	
+pt	67		F9	
+pt	68		F10	
+pt	69		Num_Lock	
+pt	70		Scroll_Lock	
+pt	71		KP_Home	7
+pt	72		KP_Up	8
+pt	73		KP_Prior	9
+pt	74	-	KP_Subtract	
+pt	75		KP_Left	4
+pt	76		KP_Begin	5
+pt	77		KP_Right	6
+pt	78	+	KP_Add	
+pt	79		KP_End	1
+pt	80		KP_Down	2
+pt	81		KP_Next	3
+pt	82		KP_Insert	0
+pt	83		KP_Delete	
+pt	84		ISO_Level3_Shift	
+pt	85		F24	
+pt	86	<	less	
+pt	87		F11	
+pt	88		F12	
+pt	90		Katakana	
+pt	91		Hiragana	
+pt	92		Henkan_Mode	
+pt	93		Hiragana_Katakana	
+pt	94		Muhenkan	
+pt	96		KP_Enter	
+pt	97		Control_R	
+pt	98	/	KP_Divide	
+pt	99		Print	
+pt	100		ISO_Level3_Shift	
+pt	101		Linefeed	
+pt	102		Home	
+pt	103		Up	
+pt	104		Prior	
+pt	105		Left	
+pt	106		Right	
+pt	107		End	
+pt	108		Down	
+pt	109		Next	
+pt	110		Insert	
+pt	111		Delete	
+pt	113		XF86AudioMute	
+pt	114		XF86AudioLowerVolume	
+pt	115		XF86AudioRaiseVolume	
+pt	116		XF86PowerOff	
+pt	117	=	KP_Equal	
+pt	118	±	plusminus	
+pt	119		Pause	
+pt	120		XF86LaunchA	
+pt	121	.	KP_Decimal	
+pt	122		Hangul	
+pt	123		Hangul_Hanja	
+pt	125		Super_L	
+pt	126		Super_R	
+pt	127		Menu	
+pt	128		Cancel	
+pt	129		Redo	
+pt	130		SunProps	
+pt	131		Undo	
+pt	132		SunFront	
+pt	133		XF86Copy	
+pt	134		XF86Open	
+pt	135		XF86Paste	
+pt	136		Find	
+pt	137		XF86Cut	
+pt	138		Help	
+pt	139		XF86MenuKB	
+pt	140		XF86Calculator	
+pt	142		XF86Sleep	
+pt	143		XF86WakeUp	
+pt	144		XF86Explorer	
+pt	145		XF86Send	
+pt	147		XF86Xfer	
+pt	148		XF86Launch1	
+pt	149		XF86Launch2	
+pt	150		XF86WWW	
+pt	151		XF86DOS	
+pt	152		XF86ScreenSaver	
+pt	153		XF86RotateWindows	
+pt	154		XF86TaskPane	
+pt	155		XF86Mail	
+pt	156		XF86Favorites	
+pt	157		XF86MyComputer	
+pt	158		XF86Back	
+pt	159		XF86Forward	
+pt	161		XF86Eject	
+pt	162		XF86Eject	
+pt	163		XF86AudioNext	
+pt	164		XF86AudioPlay	
+pt	165		XF86AudioPrev	
+pt	166		XF86AudioStop	
+pt	167		XF86AudioRecord	
+pt	168		XF86AudioRewind	
+pt	169		XF86Phone	
+pt	171		XF86Tools	
+pt	172		XF86HomePage	
+pt	173		XF86Reload	
+pt	174		XF86Close	
+pt	177		XF86ScrollUp	
+pt	178		XF86ScrollDown	
+pt	179	(	parenleft	
+pt	180	)	parenright	
+pt	181		XF86New	
+pt	182		Redo	
+pt	183		XF86Tools	
+pt	184		XF86Launch5	
+pt	185		XF86Launch6	
+pt	186		XF86Launch7	
+pt	187		XF86Launch8	
+pt	188		XF86Launch9	
+pt	189		F19	
+pt	190		XF86AudioMicMute	
+pt	191		XF86TouchpadToggle	
+pt	192		XF86TouchpadOn	
+pt	193		F23	
+pt	194		F24	
+pt	195		ISO_Level5_Shift	
+pt	200		XF86AudioPlay	
+pt	201		XF86AudioPause	
+pt	202		XF86Launch3	
+pt	203		XF86Launch4	
+pt	204		XF86LaunchB	
+pt	205		XF86Suspend	
+pt	206		XF86Close	
+pt	207		XF86AudioPlay	
+pt	208		XF86AudioForward	
+pt	209		XF86AudioBassBoost	
+pt	210		Print	
+pt	212		XF86WebCam	
+pt	213		XF86AudioPreset	
+pt	215		XF86Mail	
+pt	216		XF86Messenger	
+pt	217		XF86Search	
+pt	218		XF86Go	
+pt	219		XF86Finance	
+pt	220		XF86Game	
+pt	221		XF86Shop	
+pt	223		Cancel	
+pt	224		XF86MonBrightnessDown	
+pt	225		XF86MonBrightnessUp	
+pt	226		XF86AudioMedia	
+pt	227		XF86Display	
+pt	228		XF86KbdLightOnOff	
+pt	229		XF86KbdBrightnessDown	
+pt	230		XF86KbdBrightnessUp	
+pt	231		XF86Send	
+pt	232		XF86Reply	
+pt	233		XF86MailForward	
+pt	234		XF86Save	
+pt	235		XF86Documents	
+pt	236		XF86Battery	
+pt	237		XF86Bluetooth	
+pt	238		XF86WLAN	
+pt	239		XF86UWB	
+pt	241		XF86Next_VMode	
+pt	242		XF86Prev_VMode	
+pt	243		XF86MonBrightnessCycle	
+pt	244		XF86BrightnessAuto	
+pt	245		XF86DisplayOff	
+pt	246		XF86WWAN	
+pt	247		XF86RFKill	
+nl	1		Escape	
+nl	2	1	1	1
+nl	3	2	2	2
+nl	4	3	3	3
+nl	5	4	4	4
+nl	6	5	5	5
+nl	7	6	6	6
+nl	8	7	7	7
+nl	9	8	8	8
+nl	10	9	9	9
+nl	11	0	0	0
+nl	12	/	slash	
+nl	13	°	degree	
+nl	14		BackSpace	
+nl	15		Tab	
+nl	16	q	q	
+nl	17	w	w	
+nl	18	e	e	
+nl	19	r	r	
+nl	20	t	t	
+nl	21	y	y	
+nl	22	u	u	
+nl	23	i	i	
+nl	24	o	o	
+nl	25	p	p	
+nl	26		dead_diaeresis	
+nl	27	*	asterisk	
+nl	28		Return	
+nl	29		Control_L	
+nl	30	a	a	
+nl	31	s	s	
+nl	32	d	d	
+nl	33	f	f	
+nl	34	g	g	
+nl	35	h	h	
+nl	36	j	j	
+nl	37	k	k	
+nl	38	l	l	
+nl	39	+	plus	
+nl	40		dead_acute	
+nl	41	@	at	
+nl	42		Shift_L	
+nl	43	<	less	
+nl	44	z	z	
+nl	45	x	x	
+nl	46	c	c	
+nl	47	v	v	
+nl	48	b	b	
+nl	49	n	n	
+nl	50	m	m	
+nl	51	,	comma	
+nl	52	.	period	
+nl	53	-	minus	
+nl	54		Shift_R	
+nl	55	*	KP_Multiply	
+nl	56		Alt_L	
+nl	57	 	space	
+nl	58		Caps_Lock	
+nl	59		F1	
+nl	60		F2	
+nl	61		F3	
+nl	62		F4	
+nl	63		F5	
+nl	64		F6	
+nl	65		F7	
+nl	66		F8	
+nl	67		F9	
+nl	68		F10	
+nl	69		Num_Lock	
+nl	70		Scroll_Lock	
+nl	71		KP_Home	7
+nl	72		KP_Up	8
+nl	73		KP_Prior	9
+nl	74	-	KP_Subtract	
+nl	75		KP_Left	4
+nl	76		KP_Begin	5
+nl	77		KP_Right	6
+nl	78	+	KP_Add	
+nl	79		KP_End	1
+nl	80		KP_Down	2
+nl	81		KP_Next	3
+nl	82		KP_Insert	0
+nl	83		KP_Delete	
+nl	84		ISO_Level3_Shift	
+nl	85		F24	
+nl	86	]	bracketright	
+nl	87		F11	
+nl	88		F12	
+nl	90		Katakana	
+nl	91		Hiragana	
+nl	92		Henkan_Mode	
+nl	93		Hiragana_Katakana	
+nl	94		Muhenkan	
+nl	96		KP_Enter	
+nl	97		Control_R	
+nl	98	/	KP_Divide	
+nl	99		Print	
+nl	100		ISO_Level3_Shift	
+nl	101		Linefeed	
+nl	102		Home	
+nl	103		Up	
+nl	104		Prior	
+nl	105		Left	
+nl	106		Right	
+nl	107		End	
+nl	108		Down	
+nl	109		Next	
+nl	110		Insert	
+nl	111		Delete	
+nl	113		XF86AudioMute	
+nl	114		XF86AudioLowerVolume	
+nl	115		XF86AudioRaiseVolume	
+nl	116		XF86PowerOff	
+nl	117	=	KP_Equal	
+nl	118	±	plusminus	
+nl	119		Pause	
+nl	120		XF86LaunchA	
+nl	121	.	KP_Decimal	
+nl	122		Hangul	
+nl	123		Hangul_Hanja	
+nl	125		Super_L	
+nl	126		Super_R	
+nl	127		Menu	
+nl	128		Cancel	
+nl	129		Redo	
+nl	130		SunProps	
+nl	131		Undo	
+nl	132		SunFront	
+nl	133		XF86Copy	
+nl	134		XF86Open	
+nl	135		XF86Paste	
+nl	136		Find	
+nl	137		XF86Cut	
+nl	138		Help	
+nl	139		XF86MenuKB	
+nl	140		XF86Calculator	
+nl	142		XF86Sleep	
+nl	143		XF86WakeUp	
+nl	144		XF86Explorer	
+nl	145		XF86Send	
+nl	147		XF86Xfer	
+nl	148		XF86Launch1	
+nl	149		XF86Launch2	
+nl	150		XF86WWW	
+nl	151		XF86DOS	
+nl	152		XF86ScreenSaver	
+nl	153		XF86RotateWindows	
+nl	154		XF86TaskPane	
+nl	155		XF86Mail	
+nl	156		XF86Favorites	
+nl	157		XF86MyComputer	
+nl	158		XF86Back	
+nl	159		XF86Forward	
+nl	161		XF86Eject	
+nl	162		XF86Eject	
+nl	163		XF86AudioNext	
+nl	164		XF86AudioPlay	
+nl	165		XF86AudioPrev	
+nl	166		XF86AudioStop	
+nl	167		XF86AudioRecord	
+nl	168		XF86AudioRewind	
+nl	169		XF86Phone	
+nl	171		XF86Tools	
+nl	172		XF86HomePage	
+nl	173		XF86Reload	
+nl	174		XF86Close	
+nl	177		XF86ScrollUp	
+nl	178		XF86ScrollDown	
+nl	179	(	parenleft	
+nl	180	)	parenright	
+nl	181		XF86New	
+nl	182		Redo	
+nl	183		XF86Tools	
+nl	184		XF86Launch5	
+nl	185		XF86Launch6	
+nl	186		XF86Launch7	
+nl	187		XF86Launch8	
+nl	188		XF86Launch9	
+nl	189		F19	
+nl	190		XF86AudioMicMute	
+nl	191		XF86TouchpadToggle	
+nl	192		XF86TouchpadOn	
+nl	193		F23	
+nl	194		F24	
+nl	195		ISO_Level5_Shift	
+nl	200		XF86AudioPlay	
+nl	201		XF86AudioPause	
+nl	202		XF86Launch3	
+nl	203		XF86Launch4	
+nl	204		XF86LaunchB	
+nl	205		XF86Suspend	
+nl	206		XF86Close	
+nl	207		XF86AudioPlay	
+nl	208		XF86AudioForward	
+nl	209		XF86AudioBassBoost	
+nl	210		Print	
+nl	212		XF86WebCam	
+nl	213		XF86AudioPreset	
+nl	215		XF86Mail	
+nl	216		XF86Messenger	
+nl	217		XF86Search	
+nl	218		XF86Go	
+nl	219		XF86Finance	
+nl	220		XF86Game	
+nl	221		XF86Shop	
+nl	223		Cancel	
+nl	224		XF86MonBrightnessDown	
+nl	225		XF86MonBrightnessUp	
+nl	226		XF86AudioMedia	
+nl	227		XF86Display	
+nl	228		XF86KbdLightOnOff	
+nl	229		XF86KbdBrightnessDown	
+nl	230		XF86KbdBrightnessUp	
+nl	231		XF86Send	
+nl	232		XF86Reply	
+nl	233		XF86MailForward	
+nl	234		XF86Save	
+nl	235		XF86Documents	
+nl	236		XF86Battery	
+nl	237		XF86Bluetooth	
+nl	238		XF86WLAN	
+nl	239		XF86UWB	
+nl	241		XF86Next_VMode	
+nl	242		XF86Prev_VMode	
+nl	243		XF86MonBrightnessCycle	
+nl	244		XF86BrightnessAuto	
+nl	245		XF86DisplayOff	
+nl	246		XF86WWAN	
+nl	247		XF86RFKill	
+be	1		Escape	
+be	2	&	ampersand	1
+be	3	é	eacute	2
+be	4	""""	quotedbl	3
+be	5	'	apostrophe	4
+be	6	(	parenleft	5
+be	7	§	section	6
+be	8	è	egrave	7
+be	9	!	exclam	8
+be	10	ç	ccedilla	9
+be	11	à	agrave	0
+be	12	)	parenright	
+be	13	-	minus	
+be	14		BackSpace	
+be	15		Tab	
+be	16	a	a	
+be	17	z	z	
+be	18	e	e	
+be	19	r	r	
+be	20	t	t	
+be	21	y	y	
+be	22	u	u	
+be	23	i	i	
+be	24	o	o	
+be	25	p	p	
+be	26		dead_circumflex	
+be	27	$	dollar	
+be	28		Return	
+be	29		Control_L	
+be	30	q	q	
+be	31	s	s	
+be	32	d	d	
+be	33	f	f	
+be	34	g	g	
+be	35	h	h	
+be	36	j	j	
+be	37	k	k	
+be	38	l	l	
+be	39	m	m	
+be	40	ù	ugrave	
+be	41	²	twosuperior	
+be	42		Shift_L	
+be	43	µ	mu	
+be	44	w	w	
+be	45	x	x	
+be	46	c	c	
+be	47	v	v	
+be	48	b	b	
+be	49	n	n	
+be	50	,	comma	
+be	51	;	semicolon	
+be	52	:	colon	
+be	53	=	equal	
+be	54		Shift_R	
+be	55	*	KP_Multiply	
+be	56		Alt_L	
+be	57	 	space	
+be	58		Caps_Lock	
+be	59		F1	
+be	60		F2	
+be	61		F3	
+be	62		F4	
+be	63		F5	
+be	64		F6	
+be	65		F7	
+be	66		F8	
+be	67		F9	
+be	68		F10	
+be	69		Num_Lock	
+be	70		Scroll_Lock	
+be	71		KP_Home	7
+be	72		KP_Up	8
+be	73		KP_Prior	9
+be	74	-	KP_Subtract	
+be	75		KP_Left	4
+be	76		KP_Begin	5
+be	77		KP_Right	6
+be	78	+	KP_Add	
+be	79		KP_End	1
+be	80		KP_Down	2
+be	81		KP_Next	3
+be	82		KP_Insert	0
+be	83		KP_Delete	
+be	84		ISO_Level3_Shift	
+be	85		F24	
+be	86	<	less	
+be	87		F11	
+be	88		F12	
+be	90		Katakana	
+be	91		Hiragana	
+be	92		Henkan_Mode	
+be	93		Hiragana_Katakana	
+be	94		Muhenkan	
+be	96		KP_Enter	
+be	97		Control_R	
+be	98	/	KP_Divide	
+be	99		Print	
+be	100		ISO_Level3_Shift	
+be	101		Linefeed	
+be	102		Home	
+be	103		Up	
+be	104		Prior	
+be	105		Left	
+be	106		Right	
+be	107		End	
+be	108		Down	
+be	109		Next	
+be	110		Insert	
+be	111		Delete	
+be	113		XF86AudioMute	
+be	114		XF86AudioLowerVolume	
+be	115		XF86AudioRaiseVolume	
+be	116		XF86PowerOff	
+be	117	=	KP_Equal	
+be	118	±	plusminus	
+be	119		Pause	
+be	120		XF86LaunchA	
+be	121	.	KP_Decimal	
+be	122		Hangul	
+be	123		Hangul_Hanja	
+be	125		Super_L	
+be	126		Super_R	
+be	127		Menu	
+be	128		Cancel	
+be	129		Redo	
+be	130		SunProps	
+be	131		Undo	
+be	132		SunFront	
+be	133		XF86Copy	
+be	134		XF86Open	
+be	135		XF86Paste	
+be	136		Find	
+be	137		XF86Cut	
+be	138		Help	
+be	139		XF86MenuKB	
+be	140		XF86Calculator	
+be	142		XF86Sleep	
+be	143		XF86WakeUp	
+be	144		XF86Explorer	
+be	145		XF86Send	
+be	147		XF86Xfer	
+be	148		XF86Launch1	
+be	149		XF86Launch2	
+be	150		XF86WWW	
+be	151		XF86DOS	
+be	152		XF86ScreenSaver	
+be	153		XF86RotateWindows	
+be	154		XF86TaskPane	
+be	155		XF86Mail	
+be	156		XF86Favorites	
+be	157		XF86MyComputer	
+be	158		XF86Back	
+be	159		XF86Forward	
+be	161		XF86Eject	
+be	162		XF86Eject	
+be	163		XF86AudioNext	
+be	164		XF86AudioPlay	
+be	165		XF86AudioPrev	
+be	166		XF86AudioStop	
+be	167		XF86AudioRecord	
+be	168		XF86AudioRewind	
+be	169		XF86Phone	
+be	171		XF86Tools	
+be	172		XF86HomePage	
+be	173		XF86Reload	
+be	174		XF86Close	
+be	177		XF86ScrollUp	
+be	178		XF86ScrollDown	
+be	179	(	parenleft	
+be	180	)	parenright	
+be	181		XF86New	
+be	182		Redo	
+be	183		XF86Tools	
+be	184		XF86Launch5	
+be	185		XF86Launch6	
+be	186		XF86Launch7	
+be	187		XF86Launch8	
+be	188		XF86Launch9	
+be	189		F19	
+be	190		XF86AudioMicMute	
+be	191		XF86TouchpadToggle	
+be	192		XF86TouchpadOn	
+be	193		F23	
+be	194		F24	
+be	195		ISO_Level5_Shift	
+be	200		XF86AudioPlay	
+be	201		XF86AudioPause	
+be	202		XF86Launch3	
+be	203		XF86Launch4	
+be	204		XF86LaunchB	
+be	205		XF86Suspend	
+be	206		XF86Close	
+be	207		XF86AudioPlay	
+be	208		XF86AudioForward	
+be	209		XF86AudioBassBoost	
+be	210		Print	
+be	212		XF86WebCam	
+be	213		XF86AudioPreset	
+be	215		XF86Mail	
+be	216		XF86Messenger	
+be	217		XF86Search	
+be	218		XF86Go	
+be	219		XF86Finance	
+be	220		XF86Game	
+be	221		XF86Shop	
+be	223		Cancel	
+be	224		XF86MonBrightnessDown	
+be	225		XF86MonBrightnessUp	
+be	226		XF86AudioMedia	
+be	227		XF86Display	
+be	228		XF86KbdLightOnOff	
+be	229		XF86KbdBrightnessDown	
+be	230		XF86KbdBrightnessUp	
+be	231		XF86Send	
+be	232		XF86Reply	
+be	233		XF86MailForward	
+be	234		XF86Save	
+be	235		XF86Documents	
+be	236		XF86Battery	
+be	237		XF86Bluetooth	
+be	238		XF86WLAN	
+be	239		XF86UWB	
+be	241		XF86Next_VMode	
+be	242		XF86Prev_VMode	
+be	243		XF86MonBrightnessCycle	
+be	244		XF86BrightnessAuto	
+be	245		XF86DisplayOff	
+be	246		XF86WWAN	
+be	247		XF86RFKill	
+dk	1		Escape	
+dk	2	1	1	1
+dk	3	2	2	2
+dk	4	3	3	3
+dk	5	4	4	4
+dk	6	5	5	5
+dk	7	6	6	6
+dk	8	7	7	7
+dk	9	8	8	8
+dk	10	9	9	9
+dk	11	0	0	0
+dk	12	+	plus	
+dk	13		dead_acute	
+dk	14		BackSpace	
+dk	15		Tab	
+dk	16	q	q	
+dk	17	w	w	
+dk	18	e	e	
+dk	19	r	r	
+dk	20	t	t	
+dk	21	y	y	
+dk	22	u	u	
+dk	23	i	i	
+dk	24	o	o	
+dk	25	p	p	
+dk	26	å	aring	
+dk	27		dead_diaeresis	
+dk	28		Return	
+dk	29		Control_L	
+dk	30	a	a	
+dk	31	s	s	
+dk	32	d	d	
+dk	33	f	f	
+dk	34	g	g	
+dk	35	h	h	
+dk	36	j	j	
+dk	37	k	k	
+dk	38	l	l	
+dk	39	æ	ae	
+dk	40	ø	oslash	
+dk	41	½	onehalf	
+dk	42		Shift_L	
+dk	43	'	apostrophe	
+dk	44	z	z	
+dk	45	x	x	
+dk	46	c	c	
+dk	47	v	v	
+dk	48	b	b	
+dk	49	n	n	
+dk	50	m	m	
+dk	51	,	comma	
+dk	52	.	period	
+dk	53	-	minus	
+dk	54		Shift_R	
+dk	55	*	KP_Multiply	
+dk	56		Alt_L	
+dk	57	 	space	
+dk	58		Caps_Lock	
+dk	59		F1	
+dk	60		F2	
+dk	61		F3	
+dk	62		F4	
+dk	63		F5	
+dk	64		F6	
+dk	65		F7	
+dk	66		F8	
+dk	67		F9	
+dk	68		F10	
+dk	69		Num_Lock	
+dk	70		Scroll_Lock	
+dk	71		KP_Home	7
+dk	72		KP_Up	8
+dk	73		KP_Prior	9
+dk	74	-	KP_Subtract	
+dk	75		KP_Left	4
+dk	76		KP_Begin	5
+dk	77		KP_Right	6
+dk	78	+	KP_Add	
+dk	79		KP_End	1
+dk	80		KP_Down	2
+dk	81		KP_Next	3
+dk	82		KP_Insert	0
+dk	83		KP_Delete	
+dk	84		ISO_Level3_Shift	
+dk	85		F24	
+dk	86	<	less	
+dk	87		F11	
+dk	88		F12	
+dk	90		Katakana	
+dk	91		Hiragana	
+dk	92		Henkan_Mode	
+dk	93		Hiragana_Katakana	
+dk	94		Muhenkan	
+dk	96		KP_Enter	
+dk	97		Control_R	
+dk	98	/	KP_Divide	
+dk	99		Print	
+dk	100		ISO_Level3_Shift	
+dk	101		Linefeed	
+dk	102		Home	
+dk	103		Up	
+dk	104		Prior	
+dk	105		Left	
+dk	106		Right	
+dk	107		End	
+dk	108		Down	
+dk	109		Next	
+dk	110		Insert	
+dk	111		Delete	
+dk	113		XF86AudioMute	
+dk	114		XF86AudioLowerVolume	
+dk	115		XF86AudioRaiseVolume	
+dk	116		XF86PowerOff	
+dk	117	=	KP_Equal	
+dk	118	±	plusminus	
+dk	119		Pause	
+dk	120		XF86LaunchA	
+dk	121	.	KP_Decimal	
+dk	122		Hangul	
+dk	123		Hangul_Hanja	
+dk	125		Super_L	
+dk	126		Super_R	
+dk	127		Menu	
+dk	128		Cancel	
+dk	129		Redo	
+dk	130		SunProps	
+dk	131		Undo	
+dk	132		SunFront	
+dk	133		XF86Copy	
+dk	134		XF86Open	
+dk	135		XF86Paste	
+dk	136		Find	
+dk	137		XF86Cut	
+dk	138		Help	
+dk	139		XF86MenuKB	
+dk	140		XF86Calculator	
+dk	142		XF86Sleep	
+dk	143		XF86WakeUp	
+dk	144		XF86Explorer	
+dk	145		XF86Send	
+dk	147		XF86Xfer	
+dk	148		XF86Launch1	
+dk	149		XF86Launch2	
+dk	150		XF86WWW	
+dk	151		XF86DOS	
+dk	152		XF86ScreenSaver	
+dk	153		XF86RotateWindows	
+dk	154		XF86TaskPane	
+dk	155		XF86Mail	
+dk	156		XF86Favorites	
+dk	157		XF86MyComputer	
+dk	158		XF86Back	
+dk	159		XF86Forward	
+dk	161		XF86Eject	
+dk	162		XF86Eject	
+dk	163		XF86AudioNext	
+dk	164		XF86AudioPlay	
+dk	165		XF86AudioPrev	
+dk	166		XF86AudioStop	
+dk	167		XF86AudioRecord	
+dk	168		XF86AudioRewind	
+dk	169		XF86Phone	
+dk	171		XF86Tools	
+dk	172		XF86HomePage	
+dk	173		XF86Reload	
+dk	174		XF86Close	
+dk	177		XF86ScrollUp	
+dk	178		XF86ScrollDown	
+dk	179	(	parenleft	
+dk	180	)	parenright	
+dk	181		XF86New	
+dk	182		Redo	
+dk	183		XF86Tools	
+dk	184		XF86Launch5	
+dk	185		XF86Launch6	
+dk	186		XF86Launch7	
+dk	187		XF86Launch8	
+dk	188		XF86Launch9	
+dk	189		F19	
+dk	190		XF86AudioMicMute	
+dk	191		XF86TouchpadToggle	
+dk	192		XF86TouchpadOn	
+dk	193		F23	
+dk	194		F24	
+dk	195		ISO_Level5_Shift	
+dk	200		XF86AudioPlay	
+dk	201		XF86AudioPause	
+dk	202		XF86Launch3	
+dk	203		XF86Launch4	
+dk	204		XF86LaunchB	
+dk	205		XF86Suspend	
+dk	206		XF86Close	
+dk	207		XF86AudioPlay	
+dk	208		XF86AudioForward	
+dk	209		XF86AudioBassBoost	
+dk	210		Print	
+dk	212		XF86WebCam	
+dk	213		XF86AudioPreset	
+dk	215		XF86Mail	
+dk	216		XF86Messenger	
+dk	217		XF86Search	
+dk	218		XF86Go	
+dk	219		XF86Finance	
+dk	220		XF86Game	
+dk	221		XF86Shop	
+dk	223		Cancel	
+dk	224		XF86MonBrightnessDown	
+dk	225		XF86MonBrightnessUp	
+dk	226		XF86AudioMedia	
+dk	227		XF86Display	
+dk	228		XF86KbdLightOnOff	
+dk	229		XF86KbdBrightnessDown	
+dk	230		XF86KbdBrightnessUp	
+dk	231		XF86Send	
+dk	232		XF86Reply	
+dk	233		XF86MailForward	
+dk	234		XF86Save	
+dk	235		XF86Documents	
+dk	236		XF86Battery	
+dk	237		XF86Bluetooth	
+dk	238		XF86WLAN	
+dk	239		XF86UWB	
+dk	241		XF86Next_VMode	
+dk	242		XF86Prev_VMode	
+dk	243		XF86MonBrightnessCycle	
+dk	244		XF86BrightnessAuto	
+dk	245		XF86DisplayOff	
+dk	246		XF86WWAN	
+dk	247		XF86RFKill	
+no	1		Escape	
+no	2	1	1	1
+no	3	2	2	2
+no	4	3	3	3
+no	5	4	4	4
+no	6	5	5	5
+no	7	6	6	6
+no	8	7	7	7
+no	9	8	8	8
+no	10	9	9	9
+no	11	0	0	0
+no	12	+	plus	
+no	13	\	backslash	
+no	14		BackSpace	
+no	15		Tab	
+no	16	q	q	
+no	17	w	w	
+no	18	e	e	
+no	19	r	r	
+no	20	t	t	
+no	21	y	y	
+no	22	u	u	
+no	23	i	i	
+no	24	o	o	
+no	25	p	p	
+no	26	å	aring	
+no	27		dead_diaeresis	
+no	28		Return	
+no	29		Control_L	
+no	30	a	a	
+no	31	s	s	
+no	32	d	d	
+no	33	f	f	
+no	34	g	g	
+no	35	h	h	
+no	36	j	j	
+no	37	k	k	
+no	38	l	l	
+no	39	ø	oslash	
+no	40	æ	ae	
+no	41	|	bar	
+no	42		Shift_L	
+no	43	'	apostrophe	
+no	44	z	z	
+no	45	x	x	
+no	46	c	c	
+no	47	v	v	
+no	48	b	b	
+no	49	n	n	
+no	50	m	m	
+no	51	,	comma	
+no	52	.	period	
+no	53	-	minus	
+no	54		Shift_R	
+no	55	*	KP_Multiply	
+no	56		Alt_L	
+no	57	 	space	
+no	58		Caps_Lock	
+no	59		F1	
+no	60		F2	
+no	61		F3	
+no	62		F4	
+no	63		F5	
+no	64		F6	
+no	65		F7	
+no	66		F8	
+no	67		F9	
+no	68		F10	
+no	69		Num_Lock	
+no	70		Scroll_Lock	
+no	71		KP_Home	7
+no	72		KP_Up	8
+no	73		KP_Prior	9
+no	74	-	KP_Subtract	
+no	75		KP_Left	4
+no	76		KP_Begin	5
+no	77		KP_Right	6
+no	78	+	KP_Add	
+no	79		KP_End	1
+no	80		KP_Down	2
+no	81		KP_Next	3
+no	82		KP_Insert	0
+no	83		KP_Delete	
+no	84		ISO_Level3_Shift	
+no	85		F24	
+no	86	<	less	
+no	87		F11	
+no	88		F12	
+no	90		Katakana	
+no	91		Hiragana	
+no	92		Henkan_Mode	
+no	93		Hiragana_Katakana	
+no	94		Muhenkan	
+no	96		KP_Enter	
+no	97		Control_R	
+no	98	/	KP_Divide	
+no	99		Print	
+no	100		ISO_Level3_Shift	
+no	101		Linefeed	
+no	102		Home	
+no	103		Up	
+no	104		Prior	
+no	105		Left	
+no	106		Right	
+no	107		End	
+no	108		Down	
+no	109		Next	
+no	110		Insert	
+no	111		Delete	
+no	113		XF86AudioMute	
+no	114		XF86AudioLowerVolume	
+no	115		XF86AudioRaiseVolume	
+no	116		XF86PowerOff	
+no	117	=	KP_Equal	
+no	118	±	plusminus	
+no	119		Pause	
+no	120		XF86LaunchA	
+no	121	.	KP_Decimal	
+no	122		Hangul	
+no	123		Hangul_Hanja	
+no	125		Super_L	
+no	126		Super_R	
+no	127		Menu	
+no	128		Cancel	
+no	129		Redo	
+no	130		SunProps	
+no	131		Undo	
+no	132		SunFront	
+no	133		XF86Copy	
+no	134		XF86Open	
+no	135		XF86Paste	
+no	136		Find	
+no	137		XF86Cut	
+no	138		Help	
+no	139		XF86MenuKB	
+no	140		XF86Calculator	
+no	142		XF86Sleep	
+no	143		XF86WakeUp	
+no	144		XF86Explorer	
+no	145		XF86Send	
+no	147		XF86Xfer	
+no	148		XF86Launch1	
+no	149		XF86Launch2	
+no	150		XF86WWW	
+no	151		XF86DOS	
+no	152		XF86ScreenSaver	
+no	153		XF86RotateWindows	
+no	154		XF86TaskPane	
+no	155		XF86Mail	
+no	156		XF86Favorites	
+no	157		XF86MyComputer	
+no	158		XF86Back	
+no	159		XF86Forward	
+no	161		XF86Eject	
+no	162		XF86Eject	
+no	163		XF86AudioNext	
+no	164		XF86AudioPlay	
+no	165		XF86AudioPrev	
+no	166		XF86AudioStop	
+no	167		XF86AudioRecord	
+no	168		XF86AudioRewind	
+no	169		XF86Phone	
+no	171		XF86Tools	
+no	172		XF86HomePage	
+no	173		XF86Reload	
+no	174		XF86Close	
+no	177		XF86ScrollUp	
+no	178		XF86ScrollDown	
+no	179	(	parenleft	
+no	180	)	parenright	
+no	181		XF86New	
+no	182		Redo	
+no	183		XF86Tools	
+no	184		XF86Launch5	
+no	185		XF86Launch6	
+no	186		XF86Launch7	
+no	187		XF86Launch8	
+no	188		XF86Launch9	
+no	189		F19	
+no	190		XF86AudioMicMute	
+no	191		XF86TouchpadToggle	
+no	192		XF86TouchpadOn	
+no	193		F23	
+no	194		F24	
+no	195		ISO_Level5_Shift	
+no	200		XF86AudioPlay	
+no	201		XF86AudioPause	
+no	202		XF86Launch3	
+no	203		XF86Launch4	
+no	204		XF86LaunchB	
+no	205		XF86Suspend	
+no	206		XF86Close	
+no	207		XF86AudioPlay	
+no	208		XF86AudioForward	
+no	209		XF86AudioBassBoost	
+no	210		Print	
+no	212		XF86WebCam	
+no	213		XF86AudioPreset	
+no	215		XF86Mail	
+no	216		XF86Messenger	
+no	217		XF86Search	
+no	218		XF86Go	
+no	219		XF86Finance	
+no	220		XF86Game	
+no	221		XF86Shop	
+no	223		Cancel	
+no	224		XF86MonBrightnessDown	
+no	225		XF86MonBrightnessUp	
+no	226		XF86AudioMedia	
+no	227		XF86Display	
+no	228		XF86KbdLightOnOff	
+no	229		XF86KbdBrightnessDown	
+no	230		XF86KbdBrightnessUp	
+no	231		XF86Send	
+no	232		XF86Reply	
+no	233		XF86MailForward	
+no	234		XF86Save	
+no	235		XF86Documents	
+no	236		XF86Battery	
+no	237		XF86Bluetooth	
+no	238		XF86WLAN	
+no	239		XF86UWB	
+no	241		XF86Next_VMode	
+no	242		XF86Prev_VMode	
+no	243		XF86MonBrightnessCycle	
+no	244		XF86BrightnessAuto	
+no	245		XF86DisplayOff	
+no	246		XF86WWAN	
+no	247		XF86RFKill	
+se	1		Escape	
+se	2	1	1	1
+se	3	2	2	2
+se	4	3	3	3
+se	5	4	4	4
+se	6	5	5	5
+se	7	6	6	6
+se	8	7	7	7
+se	9	8	8	8
+se	10	9	9	9
+se	11	0	0	0
+se	12	+	plus	
+se	13		dead_acute	
+se	14		BackSpace	
+se	15		Tab	
+se	16	q	q	
+se	17	w	w	
+se	18	e	e	
+se	19	r	r	
+se	20	t	t	
+se	21	y	y	
+se	22	u	u	
+se	23	i	i	
+se	24	o	o	
+se	25	p	p	
+se	26	å	aring	
+se	27		dead_diaeresis	
+se	28		Return	
+se	29		Control_L	
+se	30	a	a	
+se	31	s	s	
+se	32	d	d	
+se	33	f	f	
+se	34	g	g	
+se	35	h	h	
+se	36	j	j	
+se	37	k	k	
+se	38	l	l	
+se	39	ö	odiaeresis	
+se	40	ä	adiaeresis	
+se	41	§	section	
+se	42		Shift_L	
+se	43	'	apostrophe	
+se	44	z	z	
+se	45	x	x	
+se	46	c	c	
+se	47	v	v	
+se	48	b	b	
+se	49	n	n	
+se	50	m	m	
+se	51	,	comma	
+se	52	.	period	
+se	53	-	minus	
+se	54		Shift_R	
+se	55	*	KP_Multiply	
+se	56		Alt_L	
+se	57	 	space	
+se	58		Caps_Lock	
+se	59		F1	
+se	60		F2	
+se	61		F3	
+se	62		F4	
+se	63		F5	
+se	64		F6	
+se	65		F7	
+se	66		F8	
+se	67		F9	
+se	68		F10	
+se	69		Num_Lock	
+se	70		Scroll_Lock	
+se	71		KP_Home	7
+se	72		KP_Up	8
+se	73		KP_Prior	9
+se	74	-	KP_Subtract	
+se	75		KP_Left	4
+se	76		KP_Begin	5
+se	77		KP_Right	6
+se	78	+	KP_Add	
+se	79		KP_End	1
+se	80		KP_Down	2
+se	81		KP_Next	3
+se	82		KP_Insert	0
+se	83		KP_Delete	
+se	84		ISO_Level3_Shift	
+se	85		F24	
+se	86	<	less	
+se	87		F11	
+se	88		F12	
+se	90		Katakana	
+se	91		Hiragana	
+se	92		Henkan_Mode	
+se	93		Hiragana_Katakana	
+se	94		Muhenkan	
+se	96		KP_Enter	
+se	97		Control_R	
+se	98	/	KP_Divide	
+se	99		Print	
+se	100		ISO_Level3_Shift	
+se	101		Linefeed	
+se	102		Home	
+se	103		Up	
+se	104		Prior	
+se	105		Left	
+se	106		Right	
+se	107		End	
+se	108		Down	
+se	109		Next	
+se	110		Insert	
+se	111		Delete	
+se	113		XF86AudioMute	
+se	114		XF86AudioLowerVolume	
+se	115		XF86AudioRaiseVolume	
+se	116		XF86PowerOff	
+se	117	=	KP_Equal	
+se	118	±	plusminus	
+se	119		Pause	
+se	120		XF86LaunchA	
+se	121	.	KP_Decimal	
+se	122		Hangul	
+se	123		Hangul_Hanja	
+se	125		Super_L	
+se	126		Super_R	
+se	127		Menu	
+se	128		Cancel	
+se	129		Redo	
+se	130		SunProps	
+se	131		Undo	
+se	132		SunFront	
+se	133		XF86Copy	
+se	134		XF86Open	
+se	135		XF86Paste	
+se	136		Find	
+se	137		XF86Cut	
+se	138		Help	
+se	139		XF86MenuKB	
+se	140		XF86Calculator	
+se	142		XF86Sleep	
+se	143		XF86WakeUp	
+se	144		XF86Explorer	
+se	145		XF86Send	
+se	147		XF86Xfer	
+se	148		XF86Launch1	
+se	149		XF86Launch2	
+se	150		XF86WWW	
+se	151		XF86DOS	
+se	152		XF86ScreenSaver	
+se	153		XF86RotateWindows	
+se	154		XF86TaskPane	
+se	155		XF86Mail	
+se	156		XF86Favorites	
+se	157		XF86MyComputer	
+se	158		XF86Back	
+se	159		XF86Forward	
+se	161		XF86Eject	
+se	162		XF86Eject	
+se	163		XF86AudioNext	
+se	164		XF86AudioPlay	
+se	165		XF86AudioPrev	
+se	166		XF86AudioStop	
+se	167		XF86AudioRecord	
+se	168		XF86AudioRewind	
+se	169		XF86Phone	
+se	171		XF86Tools	
+se	172		XF86HomePage	
+se	173		XF86Reload	
+se	174		XF86Close	
+se	177		XF86ScrollUp	
+se	178		XF86ScrollDown	
+se	179	(	parenleft	
+se	180	)	parenright	
+se	181		XF86New	
+se	182		Redo	
+se	183		XF86Tools	
+se	184		XF86Launch5	
+se	185		XF86Launch6	
+se	186		XF86Launch7	
+se	187		XF86Launch8	
+se	188		XF86Launch9	
+se	189		F19	
+se	190		XF86AudioMicMute	
+se	191		XF86TouchpadToggle	
+se	192		XF86TouchpadOn	
+se	193		F23	
+se	194		F24	
+se	195		ISO_Level5_Shift	
+se	200		XF86AudioPlay	
+se	201		XF86AudioPause	
+se	202		XF86Launch3	
+se	203		XF86Launch4	
+se	204		XF86LaunchB	
+se	205		XF86Suspend	
+se	206		XF86Close	
+se	207		XF86AudioPlay	
+se	208		XF86AudioForward	
+se	209		XF86AudioBassBoost	
+se	210		Print	
+se	212		XF86WebCam	
+se	213		XF86AudioPreset	
+se	215		XF86Mail	
+se	216		XF86Messenger	
+se	217		XF86Search	
+se	218		XF86Go	
+se	219		XF86Finance	
+se	220		XF86Game	
+se	221		XF86Shop	
+se	223		Cancel	
+se	224		XF86MonBrightnessDown	
+se	225		XF86MonBrightnessUp	
+se	226		XF86AudioMedia	
+se	227		XF86Display	
+se	228		XF86KbdLightOnOff	
+se	229		XF86KbdBrightnessDown	
+se	230		XF86KbdBrightnessUp	
+se	231		XF86Send	
+se	232		XF86Reply	
+se	233		XF86MailForward	
+se	234		XF86Save	
+se	235		XF86Documents	
+se	236		XF86Battery	
+se	237		XF86Bluetooth	
+se	238		XF86WLAN	
+se	239		XF86UWB	
+se	241		XF86Next_VMode	
+se	242		XF86Prev_VMode	
+se	243		XF86MonBrightnessCycle	
+se	244		XF86BrightnessAuto	
+se	245		XF86DisplayOff	
+se	246		XF86WWAN	
+se	247		XF86RFKill	
+fi	1		Escape	
+fi	2	1	1	1
+fi	3	2	2	2
+fi	4	3	3	3
+fi	5	4	4	4
+fi	6	5	5	5
+fi	7	6	6	6
+fi	8	7	7	7
+fi	9	8	8	8
+fi	10	9	9	9
+fi	11	0	0	0
+fi	12	+	plus	
+fi	13		dead_acute	
+fi	14		BackSpace	
+fi	15		Tab	
+fi	16	q	q	
+fi	17	w	w	
+fi	18	e	e	
+fi	19	r	r	
+fi	20	t	t	
+fi	21	y	y	
+fi	22	u	u	
+fi	23	i	i	
+fi	24	o	o	
+fi	25	p	p	
+fi	26	å	aring	
+fi	27		dead_diaeresis	
+fi	28		Return	
+fi	29		Control_L	
+fi	30	a	a	
+fi	31	s	s	
+fi	32	d	d	
+fi	33	f	f	
+fi	34	g	g	
+fi	35	h	h	
+fi	36	j	j	
+fi	37	k	k	
+fi	38	l	l	
+fi	39	ö	odiaeresis	
+fi	40	ä	adiaeresis	
+fi	41	§	section	
+fi	42		Shift_L	
+fi	43	'	apostrophe	
+fi	44	z	z	
+fi	45	x	x	
+fi	46	c	c	
+fi	47	v	v	
+fi	48	b	b	
+fi	49	n	n	
+fi	50	m	m	
+fi	51	,	comma	
+fi	52	.	period	
+fi	53	-	minus	
+fi	54		Shift_R	
+fi	55	*	KP_Multiply	
+fi	56		Alt_L	
+fi	57	 	space	
+fi	58		Caps_Lock	
+fi	59		F1	
+fi	60		F2	
+fi	61		F3	
+fi	62		F4	
+fi	63		F5	
+fi	64		F6	
+fi	65		F7	
+fi	66		F8	
+fi	67		F9	
+fi	68		F10	
+fi	69		Num_Lock	
+fi	70		Scroll_Lock	
+fi	71		KP_Home	7
+fi	72		KP_Up	8
+fi	73		KP_Prior	9
+fi	74	-	KP_Subtract	
+fi	75		KP_Left	4
+fi	76		KP_Begin	5
+fi	77		KP_Right	6
+fi	78	+	KP_Add	
+fi	79		KP_End	1
+fi	80		KP_Down	2
+fi	81		KP_Next	3
+fi	82		KP_Insert	0
+fi	83		KP_Delete	
+fi	84		ISO_Level3_Shift	
+fi	85		F24	
+fi	86	<	less	
+fi	87		F11	
+fi	88		F12	
+fi	90		Katakana	
+fi	91		Hiragana	
+fi	92		Henkan_Mode	
+fi	93		Hiragana_Katakana	
+fi	94		Muhenkan	
+fi	96		KP_Enter	
+fi	97		Control_R	
+fi	98	/	KP_Divide	
+fi	99		Print	
+fi	100		ISO_Level3_Shift	
+fi	101		Linefeed	
+fi	102		Home	
+fi	103		Up	
+fi	104		Prior	
+fi	105		Left	
+fi	106		Right	
+fi	107		End	
+fi	108		Down	
+fi	109		Next	
+fi	110		Insert	
+fi	111		Delete	
+fi	113		XF86AudioMute	
+fi	114		XF86AudioLowerVolume	
+fi	115		XF86AudioRaiseVolume	
+fi	116		XF86PowerOff	
+fi	117	=	KP_Equal	
+fi	118	±	plusminus	
+fi	119		Pause	
+fi	120		XF86LaunchA	
+fi	121	.	KP_Decimal	
+fi	122		Hangul	
+fi	123		Hangul_Hanja	
+fi	125		Super_L	
+fi	126		Super_R	
+fi	127		Menu	
+fi	128		Cancel	
+fi	129		Redo	
+fi	130		SunProps	
+fi	131		Undo	
+fi	132		SunFront	
+fi	133		XF86Copy	
+fi	134		XF86Open	
+fi	135		XF86Paste	
+fi	136		Find	
+fi	137		XF86Cut	
+fi	138		Help	
+fi	139		XF86MenuKB	
+fi	140		XF86Calculator	
+fi	142		XF86Sleep	
+fi	143		XF86WakeUp	
+fi	144		XF86Explorer	
+fi	145		XF86Send	
+fi	147		XF86Xfer	
+fi	148		XF86Launch1	
+fi	149		XF86Launch2	
+fi	150		XF86WWW	
+fi	151		XF86DOS	
+fi	152		XF86ScreenSaver	
+fi	153		XF86RotateWindows	
+fi	154		XF86TaskPane	
+fi	155		XF86Mail	
+fi	156		XF86Favorites	
+fi	157		XF86MyComputer	
+fi	158		XF86Back	
+fi	159		XF86Forward	
+fi	161		XF86Eject	
+fi	162		XF86Eject	
+fi	163		XF86AudioNext	
+fi	164		XF86AudioPlay	
+fi	165		XF86AudioPrev	
+fi	166		XF86AudioStop	
+fi	167		XF86AudioRecord	
+fi	168		XF86AudioRewind	
+fi	169		XF86Phone	
+fi	171		XF86Tools	
+fi	172		XF86HomePage	
+fi	173		XF86Reload	
+fi	174		XF86Close	
+fi	177		XF86ScrollUp	
+fi	178		XF86ScrollDown	
+fi	179	(	parenleft	
+fi	180	)	parenright	
+fi	181		XF86New	
+fi	182		Redo	
+fi	183		XF86Tools	
+fi	184		XF86Launch5	
+fi	185		XF86Launch6	
+fi	186		XF86Launch7	
+fi	187		XF86Launch8	
+fi	188		XF86Launch9	
+fi	189		F19	
+fi	190		XF86AudioMicMute	
+fi	191		XF86TouchpadToggle	
+fi	192		XF86TouchpadOn	
+fi	193		F23	
+fi	194		F24	
+fi	195		ISO_Level5_Shift	
+fi	200		XF86AudioPlay	
+fi	201		XF86AudioPause	
+fi	202		XF86Launch3	
+fi	203		XF86Launch4	
+fi	204		XF86LaunchB	
+fi	205		XF86Suspend	
+fi	206		XF86Close	
+fi	207		XF86AudioPlay	
+fi	208		XF86AudioForward	
+fi	209		XF86AudioBassBoost	
+fi	210		Print	
+fi	212		XF86WebCam	
+fi	213		XF86AudioPreset	
+fi	215		XF86Mail	
+fi	216		XF86Messenger	
+fi	217		XF86Search	
+fi	218		XF86Go	
+fi	219		XF86Finance	
+fi	220		XF86Game	
+fi	221		XF86Shop	
+fi	223		Cancel	
+fi	224		XF86MonBrightnessDown	
+fi	225		XF86MonBrightnessUp	
+fi	226		XF86AudioMedia	
+fi	227		XF86Display	
+fi	228		XF86KbdLightOnOff	
+fi	229		XF86KbdBrightnessDown	
+fi	230		XF86KbdBrightnessUp	
+fi	231		XF86Send	
+fi	232		XF86Reply	
+fi	233		XF86MailForward	
+fi	234		XF86Save	
+fi	235		XF86Documents	
+fi	236		XF86Battery	
+fi	237		XF86Bluetooth	
+fi	238		XF86WLAN	
+fi	239		XF86UWB	
+fi	241		XF86Next_VMode	
+fi	242		XF86Prev_VMode	
+fi	243		XF86MonBrightnessCycle	
+fi	244		XF86BrightnessAuto	
+fi	245		XF86DisplayOff	
+fi	246		XF86WWAN	
+fi	247		XF86RFKill	
+pl	1		Escape	
+pl	2	1	1	1
+pl	3	2	2	2
+pl	4	3	3	3
+pl	5	4	4	4
+pl	6	5	5	5
+pl	7	6	6	6
+pl	8	7	7	7
+pl	9	8	8	8
+pl	10	9	9	9
+pl	11	0	0	0
+pl	12	-	minus	
+pl	13	=	equal	
+pl	14		BackSpace	
+pl	15		Tab	
+pl	16	q	q	
+pl	17	w	w	
+pl	18	e	e	
+pl	19	r	r	
+pl	20	t	t	
+pl	21	y	y	
+pl	22	u	u	
+pl	23	i	i	
+pl	24	o	o	
+pl	25	p	p	
+pl	26	[	bracketleft	
+pl	27	]	bracketright	
+pl	28		Return	
+pl	29		Control_L	
+pl	30	a	a	
+pl	31	s	s	
+pl	32	d	d	
+pl	33	f	f	
+pl	34	g	g	
+pl	35	h	h	
+pl	36	j	j	
+pl	37	k	k	
+pl	38	l	l	
+pl	39	;	semicolon	
+pl	40	'	apostrophe	
+pl	41	`	grave	
+pl	42		Shift_L	
+pl	43	\	backslash	
+pl	44	z	z	
+pl	45	x	x	
+pl	46	c	c	
+pl	47	v	v	
+pl	48	b	b	
+pl	49	n	n	
+pl	50	m	m	
+pl	51	,	comma	
+pl	52	.	period	
+pl	53	/	slash	
+pl	54		Shift_R	
+pl	55	*	KP_Multiply	
+pl	56		Alt_L	
+pl	57	 	space	
+pl	58		Caps_Lock	
+pl	59		F1	
+pl	60		F2	
+pl	61		F3	
+pl	62		F4	
+pl	63		F5	
+pl	64		F6	
+pl	65		F7	
+pl	66		F8	
+pl	67		F9	
+pl	68		F10	
+pl	69		Num_Lock	
+pl	70		Scroll_Lock	
+pl	71		KP_Home	7
+pl	72		KP_Up	8
+pl	73		KP_Prior	9
+pl	74	-	KP_Subtract	
+pl	75		KP_Left	4
+pl	76		KP_Begin	5
+pl	77		KP_Right	6
+pl	78	+	KP_Add	
+pl	79		KP_End	1
+pl	80		KP_Down	2
+pl	81		KP_Next	3
+pl	82		KP_Insert	0
+pl	83		KP_Delete	
+pl	84		ISO_Level3_Shift	
+pl	85		F24	
+pl	86	<	less	
+pl	87		F11	
+pl	88		F12	
+pl	90		Katakana	
+pl	91		Hiragana	
+pl	92		Henkan_Mode	
+pl	93		Hiragana_Katakana	
+pl	94		Muhenkan	
+pl	96		KP_Enter	
+pl	97		Control_R	
+pl	98	/	KP_Divide	
+pl	99		Print	
+pl	100		ISO_Level3_Shift	
+pl	101		Linefeed	
+pl	102		Home	
+pl	103		Up	
+pl	104		Prior	
+pl	105		Left	
+pl	106		Right	
+pl	107		End	
+pl	108		Down	
+pl	109		Next	
+pl	110		Insert	
+pl	111		Delete	
+pl	113		XF86AudioMute	
+pl	114		XF86AudioLowerVolume	
+pl	115		XF86AudioRaiseVolume	
+pl	116		XF86PowerOff	
+pl	117	=	KP_Equal	
+pl	118	±	plusminus	
+pl	119		Pause	
+pl	120		XF86LaunchA	
+pl	121	.	KP_Decimal	
+pl	122		Hangul	
+pl	123		Hangul_Hanja	
+pl	125		Super_L	
+pl	126		Super_R	
+pl	127		Menu	
+pl	128		Cancel	
+pl	129		Redo	
+pl	130		SunProps	
+pl	131		Undo	
+pl	132		SunFront	
+pl	133		XF86Copy	
+pl	134		XF86Open	
+pl	135		XF86Paste	
+pl	136		Find	
+pl	137		XF86Cut	
+pl	138		Help	
+pl	139		XF86MenuKB	
+pl	140		XF86Calculator	
+pl	142		XF86Sleep	
+pl	143		XF86WakeUp	
+pl	144		XF86Explorer	
+pl	145		XF86Send	
+pl	147		XF86Xfer	
+pl	148		XF86Launch1	
+pl	149		XF86Launch2	
+pl	150		XF86WWW	
+pl	151		XF86DOS	
+pl	152		XF86ScreenSaver	
+pl	153		XF86RotateWindows	
+pl	154		XF86TaskPane	
+pl	155		XF86Mail	
+pl	156		XF86Favorites	
+pl	157		XF86MyComputer	
+pl	158		XF86Back	
+pl	159		XF86Forward	
+pl	161		XF86Eject	
+pl	162		XF86Eject	
+pl	163		XF86AudioNext	
+pl	164		XF86AudioPlay	
+pl	165		XF86AudioPrev	
+pl	166		XF86AudioStop	
+pl	167		XF86AudioRecord	
+pl	168		XF86AudioRewind	
+pl	169		XF86Phone	
+pl	171		XF86Tools	
+pl	172		XF86HomePage	
+pl	173		XF86Reload	
+pl	174		XF86Close	
+pl	177		XF86ScrollUp	
+pl	178		XF86ScrollDown	
+pl	179	(	parenleft	
+pl	180	)	parenright	
+pl	181		XF86New	
+pl	182		Redo	
+pl	183		XF86Tools	
+pl	184		XF86Launch5	
+pl	185		XF86Launch6	
+pl	186		XF86Launch7	
+pl	187		XF86Launch8	
+pl	188		XF86Launch9	
+pl	189		F19	
+pl	190		XF86AudioMicMute	
+pl	191		XF86TouchpadToggle	
+pl	192		XF86TouchpadOn	
+pl	193		F23	
+pl	194		F24	
+pl	195		ISO_Level5_Shift	
+pl	200		XF86AudioPlay	
+pl	201		XF86AudioPause	
+pl	202		XF86Launch3	
+pl	203		XF86Launch4	
+pl	204		XF86LaunchB	
+pl	205		XF86Suspend	
+pl	206		XF86Close	
+pl	207		XF86AudioPlay	
+pl	208		XF86AudioForward	
+pl	209		XF86AudioBassBoost	
+pl	210		Print	
+pl	212		XF86WebCam	
+pl	213		XF86AudioPreset	
+pl	215		XF86Mail	
+pl	216		XF86Messenger	
+pl	217		XF86Search	
+pl	218		XF86Go	
+pl	219		XF86Finance	
+pl	220		XF86Game	
+pl	221		XF86Shop	
+pl	223		Cancel	
+pl	224		XF86MonBrightnessDown	
+pl	225		XF86MonBrightnessUp	
+pl	226		XF86AudioMedia	
+pl	227		XF86Display	
+pl	228		XF86KbdLightOnOff	
+pl	229		XF86KbdBrightnessDown	
+pl	230		XF86KbdBrightnessUp	
+pl	231		XF86Send	
+pl	232		XF86Reply	
+pl	233		XF86MailForward	
+pl	234		XF86Save	
+pl	235		XF86Documents	
+pl	236		XF86Battery	
+pl	237		XF86Bluetooth	
+pl	238		XF86WLAN	
+pl	239		XF86UWB	
+pl	241		XF86Next_VMode	
+pl	242		XF86Prev_VMode	
+pl	243		XF86MonBrightnessCycle	
+pl	244		XF86BrightnessAuto	
+pl	245		XF86DisplayOff	
+pl	246		XF86WWAN	
+pl	247		XF86RFKill	
+cz	1		Escape	
+cz	2	+	plus	1
+cz	3	ě	ecaron	2
+cz	4	š	scaron	3
+cz	5	č	ccaron	4
+cz	6	ř	rcaron	5
+cz	7	ž	zcaron	6
+cz	8	ý	yacute	7
+cz	9	á	aacute	8
+cz	10	í	iacute	9
+cz	11	é	eacute	0
+cz	12	=	equal	
+cz	13		dead_acute	
+cz	14		BackSpace	
+cz	15		Tab	
+cz	16	q	q	
+cz	17	w	w	
+cz	18	e	e	
+cz	19	r	r	
+cz	20	t	t	
+cz	21	z	z	
+cz	22	u	u	
+cz	23	i	i	
+cz	24	o	o	
+cz	25	p	p	
+cz	26	ú	uacute	
+cz	27	)	parenright	
+cz	28		Return	
+cz	29		Control_L	
+cz	30	a	a	
+cz	31	s	s	
+cz	32	d	d	
+cz	33	f	f	
+cz	34	g	g	
+cz	35	h	h	
+cz	36	j	j	
+cz	37	k	k	
+cz	38	l	l	
+cz	39	ů	uring	
+cz	40	§	section	
+cz	41	;	semicolon	
+cz	42		Shift_L	
+cz	43		dead_diaeresis	
+cz	44	y	y	
+cz	45	x	x	
+cz	46	c	c	
+cz	47	v	v	
+cz	48	b	b	
+cz	49	n	n	
+cz	50	m	m	
+cz	51	,	comma	
+cz	52	.	period	
+cz	53	-	minus	
+cz	54		Shift_R	
+cz	55	*	KP_Multiply	
+cz	56		Alt_L	
+cz	57	 	space	
+cz	58		Caps_Lock	
+cz	59		F1	
+cz	60		F2	
+cz	61		F3	
+cz	62		F4	
+cz	63		F5	
+cz	64		F6	
+cz	65		F7	
+cz	66		F8	
+cz	67		F9	
+cz	68		F10	
+cz	69		Num_Lock	
+cz	70		Scroll_Lock	
+cz	71		KP_Home	7
+cz	72		KP_Up	8
+cz	73		KP_Prior	9
+cz	74	-	KP_Subtract	
+cz	75		KP_Left	4
+cz	76		KP_Begin	5
+cz	77		KP_Right	6
+cz	78	+	KP_Add	
+cz	79		KP_End	1
+cz	80		KP_Down	2
+cz	81		KP_Next	3
+cz	82		KP_Insert	0
+cz	83		KP_Delete	
+cz	84		ISO_Level3_Shift	
+cz	85		F24	
+cz	86	\	backslash	
+cz	87		F11	
+cz	88		F12	
+cz	90		Katakana	
+cz	91		Hiragana	
+cz	92		Henkan_Mode	
+cz	93		Hiragana_Katakana	
+cz	94		Muhenkan	
+cz	96		KP_Enter	
+cz	97		Control_R	
+cz	98	/	KP_Divide	
+cz	99		Print	
+cz	100		ISO_Level3_Shift	
+cz	101		Linefeed	
+cz	102		Home	
+cz	103		Up	
+cz	104		Prior	
+cz	105		Left	
+cz	106		Right	
+cz	107		End	
+cz	108		Down	
+cz	109		Next	
+cz	110		Insert	
+cz	111		Delete	
+cz	113		XF86AudioMute	
+cz	114		XF86AudioLowerVolume	
+cz	115		XF86AudioRaiseVolume	
+cz	116		XF86PowerOff	
+cz	117	=	KP_Equal	
+cz	118	±	plusminus	
+cz	119		Pause	
+cz	120		XF86LaunchA	
+cz	121	.	KP_Decimal	
+cz	122		Hangul	
+cz	123		Hangul_Hanja	
+cz	125		Super_L	
+cz	126		Super_R	
+cz	127		Menu	
+cz	128		Cancel	
+cz	129		Redo	
+cz	130		SunProps	
+cz	131		Undo	
+cz	132		SunFront	
+cz	133		XF86Copy	
+cz	134		XF86Open	
+cz	135		XF86Paste	
+cz	136		Find	
+cz	137		XF86Cut	
+cz	138		Help	
+cz	139		XF86MenuKB	
+cz	140		XF86Calculator	
+cz	142		XF86Sleep	
+cz	143		XF86WakeUp	
+cz	144		XF86Explorer	
+cz	145		XF86Send	
+cz	147		XF86Xfer	
+cz	148		XF86Launch1	
+cz	149		XF86Launch2	
+cz	150		XF86WWW	
+cz	151		XF86DOS	
+cz	152		XF86ScreenSaver	
+cz	153		XF86RotateWindows	
+cz	154		XF86TaskPane	
+cz	155		XF86Mail	
+cz	156		XF86Favorites	
+cz	157		XF86MyComputer	
+cz	158		XF86Back	
+cz	159		XF86Forward	
+cz	161		XF86Eject	
+cz	162		XF86Eject	
+cz	163		XF86AudioNext	
+cz	164		XF86AudioPlay	
+cz	165		XF86AudioPrev	
+cz	166		XF86AudioStop	
+cz	167		XF86AudioRecord	
+cz	168		XF86AudioRewind	
+cz	169		XF86Phone	
+cz	171		XF86Tools	
+cz	172		XF86HomePage	
+cz	173		XF86Reload	
+cz	174		XF86Close	
+cz	177		XF86ScrollUp	
+cz	178		XF86ScrollDown	
+cz	179	(	parenleft	
+cz	180	)	parenright	
+cz	181		XF86New	
+cz	182		Redo	
+cz	183		XF86Tools	
+cz	184		XF86Launch5	
+cz	185		XF86Launch6	
+cz	186		XF86Launch7	
+cz	187		XF86Launch8	
+cz	188		XF86Launch9	
+cz	189		F19	
+cz	190		XF86AudioMicMute	
+cz	191		XF86TouchpadToggle	
+cz	192		XF86TouchpadOn	
+cz	193		F23	
+cz	194		F24	
+cz	195		ISO_Level5_Shift	
+cz	200		XF86AudioPlay	
+cz	201		XF86AudioPause	
+cz	202		XF86Launch3	
+cz	203		XF86Launch4	
+cz	204		XF86LaunchB	
+cz	205		XF86Suspend	
+cz	206		XF86Close	
+cz	207		XF86AudioPlay	
+cz	208		XF86AudioForward	
+cz	209		XF86AudioBassBoost	
+cz	210		Print	
+cz	212		XF86WebCam	
+cz	213		XF86AudioPreset	
+cz	215		XF86Mail	
+cz	216		XF86Messenger	
+cz	217		XF86Search	
+cz	218		XF86Go	
+cz	219		XF86Finance	
+cz	220		XF86Game	
+cz	221		XF86Shop	
+cz	223		Cancel	
+cz	224		XF86MonBrightnessDown	
+cz	225		XF86MonBrightnessUp	
+cz	226		XF86AudioMedia	
+cz	227		XF86Display	
+cz	228		XF86KbdLightOnOff	
+cz	229		XF86KbdBrightnessDown	
+cz	230		XF86KbdBrightnessUp	
+cz	231		XF86Send	
+cz	232		XF86Reply	
+cz	233		XF86MailForward	
+cz	234		XF86Save	
+cz	235		XF86Documents	
+cz	236		XF86Battery	
+cz	237		XF86Bluetooth	
+cz	238		XF86WLAN	
+cz	239		XF86UWB	
+cz	241		XF86Next_VMode	
+cz	242		XF86Prev_VMode	
+cz	243		XF86MonBrightnessCycle	
+cz	244		XF86BrightnessAuto	
+cz	245		XF86DisplayOff	
+cz	246		XF86WWAN	
+cz	247		XF86RFKill	
+sk	1		Escape	
+sk	2	+	plus	1
+sk	3	ľ	lcaron	2
+sk	4	š	scaron	3
+sk	5	č	ccaron	4
+sk	6	ť	tcaron	5
+sk	7	ž	zcaron	6
+sk	8	ý	yacute	7
+sk	9	á	aacute	8
+sk	10	í	iacute	9
+sk	11	é	eacute	0
+sk	12	=	equal	
+sk	13		dead_acute	
+sk	14		BackSpace	
+sk	15		Tab	
+sk	16	q	q	
+sk	17	w	w	
+sk	18	e	e	
+sk	19	r	r	
+sk	20	t	t	
+sk	21	z	z	
+sk	22	u	u	
+sk	23	i	i	
+sk	24	o	o	
+sk	25	p	p	
+sk	26	ú	uacute	
+sk	27	ä	adiaeresis	
+sk	28		Return	
+sk	29		Control_L	
+sk	30	a	a	
+sk	31	s	s	
+sk	32	d	d	
+sk	33	f	f	
+sk	34	g	g	
+sk	35	h	h	
+sk	36	j	j	
+sk	37	k	k	
+sk	38	l	l	
+sk	39	ô	ocircumflex	
+sk	40	§	section	
+sk	41	;	semicolon	
+sk	42		Shift_L	
+sk	43	ň	ncaron	
+sk	44	y	y	
+sk	45	x	x	
+sk	46	c	c	
+sk	47	v	v	
+sk	48	b	b	
+sk	49	n	n	
+sk	50	m	m	
+sk	51	,	comma	
+sk	52	.	period	
+sk	53	-	minus	
+sk	54		Shift_R	
+sk	55	*	KP_Multiply	
+sk	56		Alt_L	
+sk	57	 	space	
+sk	58		Caps_Lock	
+sk	59		F1	
+sk	60		F2	
+sk	61		F3	
+sk	62		F4	
+sk	63		F5	
+sk	64		F6	
+sk	65		F7	
+sk	66		F8	
+sk	67		F9	
+sk	68		F10	
+sk	69		Num_Lock	
+sk	70		Scroll_Lock	
+sk	71		KP_Home	7
+sk	72		KP_Up	8
+sk	73		KP_Prior	9
+sk	74	-	KP_Subtract	
+sk	75		KP_Left	4
+sk	76		KP_Begin	5
+sk	77		KP_Right	6
+sk	78	+	KP_Add	
+sk	79		KP_End	1
+sk	80		KP_Down	2
+sk	81		KP_Next	3
+sk	82		KP_Insert	0
+sk	83		KP_Delete	
+sk	84		ISO_Level3_Shift	
+sk	85		F24	
+sk	86	\	backslash	
+sk	87		F11	
+sk	88		F12	
+sk	90		Katakana	
+sk	91		Hiragana	
+sk	92		Henkan_Mode	
+sk	93		Hiragana_Katakana	
+sk	94		Muhenkan	
+sk	96		KP_Enter	
+sk	97		Control_R	
+sk	98	/	KP_Divide	
+sk	99		Print	
+sk	100		ISO_Level3_Shift	
+sk	101		Linefeed	
+sk	102		Home	
+sk	103		Up	
+sk	104		Prior	
+sk	105		Left	
+sk	106		Right	
+sk	107		End	
+sk	108		Down	
+sk	109		Next	
+sk	110		Insert	
+sk	111		Delete	
+sk	113		XF86AudioMute	
+sk	114		XF86AudioLowerVolume	
+sk	115		XF86AudioRaiseVolume	
+sk	116		XF86PowerOff	
+sk	117	=	KP_Equal	
+sk	118	±	plusminus	
+sk	119		Pause	
+sk	120		XF86LaunchA	
+sk	121	.	KP_Decimal	
+sk	122		Hangul	
+sk	123		Hangul_Hanja	
+sk	125		Super_L	
+sk	126		Super_R	
+sk	127		Menu	
+sk	128		Cancel	
+sk	129		Redo	
+sk	130		SunProps	
+sk	131		Undo	
+sk	132		SunFront	
+sk	133		XF86Copy	
+sk	134		XF86Open	
+sk	135		XF86Paste	
+sk	136		Find	
+sk	137		XF86Cut	
+sk	138		Help	
+sk	139		XF86MenuKB	
+sk	140		XF86Calculator	
+sk	142		XF86Sleep	
+sk	143		XF86WakeUp	
+sk	144		XF86Explorer	
+sk	145		XF86Send	
+sk	147		XF86Xfer	
+sk	148		XF86Launch1	
+sk	149		XF86Launch2	
+sk	150		XF86WWW	
+sk	151		XF86DOS	
+sk	152		XF86ScreenSaver	
+sk	153		XF86RotateWindows	
+sk	154		XF86TaskPane	
+sk	155		XF86Mail	
+sk	156		XF86Favorites	
+sk	157		XF86MyComputer	
+sk	158		XF86Back	
+sk	159		XF86Forward	
+sk	161		XF86Eject	
+sk	162		XF86Eject	
+sk	163		XF86AudioNext	
+sk	164		XF86AudioPlay	
+sk	165		XF86AudioPrev	
+sk	166		XF86AudioStop	
+sk	167		XF86AudioRecord	
+sk	168		XF86AudioRewind	
+sk	169		XF86Phone	
+sk	171		XF86Tools	
+sk	172		XF86HomePage	
+sk	173		XF86Reload	
+sk	174		XF86Close	
+sk	177		XF86ScrollUp	
+sk	178		XF86ScrollDown	
+sk	179	(	parenleft	
+sk	180	)	parenright	
+sk	181		XF86New	
+sk	182		Redo	
+sk	183		XF86Tools	
+sk	184		XF86Launch5	
+sk	185		XF86Launch6	
+sk	186		XF86Launch7	
+sk	187		XF86Launch8	
+sk	188		XF86Launch9	
+sk	189		F19	
+sk	190		XF86AudioMicMute	
+sk	191		XF86TouchpadToggle	
+sk	192		XF86TouchpadOn	
+sk	193		F23	
+sk	194		F24	
+sk	195		ISO_Level5_Shift	
+sk	200		XF86AudioPlay	
+sk	201		XF86AudioPause	
+sk	202		XF86Launch3	
+sk	203		XF86Launch4	
+sk	204		XF86LaunchB	
+sk	205		XF86Suspend	
+sk	206		XF86Close	
+sk	207		XF86AudioPlay	
+sk	208		XF86AudioForward	
+sk	209		XF86AudioBassBoost	
+sk	210		Print	
+sk	212		XF86WebCam	
+sk	213		XF86AudioPreset	
+sk	215		XF86Mail	
+sk	216		XF86Messenger	
+sk	217		XF86Search	
+sk	218		XF86Go	
+sk	219		XF86Finance	
+sk	220		XF86Game	
+sk	221		XF86Shop	
+sk	223		Cancel	
+sk	224		XF86MonBrightnessDown	
+sk	225		XF86MonBrightnessUp	
+sk	226		XF86AudioMedia	
+sk	227		XF86Display	
+sk	228		XF86KbdLightOnOff	
+sk	229		XF86KbdBrightnessDown	
+sk	230		XF86KbdBrightnessUp	
+sk	231		XF86Send	
+sk	232		XF86Reply	
+sk	233		XF86MailForward	
+sk	234		XF86Save	
+sk	235		XF86Documents	
+sk	236		XF86Battery	
+sk	237		XF86Bluetooth	
+sk	238		XF86WLAN	
+sk	239		XF86UWB	
+sk	241		XF86Next_VMode	
+sk	242		XF86Prev_VMode	
+sk	243		XF86MonBrightnessCycle	
+sk	244		XF86BrightnessAuto	
+sk	245		XF86DisplayOff	
+sk	246		XF86WWAN	
+sk	247		XF86RFKill	
+hu	1		Escape	
+hu	2	1	1	1
+hu	3	2	2	2
+hu	4	3	3	3
+hu	5	4	4	4
+hu	6	5	5	5
+hu	7	6	6	6
+hu	8	7	7	7
+hu	9	8	8	8
+hu	10	9	9	9
+hu	11	ö	odiaeresis	
+hu	12	ü	udiaeresis	
+hu	13	ó	oacute	
+hu	14		BackSpace	
+hu	15		Tab	
+hu	16	q	q	
+hu	17	w	w	
+hu	18	e	e	
+hu	19	r	r	
+hu	20	t	t	
+hu	21	z	z	
+hu	22	u	u	
+hu	23	i	i	
+hu	24	o	o	
+hu	25	p	p	
+hu	26	ő	odoubleacute	
+hu	27	ú	uacute	
+hu	28		Return	
+hu	29		Control_L	
+hu	30	a	a	
+hu	31	s	s	
+hu	32	d	d	
+hu	33	f	f	
+hu	34	g	g	
+hu	35	h	h	
+hu	36	j	j	
+hu	37	k	k	
+hu	38	l	l	
+hu	39	é	eacute	
+hu	40	á	aacute	
+hu	41	0	0	0
+hu	42		Shift_L	
+hu	43	ű	udoubleacute	
+hu	44	y	y	
+hu	45	x	x	
+hu	46	c	c	
+hu	47	v	v	
+hu	48	b	b	
+hu	49	n	n	
+hu	50	m	m	
+hu	51	,	comma	
+hu	52	.	period	
+hu	53	-	minus	
+hu	54		Shift_R	
+hu	55	*	KP_Multiply	
+hu	56		Alt_L	
+hu	57	 	space	
+hu	58		Caps_Lock	
+hu	59		F1	
+hu	60		F2	
+hu	61		F3	
+hu	62		F4	
+hu	63		F5	
+hu	64		F6	
+hu	65		F7	
+hu	66		F8	
+hu	67		F9	
+hu	68		F10	
+hu	69		Num_Lock	
+hu	70		Scroll_Lock	
+hu	71		KP_Home	7
+hu	72		KP_Up	8
+hu	73		KP_Prior	9
+hu	74	-	KP_Subtract	
+hu	75		KP_Left	4
+hu	76		KP_Begin	5
+hu	77		KP_Right	6
+hu	78	+	KP_Add	
+hu	79		KP_End	1
+hu	80		KP_Down	2
+hu	81		KP_Next	3
+hu	82		KP_Insert	0
+hu	83		KP_Delete	
+hu	84		ISO_Level3_Shift	
+hu	85		F24	
+hu	86	í	iacute	
+hu	87		F11	
+hu	88		F12	
+hu	90		Katakana	
+hu	91		Hiragana	
+hu	92		Henkan_Mode	
+hu	93		Hiragana_Katakana	
+hu	94		Muhenkan	
+hu	96		KP_Enter	
+hu	97		Control_R	
+hu	98	/	KP_Divide	
+hu	99		Print	
+hu	100		ISO_Level3_Shift	
+hu	101		Linefeed	
+hu	102		Home	
+hu	103		Up	
+hu	104		Prior	
+hu	105		Left	
+hu	106		Right	
+hu	107		End	
+hu	108		Down	
+hu	109		Next	
+hu	110		Insert	
+hu	111		Delete	
+hu	113		XF86AudioMute	
+hu	114		XF86AudioLowerVolume	
+hu	115		XF86AudioRaiseVolume	
+hu	116		XF86PowerOff	
+hu	117	=	KP_Equal	
+hu	118	±	plusminus	
+hu	119		Pause	
+hu	120		XF86LaunchA	
+hu	121	.	KP_Decimal	
+hu	122		Hangul	
+hu	123		Hangul_Hanja	
+hu	125		Super_L	
+hu	126		Super_R	
+hu	127		Menu	
+hu	128		Cancel	
+hu	129		Redo	
+hu	130		SunProps	
+hu	131		Undo	
+hu	132		SunFront	
+hu	133		XF86Copy	
+hu	134		XF86Open	
+hu	135		XF86Paste	
+hu	136		Find	
+hu	137		XF86Cut	
+hu	138		Help	
+hu	139		XF86MenuKB	
+hu	140		XF86Calculator	
+hu	142		XF86Sleep	
+hu	143		XF86WakeUp	
+hu	144		XF86Explorer	
+hu	145		XF86Send	
+hu	147		XF86Xfer	
+hu	148		XF86Launch1	
+hu	149		XF86Launch2	
+hu	150		XF86WWW	
+hu	151		XF86DOS	
+hu	152		XF86ScreenSaver	
+hu	153		XF86RotateWindows	
+hu	154		XF86TaskPane	
+hu	155		XF86Mail	
+hu	156		XF86Favorites	
+hu	157		XF86MyComputer	
+hu	158		XF86Back	
+hu	159		XF86Forward	
+hu	161		XF86Eject	
+hu	162		XF86Eject	
+hu	163		XF86AudioNext	
+hu	164		XF86AudioPlay	
+hu	165		XF86AudioPrev	
+hu	166		XF86AudioStop	
+hu	167		XF86AudioRecord	
+hu	168		XF86AudioRewind	
+hu	169		XF86Phone	
+hu	171		XF86Tools	
+hu	172		XF86HomePage	
+hu	173		XF86Reload	
+hu	174		XF86Close	
+hu	177		XF86ScrollUp	
+hu	178		XF86ScrollDown	
+hu	179	(	parenleft	
+hu	180	)	parenright	
+hu	181		XF86New	
+hu	182		Redo	
+hu	183		XF86Tools	
+hu	184		XF86Launch5	
+hu	185		XF86Launch6	
+hu	186		XF86Launch7	
+hu	187		XF86Launch8	
+hu	188		XF86Launch9	
+hu	189		F19	
+hu	190		XF86AudioMicMute	
+hu	191		XF86TouchpadToggle	
+hu	192		XF86TouchpadOn	
+hu	193		F23	
+hu	194		F24	
+hu	195		ISO_Level5_Shift	
+hu	200		XF86AudioPlay	
+hu	201		XF86AudioPause	
+hu	202		XF86Launch3	
+hu	203		XF86Launch4	
+hu	204		XF86LaunchB	
+hu	205		XF86Suspend	
+hu	206		XF86Close	
+hu	207		XF86AudioPlay	
+hu	208		XF86AudioForward	
+hu	209		XF86AudioBassBoost	
+hu	210		Print	
+hu	212		XF86WebCam	
+hu	213		XF86AudioPreset	
+hu	215		XF86Mail	
+hu	216		XF86Messenger	
+hu	217		XF86Search	
+hu	218		XF86Go	
+hu	219		XF86Finance	
+hu	220		XF86Game	
+hu	221		XF86Shop	
+hu	223		Cancel	
+hu	224		XF86MonBrightnessDown	
+hu	225		XF86MonBrightnessUp	
+hu	226		XF86AudioMedia	
+hu	227		XF86Display	
+hu	228		XF86KbdLightOnOff	
+hu	229		XF86KbdBrightnessDown	
+hu	230		XF86KbdBrightnessUp	
+hu	231		XF86Send	
+hu	232		XF86Reply	
+hu	233		XF86MailForward	
+hu	234		XF86Save	
+hu	235		XF86Documents	
+hu	236		XF86Battery	
+hu	237		XF86Bluetooth	
+hu	238		XF86WLAN	
+hu	239		XF86UWB	
+hu	241		XF86Next_VMode	
+hu	242		XF86Prev_VMode	
+hu	243		XF86MonBrightnessCycle	
+hu	244		XF86BrightnessAuto	
+hu	245		XF86DisplayOff	
+hu	246		XF86WWAN	
+hu	247		XF86RFKill	
+ro	1		Escape	
+ro	2	1	1	1
+ro	3	2	2	2
+ro	4	3	3	3
+ro	5	4	4	4
+ro	6	5	5	5
+ro	7	6	6	6
+ro	8	7	7	7
+ro	9	8	8	8
+ro	10	9	9	9
+ro	11	0	0	0
+ro	12	-	minus	
+ro	13	=	equal	
+ro	14		BackSpace	
+ro	15		Tab	
+ro	16	q	q	
+ro	17	w	w	
+ro	18	e	e	
+ro	19	r	r	
+ro	20	t	t	
+ro	21	y	y	
+ro	22	u	u	
+ro	23	i	i	
+ro	24	o	o	
+ro	25	p	p	
+ro	26	[	bracketleft	
+ro	27	]	bracketright	
+ro	28		Return	
+ro	29		Control_L	
+ro	30	a	a	
+ro	31	s	s	
+ro	32	d	d	
+ro	33	f	f	
+ro	34	g	g	
+ro	35	h	h	
+ro	36	j	j	
+ro	37	k	k	
+ro	38	l	l	
+ro	39	;	semicolon	
+ro	40	'	apostrophe	
+ro	41	`	grave	
+ro	42		Shift_L	
+ro	43	\	backslash	
+ro	44	z	z	
+ro	45	x	x	
+ro	46	c	c	
+ro	47	v	v	
+ro	48	b	b	
+ro	49	n	n	
+ro	50	m	m	
+ro	51	,	comma	
+ro	52	.	period	
+ro	53	/	slash	
+ro	54		Shift_R	
+ro	55	*	KP_Multiply	
+ro	56		Alt_L	
+ro	57	 	space	
+ro	58		Caps_Lock	
+ro	59		F1	
+ro	60		F2	
+ro	61		F3	
+ro	62		F4	
+ro	63		F5	
+ro	64		F6	
+ro	65		F7	
+ro	66		F8	
+ro	67		F9	
+ro	68		F10	
+ro	69		Num_Lock	
+ro	70		Scroll_Lock	
+ro	71		KP_Home	7
+ro	72		KP_Up	8
+ro	73		KP_Prior	9
+ro	74	-	KP_Subtract	
+ro	75		KP_Left	4
+ro	76		KP_Begin	5
+ro	77		KP_Right	6
+ro	78	+	KP_Add	
+ro	79		KP_End	1
+ro	80		KP_Down	2
+ro	81		KP_Next	3
+ro	82		KP_Insert	0
+ro	83		KP_Delete	
+ro	84		ISO_Level3_Shift	
+ro	85		F24	
+ro	86	\	backslash	
+ro	87		F11	
+ro	88		F12	
+ro	90		Katakana	
+ro	91		Hiragana	
+ro	92		Henkan_Mode	
+ro	93		Hiragana_Katakana	
+ro	94		Muhenkan	
+ro	96		KP_Enter	
+ro	97		Control_R	
+ro	98	/	KP_Divide	
+ro	99		Print	
+ro	100		ISO_Level3_Shift	
+ro	101		Linefeed	
+ro	102		Home	
+ro	103		Up	
+ro	104		Prior	
+ro	105		Left	
+ro	106		Right	
+ro	107		End	
+ro	108		Down	
+ro	109		Next	
+ro	110		Insert	
+ro	111		Delete	
+ro	113		XF86AudioMute	
+ro	114		XF86AudioLowerVolume	
+ro	115		XF86AudioRaiseVolume	
+ro	116		XF86PowerOff	
+ro	117	=	KP_Equal	
+ro	118	±	plusminus	
+ro	119		Pause	
+ro	120		XF86LaunchA	
+ro	121	.	KP_Decimal	
+ro	122		Hangul	
+ro	123		Hangul_Hanja	
+ro	125		Super_L	
+ro	126		Super_R	
+ro	127		Menu	
+ro	128		Cancel	
+ro	129		Redo	
+ro	130		SunProps	
+ro	131		Undo	
+ro	132		SunFront	
+ro	133		XF86Copy	
+ro	134		XF86Open	
+ro	135		XF86Paste	
+ro	136		Find	
+ro	137		XF86Cut	
+ro	138		Help	
+ro	139		XF86MenuKB	
+ro	140		XF86Calculator	
+ro	142		XF86Sleep	
+ro	143		XF86WakeUp	
+ro	144		XF86Explorer	
+ro	145		XF86Send	
+ro	147		XF86Xfer	
+ro	148		XF86Launch1	
+ro	149		XF86Launch2	
+ro	150		XF86WWW	
+ro	151		XF86DOS	
+ro	152		XF86ScreenSaver	
+ro	153		XF86RotateWindows	
+ro	154		XF86TaskPane	
+ro	155		XF86Mail	
+ro	156		XF86Favorites	
+ro	157		XF86MyComputer	
+ro	158		XF86Back	
+ro	159		XF86Forward	
+ro	161		XF86Eject	
+ro	162		XF86Eject	
+ro	163		XF86AudioNext	
+ro	164		XF86AudioPlay	
+ro	165		XF86AudioPrev	
+ro	166		XF86AudioStop	
+ro	167		XF86AudioRecord	
+ro	168		XF86AudioRewind	
+ro	169		XF86Phone	
+ro	171		XF86Tools	
+ro	172		XF86HomePage	
+ro	173		XF86Reload	
+ro	174		XF86Close	
+ro	177		XF86ScrollUp	
+ro	178		XF86ScrollDown	
+ro	179	(	parenleft	
+ro	180	)	parenright	
+ro	181		XF86New	
+ro	182		Redo	
+ro	183		XF86Tools	
+ro	184		XF86Launch5	
+ro	185		XF86Launch6	
+ro	186		XF86Launch7	
+ro	187		XF86Launch8	
+ro	188		XF86Launch9	
+ro	189		F19	
+ro	190		XF86AudioMicMute	
+ro	191		XF86TouchpadToggle	
+ro	192		XF86TouchpadOn	
+ro	193		F23	
+ro	194		F24	
+ro	195		ISO_Level5_Shift	
+ro	200		XF86AudioPlay	
+ro	201		XF86AudioPause	
+ro	202		XF86Launch3	
+ro	203		XF86Launch4	
+ro	204		XF86LaunchB	
+ro	205		XF86Suspend	
+ro	206		XF86Close	
+ro	207		XF86AudioPlay	
+ro	208		XF86AudioForward	
+ro	209		XF86AudioBassBoost	
+ro	210		Print	
+ro	212		XF86WebCam	
+ro	213		XF86AudioPreset	
+ro	215		XF86Mail	
+ro	216		XF86Messenger	
+ro	217		XF86Search	
+ro	218		XF86Go	
+ro	219		XF86Finance	
+ro	220		XF86Game	
+ro	221		XF86Shop	
+ro	223		Cancel	
+ro	224		XF86MonBrightnessDown	
+ro	225		XF86MonBrightnessUp	
+ro	226		XF86AudioMedia	
+ro	227		XF86Display	
+ro	228		XF86KbdLightOnOff	
+ro	229		XF86KbdBrightnessDown	
+ro	230		XF86KbdBrightnessUp	
+ro	231		XF86Send	
+ro	232		XF86Reply	
+ro	233		XF86MailForward	
+ro	234		XF86Save	
+ro	235		XF86Documents	
+ro	236		XF86Battery	
+ro	237		XF86Bluetooth	
+ro	238		XF86WLAN	
+ro	239		XF86UWB	
+ro	241		XF86Next_VMode	
+ro	242		XF86Prev_VMode	
+ro	243		XF86MonBrightnessCycle	
+ro	244		XF86BrightnessAuto	
+ro	245		XF86DisplayOff	
+ro	246		XF86WWAN	
+ro	247		XF86RFKill	
+hr	1		Escape	
+hr	2	1	1	1
+hr	3	2	2	2
+hr	4	3	3	3
+hr	5	4	4	4
+hr	6	5	5	5
+hr	7	6	6	6
+hr	8	7	7	7
+hr	9	8	8	8
+hr	10	9	9	9
+hr	11	0	0	0
+hr	12	'	apostrophe	
+hr	13	+	plus	
+hr	14		BackSpace	
+hr	15		Tab	
+hr	16	q	q	
+hr	17	w	w	
+hr	18	e	e	
+hr	19	r	r	
+hr	20	t	t	
+hr	21	z	z	
+hr	22	u	u	
+hr	23	i	i	
+hr	24	o	o	
+hr	25	p	p	
+hr	26	š	scaron	
+hr	27	đ	dstroke	
+hr	28		Return	
+hr	29		Control_L	
+hr	30	a	a	
+hr	31	s	s	
+hr	32	d	d	
+hr	33	f	f	
+hr	34	g	g	
+hr	35	h	h	
+hr	36	j	j	
+hr	37	k	k	
+hr	38	l	l	
+hr	39	č	ccaron	
+hr	40	ć	cacute	
+hr	41	`	grave	
+hr	42		Shift_L	
+hr	43	ž	zcaron	
+hr	44	y	y	
+hr	45	x	x	
+hr	46	c	c	
+hr	47	v	v	
+hr	48	b	b	
+hr	49	n	n	
+hr	50	m	m	
+hr	51	,	comma	
+hr	52	.	period	
+hr	53	-	minus	
+hr	54		Shift_R	
+hr	55	*	KP_Multiply	
+hr	56		Alt_L	
+hr	57	 	space	
+hr	58		Caps_Lock	
+hr	59		F1	
+hr	60		F2	
+hr	61		F3	
+hr	62		F4	
+hr	63		F5	
+hr	64		F6	
+hr	65		F7	
+hr	66		F8	
+hr	67		F9	
+hr	68		F10	
+hr	69		Num_Lock	
+hr	70		Scroll_Lock	
+hr	71		KP_Home	7
+hr	72		KP_Up	8
+hr	73		KP_Prior	9
+hr	74	-	KP_Subtract	
+hr	75		KP_Left	4
+hr	76		KP_Begin	5
+hr	77		KP_Right	6
+hr	78	+	KP_Add	
+hr	79		KP_End	1
+hr	80		KP_Down	2
+hr	81		KP_Next	3
+hr	82		KP_Insert	0
+hr	83		KP_Delete	
+hr	84		ISO_Level3_Shift	
+hr	85		F24	
+hr	86	<	less	
+hr	87		F11	
+hr	88		F12	
+hr	90		Katakana	
+hr	91		Hiragana	
+hr	92		Henkan_Mode	
+hr	93		Hiragana_Katakana	
+hr	94		Muhenkan	
+hr	96		KP_Enter	
+hr	97		Control_R	
+hr	98	/	KP_Divide	
+hr	99		Print	
+hr	100		ISO_Level3_Shift	
+hr	101		Linefeed	
+hr	102		Home	
+hr	103		Up	
+hr	104		Prior	
+hr	105		Left	
+hr	106		Right	
+hr	107		End	
+hr	108		Down	
+hr	109		Next	
+hr	110		Insert	
+hr	111		Delete	
+hr	113		XF86AudioMute	
+hr	114		XF86AudioLowerVolume	
+hr	115		XF86AudioRaiseVolume	
+hr	116		XF86PowerOff	
+hr	117	=	KP_Equal	
+hr	118	±	plusminus	
+hr	119		Pause	
+hr	120		XF86LaunchA	
+hr	121	.	KP_Decimal	
+hr	122		Hangul	
+hr	123		Hangul_Hanja	
+hr	125		Super_L	
+hr	126		Super_R	
+hr	127		Menu	
+hr	128		Cancel	
+hr	129		Redo	
+hr	130		SunProps	
+hr	131		Undo	
+hr	132		SunFront	
+hr	133		XF86Copy	
+hr	134		XF86Open	
+hr	135		XF86Paste	
+hr	136		Find	
+hr	137		XF86Cut	
+hr	138		Help	
+hr	139		XF86MenuKB	
+hr	140		XF86Calculator	
+hr	142		XF86Sleep	
+hr	143		XF86WakeUp	
+hr	144		XF86Explorer	
+hr	145		XF86Send	
+hr	147		XF86Xfer	
+hr	148		XF86Launch1	
+hr	149		XF86Launch2	
+hr	150		XF86WWW	
+hr	151		XF86DOS	
+hr	152		XF86ScreenSaver	
+hr	153		XF86RotateWindows	
+hr	154		XF86TaskPane	
+hr	155		XF86Mail	
+hr	156		XF86Favorites	
+hr	157		XF86MyComputer	
+hr	158		XF86Back	
+hr	159		XF86Forward	
+hr	161		XF86Eject	
+hr	162		XF86Eject	
+hr	163		XF86AudioNext	
+hr	164		XF86AudioPlay	
+hr	165		XF86AudioPrev	
+hr	166		XF86AudioStop	
+hr	167		XF86AudioRecord	
+hr	168		XF86AudioRewind	
+hr	169		XF86Phone	
+hr	171		XF86Tools	
+hr	172		XF86HomePage	
+hr	173		XF86Reload	
+hr	174		XF86Close	
+hr	177		XF86ScrollUp	
+hr	178		XF86ScrollDown	
+hr	179	(	parenleft	
+hr	180	)	parenright	
+hr	181		XF86New	
+hr	182		Redo	
+hr	183		XF86Tools	
+hr	184		XF86Launch5	
+hr	185		XF86Launch6	
+hr	186		XF86Launch7	
+hr	187		XF86Launch8	
+hr	188		XF86Launch9	
+hr	189		F19	
+hr	190		XF86AudioMicMute	
+hr	191		XF86TouchpadToggle	
+hr	192		XF86TouchpadOn	
+hr	193		F23	
+hr	194		F24	
+hr	195		ISO_Level5_Shift	
+hr	200		XF86AudioPlay	
+hr	201		XF86AudioPause	
+hr	202		XF86Launch3	
+hr	203		XF86Launch4	
+hr	204		XF86LaunchB	
+hr	205		XF86Suspend	
+hr	206		XF86Close	
+hr	207		XF86AudioPlay	
+hr	208		XF86AudioForward	
+hr	209		XF86AudioBassBoost	
+hr	210		Print	
+hr	212		XF86WebCam	
+hr	213		XF86AudioPreset	
+hr	215		XF86Mail	
+hr	216		XF86Messenger	
+hr	217		XF86Search	
+hr	218		XF86Go	
+hr	219		XF86Finance	
+hr	220		XF86Game	
+hr	221		XF86Shop	
+hr	223		Cancel	
+hr	224		XF86MonBrightnessDown	
+hr	225		XF86MonBrightnessUp	
+hr	226		XF86AudioMedia	
+hr	227		XF86Display	
+hr	228		XF86KbdLightOnOff	
+hr	229		XF86KbdBrightnessDown	
+hr	230		XF86KbdBrightnessUp	
+hr	231		XF86Send	
+hr	232		XF86Reply	
+hr	233		XF86MailForward	
+hr	234		XF86Save	
+hr	235		XF86Documents	
+hr	236		XF86Battery	
+hr	237		XF86Bluetooth	
+hr	238		XF86WLAN	
+hr	239		XF86UWB	
+hr	241		XF86Next_VMode	
+hr	242		XF86Prev_VMode	
+hr	243		XF86MonBrightnessCycle	
+hr	244		XF86BrightnessAuto	
+hr	245		XF86DisplayOff	
+hr	246		XF86WWAN	
+hr	247		XF86RFKill	
+si	1		Escape	
+si	2	1	1	1
+si	3	2	2	2
+si	4	3	3	3
+si	5	4	4	4
+si	6	5	5	5
+si	7	6	6	6
+si	8	7	7	7
+si	9	8	8	8
+si	10	9	9	9
+si	11	0	0	0
+si	12	'	apostrophe	
+si	13	+	plus	
+si	14		BackSpace	
+si	15		Tab	
+si	16	q	q	
+si	17	w	w	
+si	18	e	e	
+si	19	r	r	
+si	20	t	t	
+si	21	z	z	
+si	22	u	u	
+si	23	i	i	
+si	24	o	o	
+si	25	p	p	
+si	26	š	scaron	
+si	27	đ	dstroke	
+si	28		Return	
+si	29		Control_L	
+si	30	a	a	
+si	31	s	s	
+si	32	d	d	
+si	33	f	f	
+si	34	g	g	
+si	35	h	h	
+si	36	j	j	
+si	37	k	k	
+si	38	l	l	
+si	39	č	ccaron	
+si	40	ć	cacute	
+si	41	¸	cedilla	
+si	42		Shift_L	
+si	43	ž	zcaron	
+si	44	y	y	
+si	45	x	x	
+si	46	c	c	
+si	47	v	v	
+si	48	b	b	
+si	49	n	n	
+si	50	m	m	
+si	51	,	comma	
+si	52	.	period	
+si	53	-	minus	
+si	54		Shift_R	
+si	55	*	KP_Multiply	
+si	56		Alt_L	
+si	57	 	space	
+si	58		Caps_Lock	
+si	59		F1	
+si	60		F2	
+si	61		F3	
+si	62		F4	
+si	63		F5	
+si	64		F6	
+si	65		F7	
+si	66		F8	
+si	67		F9	
+si	68		F10	
+si	69		Num_Lock	
+si	70		Scroll_Lock	
+si	71		KP_Home	7
+si	72		KP_Up	8
+si	73		KP_Prior	9
+si	74	-	KP_Subtract	
+si	75		KP_Left	4
+si	76		KP_Begin	5
+si	77		KP_Right	6
+si	78	+	KP_Add	
+si	79		KP_End	1
+si	80		KP_Down	2
+si	81		KP_Next	3
+si	82		KP_Insert	0
+si	83		KP_Delete	
+si	84		ISO_Level3_Shift	
+si	85		F24	
+si	86	<	less	
+si	87		F11	
+si	88		F12	
+si	90		Katakana	
+si	91		Hiragana	
+si	92		Henkan_Mode	
+si	93		Hiragana_Katakana	
+si	94		Muhenkan	
+si	96		KP_Enter	
+si	97		Control_R	
+si	98	/	KP_Divide	
+si	99		Print	
+si	100		ISO_Level3_Shift	
+si	101		Linefeed	
+si	102		Home	
+si	103		Up	
+si	104		Prior	
+si	105		Left	
+si	106		Right	
+si	107		End	
+si	108		Down	
+si	109		Next	
+si	110		Insert	
+si	111		Delete	
+si	113		XF86AudioMute	
+si	114		XF86AudioLowerVolume	
+si	115		XF86AudioRaiseVolume	
+si	116		XF86PowerOff	
+si	117	=	KP_Equal	
+si	118	±	plusminus	
+si	119		Pause	
+si	120		XF86LaunchA	
+si	121	.	KP_Decimal	
+si	122		Hangul	
+si	123		Hangul_Hanja	
+si	125		Super_L	
+si	126		Super_R	
+si	127		Menu	
+si	128		Cancel	
+si	129		Redo	
+si	130		SunProps	
+si	131		Undo	
+si	132		SunFront	
+si	133		XF86Copy	
+si	134		XF86Open	
+si	135		XF86Paste	
+si	136		Find	
+si	137		XF86Cut	
+si	138		Help	
+si	139		XF86MenuKB	
+si	140		XF86Calculator	
+si	142		XF86Sleep	
+si	143		XF86WakeUp	
+si	144		XF86Explorer	
+si	145		XF86Send	
+si	147		XF86Xfer	
+si	148		XF86Launch1	
+si	149		XF86Launch2	
+si	150		XF86WWW	
+si	151		XF86DOS	
+si	152		XF86ScreenSaver	
+si	153		XF86RotateWindows	
+si	154		XF86TaskPane	
+si	155		XF86Mail	
+si	156		XF86Favorites	
+si	157		XF86MyComputer	
+si	158		XF86Back	
+si	159		XF86Forward	
+si	161		XF86Eject	
+si	162		XF86Eject	
+si	163		XF86AudioNext	
+si	164		XF86AudioPlay	
+si	165		XF86AudioPrev	
+si	166		XF86AudioStop	
+si	167		XF86AudioRecord	
+si	168		XF86AudioRewind	
+si	169		XF86Phone	
+si	171		XF86Tools	
+si	172		XF86HomePage	
+si	173		XF86Reload	
+si	174		XF86Close	
+si	177		XF86ScrollUp	
+si	178		XF86ScrollDown	
+si	179	(	parenleft	
+si	180	)	parenright	
+si	181		XF86New	
+si	182		Redo	
+si	183		XF86Tools	
+si	184		XF86Launch5	
+si	185		XF86Launch6	
+si	186		XF86Launch7	
+si	187		XF86Launch8	
+si	188		XF86Launch9	
+si	189		F19	
+si	190		XF86AudioMicMute	
+si	191		XF86TouchpadToggle	
+si	192		XF86TouchpadOn	
+si	193		F23	
+si	194		F24	
+si	195		ISO_Level5_Shift	
+si	200		XF86AudioPlay	
+si	201		XF86AudioPause	
+si	202		XF86Launch3	
+si	203		XF86Launch4	
+si	204		XF86LaunchB	
+si	205		XF86Suspend	
+si	206		XF86Close	
+si	207		XF86AudioPlay	
+si	208		XF86AudioForward	
+si	209		XF86AudioBassBoost	
+si	210		Print	
+si	212		XF86WebCam	
+si	213		XF86AudioPreset	
+si	215		XF86Mail	
+si	216		XF86Messenger	
+si	217		XF86Search	
+si	218		XF86Go	
+si	219		XF86Finance	
+si	220		XF86Game	
+si	221		XF86Shop	
+si	223		Cancel	
+si	224		XF86MonBrightnessDown	
+si	225		XF86MonBrightnessUp	
+si	226		XF86AudioMedia	
+si	227		XF86Display	
+si	228		XF86KbdLightOnOff	
+si	229		XF86KbdBrightnessDown	
+si	230		XF86KbdBrightnessUp	
+si	231		XF86Send	
+si	232		XF86Reply	
+si	233		XF86MailForward	
+si	234		XF86Save	
+si	235		XF86Documents	
+si	236		XF86Battery	
+si	237		XF86Bluetooth	
+si	238		XF86WLAN	
+si	239		XF86UWB	
+si	241		XF86Next_VMode	
+si	242		XF86Prev_VMode	
+si	243		XF86MonBrightnessCycle	
+si	244		XF86BrightnessAuto	
+si	245		XF86DisplayOff	
+si	246		XF86WWAN	
+si	247		XF86RFKill	
+tr	1		Escape	
+tr	2	1	1	1
+tr	3	2	2	2
+tr	4	3	3	3
+tr	5	4	4	4
+tr	6	5	5	5
+tr	7	6	6	6
+tr	8	7	7	7
+tr	9	8	8	8
+tr	10	9	9	9
+tr	11	0	0	0
+tr	12	*	asterisk	
+tr	13	-	minus	
+tr	14		BackSpace	
+tr	15		Tab	
+tr	16	q	q	
+tr	17	w	w	
+tr	18	e	e	
+tr	19	r	r	
+tr	20	t	t	
+tr	21	y	y	
+tr	22	u	u	
+tr	23	ı	idotless	
+tr	24	o	o	
+tr	25	p	p	
+tr	26	ğ	gbreve	
+tr	27	ü	udiaeresis	
+tr	28		Return	
+tr	29		Control_L	
+tr	30	a	a	
+tr	31	s	s	
+tr	32	d	d	
+tr	33	f	f	
+tr	34	g	g	
+tr	35	h	h	
+tr	36	j	j	
+tr	37	k	k	
+tr	38	l	l	
+tr	39	ş	scedilla	
+tr	40	i	i	
+tr	41	""""	quotedbl	
+tr	42		Shift_L	
+tr	43	,	comma	
+tr	44	z	z	
+tr	45	x	x	
+tr	46	c	c	
+tr	47	v	v	
+tr	48	b	b	
+tr	49	n	n	
+tr	50	m	m	
+tr	51	ö	odiaeresis	
+tr	52	ç	ccedilla	
+tr	53	.	period	
+tr	54		Shift_R	
+tr	55	*	KP_Multiply	
+tr	56		Alt_L	
+tr	57	 	space	
+tr	58		Caps_Lock	
+tr	59		F1	
+tr	60		F2	
+tr	61		F3	
+tr	62		F4	
+tr	63		F5	
+tr	64		F6	
+tr	65		F7	
+tr	66		F8	
+tr	67		F9	
+tr	68		F10	
+tr	69		Num_Lock	
+tr	70		Scroll_Lock	
+tr	71		KP_Home	7
+tr	72		KP_Up	8
+tr	73		KP_Prior	9
+tr	74	-	KP_Subtract	
+tr	75		KP_Left	4
+tr	76		KP_Begin	5
+tr	77		KP_Right	6
+tr	78	+	KP_Add	
+tr	79		KP_End	1
+tr	80		KP_Down	2
+tr	81		KP_Next	3
+tr	82		KP_Insert	0
+tr	83		KP_Delete	
+tr	84		ISO_Level3_Shift	
+tr	85		F24	
+tr	86	<	less	
+tr	87		F11	
+tr	88		F12	
+tr	90		Katakana	
+tr	91		Hiragana	
+tr	92		Henkan_Mode	
+tr	93		Hiragana_Katakana	
+tr	94		Muhenkan	
+tr	96		KP_Enter	
+tr	97		Control_R	
+tr	98	/	KP_Divide	
+tr	99		Print	
+tr	100		ISO_Level3_Shift	
+tr	101		Linefeed	
+tr	102		Home	
+tr	103		Up	
+tr	104		Prior	
+tr	105		Left	
+tr	106		Right	
+tr	107		End	
+tr	108		Down	
+tr	109		Next	
+tr	110		Insert	
+tr	111		Delete	
+tr	113		XF86AudioMute	
+tr	114		XF86AudioLowerVolume	
+tr	115		XF86AudioRaiseVolume	
+tr	116		XF86PowerOff	
+tr	117	=	KP_Equal	
+tr	118	±	plusminus	
+tr	119		Pause	
+tr	120		XF86LaunchA	
+tr	121	.	KP_Decimal	
+tr	122		Hangul	
+tr	123		Hangul_Hanja	
+tr	125		Super_L	
+tr	126		Super_R	
+tr	127		Menu	
+tr	128		Cancel	
+tr	129		Redo	
+tr	130		SunProps	
+tr	131		Undo	
+tr	132		SunFront	
+tr	133		XF86Copy	
+tr	134		XF86Open	
+tr	135		XF86Paste	
+tr	136		Find	
+tr	137		XF86Cut	
+tr	138		Help	
+tr	139		XF86MenuKB	
+tr	140		XF86Calculator	
+tr	142		XF86Sleep	
+tr	143		XF86WakeUp	
+tr	144		XF86Explorer	
+tr	145		XF86Send	
+tr	147		XF86Xfer	
+tr	148		XF86Launch1	
+tr	149		XF86Launch2	
+tr	150		XF86WWW	
+tr	151		XF86DOS	
+tr	152		XF86ScreenSaver	
+tr	153		XF86RotateWindows	
+tr	154		XF86TaskPane	
+tr	155		XF86Mail	
+tr	156		XF86Favorites	
+tr	157		XF86MyComputer	
+tr	158		XF86Back	
+tr	159		XF86Forward	
+tr	161		XF86Eject	
+tr	162		XF86Eject	
+tr	163		XF86AudioNext	
+tr	164		XF86AudioPlay	
+tr	165		XF86AudioPrev	
+tr	166		XF86AudioStop	
+tr	167		XF86AudioRecord	
+tr	168		XF86AudioRewind	
+tr	169		XF86Phone	
+tr	171		XF86Tools	
+tr	172		XF86HomePage	
+tr	173		XF86Reload	
+tr	174		XF86Close	
+tr	177		XF86ScrollUp	
+tr	178		XF86ScrollDown	
+tr	179	(	parenleft	
+tr	180	)	parenright	
+tr	181		XF86New	
+tr	182		Redo	
+tr	183		XF86Tools	
+tr	184		XF86Launch5	
+tr	185		XF86Launch6	
+tr	186		XF86Launch7	
+tr	187		XF86Launch8	
+tr	188		XF86Launch9	
+tr	189		F19	
+tr	190		XF86AudioMicMute	
+tr	191		XF86TouchpadToggle	
+tr	192		XF86TouchpadOn	
+tr	193		F23	
+tr	194		F24	
+tr	195		ISO_Level5_Shift	
+tr	200		XF86AudioPlay	
+tr	201		XF86AudioPause	
+tr	202		XF86Launch3	
+tr	203		XF86Launch4	
+tr	204		XF86LaunchB	
+tr	205		XF86Suspend	
+tr	206		XF86Close	
+tr	207		XF86AudioPlay	
+tr	208		XF86AudioForward	
+tr	209		XF86AudioBassBoost	
+tr	210		Print	
+tr	212		XF86WebCam	
+tr	213		XF86AudioPreset	
+tr	215		XF86Mail	
+tr	216		XF86Messenger	
+tr	217		XF86Search	
+tr	218		XF86Go	
+tr	219		XF86Finance	
+tr	220		XF86Game	
+tr	221		XF86Shop	
+tr	223		Cancel	
+tr	224		XF86MonBrightnessDown	
+tr	225		XF86MonBrightnessUp	
+tr	226		XF86AudioMedia	
+tr	227		XF86Display	
+tr	228		XF86KbdLightOnOff	
+tr	229		XF86KbdBrightnessDown	
+tr	230		XF86KbdBrightnessUp	
+tr	231		XF86Send	
+tr	232		XF86Reply	
+tr	233		XF86MailForward	
+tr	234		XF86Save	
+tr	235		XF86Documents	
+tr	236		XF86Battery	
+tr	237		XF86Bluetooth	
+tr	238		XF86WLAN	
+tr	239		XF86UWB	
+tr	241		XF86Next_VMode	
+tr	242		XF86Prev_VMode	
+tr	243		XF86MonBrightnessCycle	
+tr	244		XF86BrightnessAuto	
+tr	245		XF86DisplayOff	
+tr	246		XF86WWAN	
+tr	247		XF86RFKill	
+ru	1		Escape	
+ru	2	1	1	1
+ru	3	2	2	2
+ru	4	3	3	3
+ru	5	4	4	4
+ru	6	5	5	5
+ru	7	6	6	6
+ru	8	7	7	7
+ru	9	8	8	8
+ru	10	9	9	9
+ru	11	0	0	0
+ru	12	-	minus	
+ru	13	=	equal	
+ru	14		BackSpace	
+ru	15		Tab	
+ru	16	й	Cyrillic_shorti	
+ru	17	ц	Cyrillic_tse	
+ru	18	у	Cyrillic_u	
+ru	19	к	Cyrillic_ka	
+ru	20	е	Cyrillic_ie	
+ru	21	н	Cyrillic_en	
+ru	22	г	Cyrillic_ghe	
+ru	23	ш	Cyrillic_sha	
+ru	24	щ	Cyrillic_shcha	
+ru	25	з	Cyrillic_ze	
+ru	26	х	Cyrillic_ha	
+ru	27	ъ	Cyrillic_hardsign	
+ru	28		Return	
+ru	29		Control_L	
+ru	30	ф	Cyrillic_ef	
+ru	31	ы	Cyrillic_yeru	
+ru	32	в	Cyrillic_ve	
+ru	33	а	Cyrillic_a	
+ru	34	п	Cyrillic_pe	
+ru	35	р	Cyrillic_er	
+ru	36	о	Cyrillic_o	
+ru	37	л	Cyrillic_el	
+ru	38	д	Cyrillic_de	
+ru	39	ж	Cyrillic_zhe	
+ru	40	э	Cyrillic_e	
+ru	41	ё	Cyrillic_io	
+ru	42		Shift_L	
+ru	43	\	backslash	
+ru	44	я	Cyrillic_ya	
+ru	45	ч	Cyrillic_che	
+ru	46	с	Cyrillic_es	
+ru	47	м	Cyrillic_em	
+ru	48	и	Cyrillic_i	
+ru	49	т	Cyrillic_te	
+ru	50	ь	Cyrillic_softsign	
+ru	51	б	Cyrillic_be	
+ru	52	ю	Cyrillic_yu	
+ru	53	.	period	
+ru	54		Shift_R	
+ru	55	*	KP_Multiply	
+ru	56		Alt_L	
+ru	57	 	space	
+ru	58		Caps_Lock	
+ru	59		F1	
+ru	60		F2	
+ru	61		F3	
+ru	62		F4	
+ru	63		F5	
+ru	64		F6	
+ru	65		F7	
+ru	66		F8	
+ru	67		F9	
+ru	68		F10	
+ru	69		Num_Lock	
+ru	70		Scroll_Lock	
+ru	71		KP_Home	7
+ru	72		KP_Up	8
+ru	73		KP_Prior	9
+ru	74	-	KP_Subtract	
+ru	75		KP_Left	4
+ru	76		KP_Begin	5
+ru	77		KP_Right	6
+ru	78	+	KP_Add	
+ru	79		KP_End	1
+ru	80		KP_Down	2
+ru	81		KP_Next	3
+ru	82		KP_Insert	0
+ru	83		KP_Delete	
+ru	84		ISO_Level3_Shift	
+ru	85		F24	
+ru	86	/	slash	
+ru	87		F11	
+ru	88		F12	
+ru	90		Katakana	
+ru	91		Hiragana	
+ru	92		Henkan_Mode	
+ru	93		Hiragana_Katakana	
+ru	94		Muhenkan	
+ru	96		KP_Enter	
+ru	97		Control_R	
+ru	98	/	KP_Divide	
+ru	99		Print	
+ru	100		Alt_R	
+ru	101		Linefeed	
+ru	102		Home	
+ru	103		Up	
+ru	104		Prior	
+ru	105		Left	
+ru	106		Right	
+ru	107		End	
+ru	108		Down	
+ru	109		Next	
+ru	110		Insert	
+ru	111		Delete	
+ru	113		XF86AudioMute	
+ru	114		XF86AudioLowerVolume	
+ru	115		XF86AudioRaiseVolume	
+ru	116		XF86PowerOff	
+ru	117	=	KP_Equal	
+ru	118	±	plusminus	
+ru	119		Pause	
+ru	120		XF86LaunchA	
+ru	121	.	KP_Decimal	
+ru	122		Hangul	
+ru	123		Hangul_Hanja	
+ru	125		Super_L	
+ru	126		Super_R	
+ru	127		Menu	
+ru	128		Cancel	
+ru	129		Redo	
+ru	130		SunProps	
+ru	131		Undo	
+ru	132		SunFront	
+ru	133		XF86Copy	
+ru	134		XF86Open	
+ru	135		XF86Paste	
+ru	136		Find	
+ru	137		XF86Cut	
+ru	138		Help	
+ru	139		XF86MenuKB	
+ru	140		XF86Calculator	
+ru	142		XF86Sleep	
+ru	143		XF86WakeUp	
+ru	144		XF86Explorer	
+ru	145		XF86Send	
+ru	147		XF86Xfer	
+ru	148		XF86Launch1	
+ru	149		XF86Launch2	
+ru	150		XF86WWW	
+ru	151		XF86DOS	
+ru	152		XF86ScreenSaver	
+ru	153		XF86RotateWindows	
+ru	154		XF86TaskPane	
+ru	155		XF86Mail	
+ru	156		XF86Favorites	
+ru	157		XF86MyComputer	
+ru	158		XF86Back	
+ru	159		XF86Forward	
+ru	161		XF86Eject	
+ru	162		XF86Eject	
+ru	163		XF86AudioNext	
+ru	164		XF86AudioPlay	
+ru	165		XF86AudioPrev	
+ru	166		XF86AudioStop	
+ru	167		XF86AudioRecord	
+ru	168		XF86AudioRewind	
+ru	169		XF86Phone	
+ru	171		XF86Tools	
+ru	172		XF86HomePage	
+ru	173		XF86Reload	
+ru	174		XF86Close	
+ru	177		XF86ScrollUp	
+ru	178		XF86ScrollDown	
+ru	179	(	parenleft	
+ru	180	)	parenright	
+ru	181		XF86New	
+ru	182		Redo	
+ru	183		XF86Tools	
+ru	184		XF86Launch5	
+ru	185		XF86Launch6	
+ru	186		XF86Launch7	
+ru	187		XF86Launch8	
+ru	188		XF86Launch9	
+ru	189		F19	
+ru	190		XF86AudioMicMute	
+ru	191		XF86TouchpadToggle	
+ru	192		XF86TouchpadOn	
+ru	193		F23	
+ru	194		F24	
+ru	195		ISO_Level5_Shift	
+ru	200		XF86AudioPlay	
+ru	201		XF86AudioPause	
+ru	202		XF86Launch3	
+ru	203		XF86Launch4	
+ru	204		XF86LaunchB	
+ru	205		XF86Suspend	
+ru	206		XF86Close	
+ru	207		XF86AudioPlay	
+ru	208		XF86AudioForward	
+ru	209		XF86AudioBassBoost	
+ru	210		Print	
+ru	212		XF86WebCam	
+ru	213		XF86AudioPreset	
+ru	215		XF86Mail	
+ru	216		XF86Messenger	
+ru	217		XF86Search	
+ru	218		XF86Go	
+ru	219		XF86Finance	
+ru	220		XF86Game	
+ru	221		XF86Shop	
+ru	223		Cancel	
+ru	224		XF86MonBrightnessDown	
+ru	225		XF86MonBrightnessUp	
+ru	226		XF86AudioMedia	
+ru	227		XF86Display	
+ru	228		XF86KbdLightOnOff	
+ru	229		XF86KbdBrightnessDown	
+ru	230		XF86KbdBrightnessUp	
+ru	231		XF86Send	
+ru	232		XF86Reply	
+ru	233		XF86MailForward	
+ru	234		XF86Save	
+ru	235		XF86Documents	
+ru	236		XF86Battery	
+ru	237		XF86Bluetooth	
+ru	238		XF86WLAN	
+ru	239		XF86UWB	
+ru	241		XF86Next_VMode	
+ru	242		XF86Prev_VMode	
+ru	243		XF86MonBrightnessCycle	
+ru	244		XF86BrightnessAuto	
+ru	245		XF86DisplayOff	
+ru	246		XF86WWAN	
+ru	247		XF86RFKill	
+ua	1		Escape	
+ua	2	1	1	1
+ua	3	2	2	2
+ua	4	3	3	3
+ua	5	4	4	4
+ua	6	5	5	5
+ua	7	6	6	6
+ua	8	7	7	7
+ua	9	8	8	8
+ua	10	9	9	9
+ua	11	0	0	0
+ua	12	-	minus	
+ua	13	=	equal	
+ua	14		BackSpace	
+ua	15		Tab	
+ua	16	й	Cyrillic_shorti	
+ua	17	ц	Cyrillic_tse	
+ua	18	у	Cyrillic_u	
+ua	19	к	Cyrillic_ka	
+ua	20	е	Cyrillic_ie	
+ua	21	н	Cyrillic_en	
+ua	22	г	Cyrillic_ghe	
+ua	23	ш	Cyrillic_sha	
+ua	24	щ	Cyrillic_shcha	
+ua	25	з	Cyrillic_ze	
+ua	26	х	Cyrillic_ha	
+ua	27	ї	Ukrainian_yi	
+ua	28		Return	
+ua	29		Control_L	
+ua	30	ф	Cyrillic_ef	
+ua	31	і	Ukrainian_i	
+ua	32	в	Cyrillic_ve	
+ua	33	а	Cyrillic_a	
+ua	34	п	Cyrillic_pe	
+ua	35	р	Cyrillic_er	
+ua	36	о	Cyrillic_o	
+ua	37	л	Cyrillic_el	
+ua	38	д	Cyrillic_de	
+ua	39	ж	Cyrillic_zhe	
+ua	40	є	Ukrainian_ie	
+ua	41	'	apostrophe	
+ua	42		Shift_L	
+ua	43	ґ	Ukrainian_ghe_with_upturn	
+ua	44	я	Cyrillic_ya	
+ua	45	ч	Cyrillic_che	
+ua	46	с	Cyrillic_es	
+ua	47	м	Cyrillic_em	
+ua	48	и	Cyrillic_i	
+ua	49	т	Cyrillic_te	
+ua	50	ь	Cyrillic_softsign	
+ua	51	б	Cyrillic_be	
+ua	52	ю	Cyrillic_yu	
+ua	53	.	period	
+ua	54		Shift_R	
+ua	55	*	KP_Multiply	
+ua	56		Alt_L	
+ua	57	 	space	
+ua	58		Caps_Lock	
+ua	59		F1	
+ua	60		F2	
+ua	61		F3	
+ua	62		F4	
+ua	63		F5	
+ua	64		F6	
+ua	65		F7	
+ua	66		F8	
+ua	67		F9	
+ua	68		F10	
+ua	69		Num_Lock	
+ua	70		Scroll_Lock	
+ua	71		KP_Home	7
+ua	72		KP_Up	8
+ua	73		KP_Prior	9
+ua	74	-	KP_Subtract	
+ua	75		KP_Left	4
+ua	76		KP_Begin	5
+ua	77		KP_Right	6
+ua	78	+	KP_Add	
+ua	79		KP_End	1
+ua	80		KP_Down	2
+ua	81		KP_Next	3
+ua	82		KP_Insert	0
+ua	83		KP_Delete	
+ua	84		ISO_Level3_Shift	
+ua	85		F24	
+ua	86	/	slash	
+ua	87		F11	
+ua	88		F12	
+ua	90		Katakana	
+ua	91		Hiragana	
+ua	92		Henkan_Mode	
+ua	93		Hiragana_Katakana	
+ua	94		Muhenkan	
+ua	96		KP_Enter	
+ua	97		Control_R	
+ua	98	/	KP_Divide	
+ua	99		Print	
+ua	100		ISO_Level3_Shift	
+ua	101		Linefeed	
+ua	102		Home	
+ua	103		Up	
+ua	104		Prior	
+ua	105		Left	
+ua	106		Right	
+ua	107		End	
+ua	108		Down	
+ua	109		Next	
+ua	110		Insert	
+ua	111		Delete	
+ua	113		XF86AudioMute	
+ua	114		XF86AudioLowerVolume	
+ua	115		XF86AudioRaiseVolume	
+ua	116		XF86PowerOff	
+ua	117	=	KP_Equal	
+ua	118	±	plusminus	
+ua	119		Pause	
+ua	120		XF86LaunchA	
+ua	121	.	KP_Decimal	
+ua	122		Hangul	
+ua	123		Hangul_Hanja	
+ua	125		Super_L	
+ua	126		Super_R	
+ua	127		Menu	
+ua	128		Cancel	
+ua	129		Redo	
+ua	130		SunProps	
+ua	131		Undo	
+ua	132		SunFront	
+ua	133		XF86Copy	
+ua	134		XF86Open	
+ua	135		XF86Paste	
+ua	136		Find	
+ua	137		XF86Cut	
+ua	138		Help	
+ua	139		XF86MenuKB	
+ua	140		XF86Calculator	
+ua	142		XF86Sleep	
+ua	143		XF86WakeUp	
+ua	144		XF86Explorer	
+ua	145		XF86Send	
+ua	147		XF86Xfer	
+ua	148		XF86Launch1	
+ua	149		XF86Launch2	
+ua	150		XF86WWW	
+ua	151		XF86DOS	
+ua	152		XF86ScreenSaver	
+ua	153		XF86RotateWindows	
+ua	154		XF86TaskPane	
+ua	155		XF86Mail	
+ua	156		XF86Favorites	
+ua	157		XF86MyComputer	
+ua	158		XF86Back	
+ua	159		XF86Forward	
+ua	161		XF86Eject	
+ua	162		XF86Eject	
+ua	163		XF86AudioNext	
+ua	164		XF86AudioPlay	
+ua	165		XF86AudioPrev	
+ua	166		XF86AudioStop	
+ua	167		XF86AudioRecord	
+ua	168		XF86AudioRewind	
+ua	169		XF86Phone	
+ua	171		XF86Tools	
+ua	172		XF86HomePage	
+ua	173		XF86Reload	
+ua	174		XF86Close	
+ua	177		XF86ScrollUp	
+ua	178		XF86ScrollDown	
+ua	179	(	parenleft	
+ua	180	)	parenright	
+ua	181		XF86New	
+ua	182		Redo	
+ua	183		XF86Tools	
+ua	184		XF86Launch5	
+ua	185		XF86Launch6	
+ua	186		XF86Launch7	
+ua	187		XF86Launch8	
+ua	188		XF86Launch9	
+ua	189		F19	
+ua	190		XF86AudioMicMute	
+ua	191		XF86TouchpadToggle	
+ua	192		XF86TouchpadOn	
+ua	193		F23	
+ua	194		F24	
+ua	195		ISO_Level5_Shift	
+ua	200		XF86AudioPlay	
+ua	201		XF86AudioPause	
+ua	202		XF86Launch3	
+ua	203		XF86Launch4	
+ua	204		XF86LaunchB	
+ua	205		XF86Suspend	
+ua	206		XF86Close	
+ua	207		XF86AudioPlay	
+ua	208		XF86AudioForward	
+ua	209		XF86AudioBassBoost	
+ua	210		Print	
+ua	212		XF86WebCam	
+ua	213		XF86AudioPreset	
+ua	215		XF86Mail	
+ua	216		XF86Messenger	
+ua	217		XF86Search	
+ua	218		XF86Go	
+ua	219		XF86Finance	
+ua	220		XF86Game	
+ua	221		XF86Shop	
+ua	223		Cancel	
+ua	224		XF86MonBrightnessDown	
+ua	225		XF86MonBrightnessUp	
+ua	226		XF86AudioMedia	
+ua	227		XF86Display	
+ua	228		XF86KbdLightOnOff	
+ua	229		XF86KbdBrightnessDown	
+ua	230		XF86KbdBrightnessUp	
+ua	231		XF86Send	
+ua	232		XF86Reply	
+ua	233		XF86MailForward	
+ua	234		XF86Save	
+ua	235		XF86Documents	
+ua	236		XF86Battery	
+ua	237		XF86Bluetooth	
+ua	238		XF86WLAN	
+ua	239		XF86UWB	
+ua	241		XF86Next_VMode	
+ua	242		XF86Prev_VMode	
+ua	243		XF86MonBrightnessCycle	
+ua	244		XF86BrightnessAuto	
+ua	245		XF86DisplayOff	
+ua	246		XF86WWAN	
+ua	247		XF86RFKill	
+gr	1		Escape	
+gr	2	1	1	1
+gr	3	2	2	2
+gr	4	3	3	3
+gr	5	4	4	4
+gr	6	5	5	5
+gr	7	6	6	6
+gr	8	7	7	7
+gr	9	8	8	8
+gr	10	9	9	9
+gr	11	0	0	0
+gr	12	-	minus	
+gr	13	=	equal	
+gr	14		BackSpace	
+gr	15		Tab	
+gr	16	;	semicolon	
+gr	17	ς	Greek_finalsmallsigma	
+gr	18	ε	Greek_epsilon	
+gr	19	ρ	Greek_rho	
+gr	20	τ	Greek_tau	
+gr	21	υ	Greek_upsilon	
+gr	22	θ	Greek_theta	
+gr	23	ι	Greek_iota	
+gr	24	ο	Greek_omicron	
+gr	25	π	Greek_pi	
+gr	26	[	bracketleft	
+gr	27	]	bracketright	
+gr	28		Return	
+gr	29		Control_L	
+gr	30	α	Greek_alpha	
+gr	31	σ	Greek_sigma	
+gr	32	δ	Greek_delta	
+gr	33	φ	Greek_phi	
+gr	34	γ	Greek_gamma	
+gr	35	η	Greek_eta	
+gr	36	ξ	Greek_xi	
+gr	37	κ	Greek_kappa	
+gr	38	λ	Greek_lamda	
+gr	39		dead_acute	
+gr	40	'	apostrophe	
+gr	41	`	grave	
+gr	42		Shift_L	
+gr	43	\	backslash	
+gr	44	ζ	Greek_zeta	
+gr	45	χ	Greek_chi	
+gr	46	ψ	Greek_psi	
+gr	47	ω	Greek_omega	
+gr	48	β	Greek_beta	
+gr	49	ν	Greek_nu	
+gr	50	μ	Greek_mu	
+gr	51	,	comma	
+gr	52	.	period	
+gr	53	/	slash	
+gr	54		Shift_R	
+gr	55	*	KP_Multiply	
+gr	56		Alt_L	
+gr	57	 	space	
+gr	58		Caps_Lock	
+gr	59		F1	
+gr	60		F2	
+gr	61		F3	
+gr	62		F4	
+gr	63		F5	
+gr	64		F6	
+gr	65		F7	
+gr	66		F8	
+gr	67		F9	
+gr	68		F10	
+gr	69		Num_Lock	
+gr	70		Scroll_Lock	
+gr	71		KP_Home	7
+gr	72		KP_Up	8
+gr	73		KP_Prior	9
+gr	74	-	KP_Subtract	
+gr	75		KP_Left	4
+gr	76		KP_Begin	5
+gr	77		KP_Right	6
+gr	78	+	KP_Add	
+gr	79		KP_End	1
+gr	80		KP_Down	2
+gr	81		KP_Next	3
+gr	82		KP_Insert	0
+gr	83		KP_Delete	
+gr	84		ISO_Level3_Shift	
+gr	85		F24	
+gr	86	«	guillemotleft	
+gr	87		F11	
+gr	88		F12	
+gr	90		Katakana	
+gr	91		Hiragana	
+gr	92		Henkan_Mode	
+gr	93		Hiragana_Katakana	
+gr	94		Muhenkan	
+gr	96		KP_Enter	
+gr	97		Control_R	
+gr	98	/	KP_Divide	
+gr	99		Print	
+gr	100		ISO_Level3_Shift	
+gr	101		Linefeed	
+gr	102		Home	
+gr	103		Up	
+gr	104		Prior	
+gr	105		Left	
+gr	106		Right	
+gr	107		End	
+gr	108		Down	
+gr	109		Next	
+gr	110		Insert	
+gr	111		Delete	
+gr	113		XF86AudioMute	
+gr	114		XF86AudioLowerVolume	
+gr	115		XF86AudioRaiseVolume	
+gr	116		XF86PowerOff	
+gr	117	=	KP_Equal	
+gr	118	±	plusminus	
+gr	119		Pause	
+gr	120		XF86LaunchA	
+gr	121	.	KP_Decimal	
+gr	122		Hangul	
+gr	123		Hangul_Hanja	
+gr	125		Super_L	
+gr	126		Super_R	
+gr	127		Menu	
+gr	128		Cancel	
+gr	129		Redo	
+gr	130		SunProps	
+gr	131		Undo	
+gr	132		SunFront	
+gr	133		XF86Copy	
+gr	134		XF86Open	
+gr	135		XF86Paste	
+gr	136		Find	
+gr	137		XF86Cut	
+gr	138		Help	
+gr	139		XF86MenuKB	
+gr	140		XF86Calculator	
+gr	142		XF86Sleep	
+gr	143		XF86WakeUp	
+gr	144		XF86Explorer	
+gr	145		XF86Send	
+gr	147		XF86Xfer	
+gr	148		XF86Launch1	
+gr	149		XF86Launch2	
+gr	150		XF86WWW	
+gr	151		XF86DOS	
+gr	152		XF86ScreenSaver	
+gr	153		XF86RotateWindows	
+gr	154		XF86TaskPane	
+gr	155		XF86Mail	
+gr	156		XF86Favorites	
+gr	157		XF86MyComputer	
+gr	158		XF86Back	
+gr	159		XF86Forward	
+gr	161		XF86Eject	
+gr	162		XF86Eject	
+gr	163		XF86AudioNext	
+gr	164		XF86AudioPlay	
+gr	165		XF86AudioPrev	
+gr	166		XF86AudioStop	
+gr	167		XF86AudioRecord	
+gr	168		XF86AudioRewind	
+gr	169		XF86Phone	
+gr	171		XF86Tools	
+gr	172		XF86HomePage	
+gr	173		XF86Reload	
+gr	174		XF86Close	
+gr	177		XF86ScrollUp	
+gr	178		XF86ScrollDown	
+gr	179	(	parenleft	
+gr	180	)	parenright	
+gr	181		XF86New	
+gr	182		Redo	
+gr	183		XF86Tools	
+gr	184		XF86Launch5	
+gr	185		XF86Launch6	
+gr	186		XF86Launch7	
+gr	187		XF86Launch8	
+gr	188		XF86Launch9	
+gr	189		F19	
+gr	190		XF86AudioMicMute	
+gr	191		XF86TouchpadToggle	
+gr	192		XF86TouchpadOn	
+gr	193		F23	
+gr	194		F24	
+gr	195		ISO_Level5_Shift	
+gr	200		XF86AudioPlay	
+gr	201		XF86AudioPause	
+gr	202		XF86Launch3	
+gr	203		XF86Launch4	
+gr	204		XF86LaunchB	
+gr	205		XF86Suspend	
+gr	206		XF86Close	
+gr	207		XF86AudioPlay	
+gr	208		XF86AudioForward	
+gr	209		XF86AudioBassBoost	
+gr	210		Print	
+gr	212		XF86WebCam	
+gr	213		XF86AudioPreset	
+gr	215		XF86Mail	
+gr	216		XF86Messenger	
+gr	217		XF86Search	
+gr	218		XF86Go	
+gr	219		XF86Finance	
+gr	220		XF86Game	
+gr	221		XF86Shop	
+gr	223		Cancel	
+gr	224		XF86MonBrightnessDown	
+gr	225		XF86MonBrightnessUp	
+gr	226		XF86AudioMedia	
+gr	227		XF86Display	
+gr	228		XF86KbdLightOnOff	
+gr	229		XF86KbdBrightnessDown	
+gr	230		XF86KbdBrightnessUp	
+gr	231		XF86Send	
+gr	232		XF86Reply	
+gr	233		XF86MailForward	
+gr	234		XF86Save	
+gr	235		XF86Documents	
+gr	236		XF86Battery	
+gr	237		XF86Bluetooth	
+gr	238		XF86WLAN	
+gr	239		XF86UWB	
+gr	241		XF86Next_VMode	
+gr	242		XF86Prev_VMode	
+gr	243		XF86MonBrightnessCycle	
+gr	244		XF86BrightnessAuto	
+gr	245		XF86DisplayOff	
+gr	246		XF86WWAN	
+gr	247		XF86RFKill	
+il	1		Escape	
+il	2	1	1	1
+il	3	2	2	2
+il	4	3	3	3
+il	5	4	4	4
+il	6	5	5	5
+il	7	6	6	6
+il	8	7	7	7
+il	9	8	8	8
+il	10	9	9	9
+il	11	0	0	0
+il	12	-	minus	
+il	13	=	equal	
+il	14		BackSpace	
+il	15		Tab	
+il	16	/	slash	
+il	17	'	apostrophe	
+il	18	ק	hebrew_qoph	
+il	19	ר	hebrew_resh	
+il	20	א	hebrew_aleph	
+il	21	ט	hebrew_tet	
+il	22	ו	hebrew_waw	
+il	23	ן	hebrew_finalnun	
+il	24	ם	hebrew_finalmem	
+il	25	פ	hebrew_pe	
+il	26	]	bracketright	
+il	27	[	bracketleft	
+il	28		Return	
+il	29		Control_L	
+il	30	ש	hebrew_shin	
+il	31	ד	hebrew_dalet	
+il	32	ג	hebrew_gimel	
+il	33	כ	hebrew_kaph	
+il	34	ע	hebrew_ayin	
+il	35	י	hebrew_yod	
+il	36	ח	hebrew_chet	
+il	37	ל	hebrew_lamed	
+il	38	ך	hebrew_finalkaph	
+il	39	ף	hebrew_finalpe	
+il	40	,	comma	
+il	41	;	semicolon	
+il	42		Shift_L	
+il	43	\	backslash	
+il	44	ז	hebrew_zain	
+il	45	ס	hebrew_samech	
+il	46	ב	hebrew_bet	
+il	47	ה	hebrew_he	
+il	48	נ	hebrew_nun	
+il	49	מ	hebrew_mem	
+il	50	צ	hebrew_zade	
+il	51	ת	hebrew_taw	
+il	52	ץ	hebrew_finalzade	
+il	53	.	period	
+il	54		Shift_R	
+il	55	*	KP_Multiply	
+il	56		Alt_L	
+il	57	 	space	
+il	58		Caps_Lock	
+il	59		F1	
+il	60		F2	
+il	61		F3	
+il	62		F4	
+il	63		F5	
+il	64		F6	
+il	65		F7	
+il	66		F8	
+il	67		F9	
+il	68		F10	
+il	69		Num_Lock	
+il	70		Scroll_Lock	
+il	71		KP_Home	7
+il	72		KP_Up	8
+il	73		KP_Prior	9
+il	74	-	KP_Subtract	
+il	75		KP_Left	4
+il	76		KP_Begin	5
+il	77		KP_Right	6
+il	78	+	KP_Add	
+il	79		KP_End	1
+il	80		KP_Down	2
+il	81		KP_Next	3
+il	82		KP_Insert	0
+il	83		KP_Delete	
+il	84		ISO_Level3_Shift	
+il	85		F24	
+il	86	<	less	
+il	87		F11	
+il	88		F12	
+il	90		Katakana	
+il	91		Hiragana	
+il	92		Henkan_Mode	
+il	93		Hiragana_Katakana	
+il	94		Muhenkan	
+il	96		KP_Enter	
+il	97		Control_R	
+il	98	/	KP_Divide	
+il	99		Print	
+il	100		ISO_Level3_Shift	
+il	101		Linefeed	
+il	102		Home	
+il	103		Up	
+il	104		Prior	
+il	105		Left	
+il	106		Right	
+il	107		End	
+il	108		Down	
+il	109		Next	
+il	110		Insert	
+il	111		Delete	
+il	113		XF86AudioMute	
+il	114		XF86AudioLowerVolume	
+il	115		XF86AudioRaiseVolume	
+il	116		XF86PowerOff	
+il	117	=	KP_Equal	
+il	118	±	plusminus	
+il	119		Pause	
+il	120		XF86LaunchA	
+il	121	.	KP_Decimal	
+il	122		Hangul	
+il	123		Hangul_Hanja	
+il	125		Super_L	
+il	126		Super_R	
+il	127		Menu	
+il	128		Cancel	
+il	129		Redo	
+il	130		SunProps	
+il	131		Undo	
+il	132		SunFront	
+il	133		XF86Copy	
+il	134		XF86Open	
+il	135		XF86Paste	
+il	136		Find	
+il	137		XF86Cut	
+il	138		Help	
+il	139		XF86MenuKB	
+il	140		XF86Calculator	
+il	142		XF86Sleep	
+il	143		XF86WakeUp	
+il	144		XF86Explorer	
+il	145		XF86Send	
+il	147		XF86Xfer	
+il	148		XF86Launch1	
+il	149		XF86Launch2	
+il	150		XF86WWW	
+il	151		XF86DOS	
+il	152		XF86ScreenSaver	
+il	153		XF86RotateWindows	
+il	154		XF86TaskPane	
+il	155		XF86Mail	
+il	156		XF86Favorites	
+il	157		XF86MyComputer	
+il	158		XF86Back	
+il	159		XF86Forward	
+il	161		XF86Eject	
+il	162		XF86Eject	
+il	163		XF86AudioNext	
+il	164		XF86AudioPlay	
+il	165		XF86AudioPrev	
+il	166		XF86AudioStop	
+il	167		XF86AudioRecord	
+il	168		XF86AudioRewind	
+il	169		XF86Phone	
+il	171		XF86Tools	
+il	172		XF86HomePage	
+il	173		XF86Reload	
+il	174		XF86Close	
+il	177		XF86ScrollUp	
+il	178		XF86ScrollDown	
+il	179	(	parenleft	
+il	180	)	parenright	
+il	181		XF86New	
+il	182		Redo	
+il	183		XF86Tools	
+il	184		XF86Launch5	
+il	185		XF86Launch6	
+il	186		XF86Launch7	
+il	187		XF86Launch8	
+il	188		XF86Launch9	
+il	189		F19	
+il	190		XF86AudioMicMute	
+il	191		XF86TouchpadToggle	
+il	192		XF86TouchpadOn	
+il	193		F23	
+il	194		F24	
+il	195		ISO_Level5_Shift	
+il	200		XF86AudioPlay	
+il	201		XF86AudioPause	
+il	202		XF86Launch3	
+il	203		XF86Launch4	
+il	204		XF86LaunchB	
+il	205		XF86Suspend	
+il	206		XF86Close	
+il	207		XF86AudioPlay	
+il	208		XF86AudioForward	
+il	209		XF86AudioBassBoost	
+il	210		Print	
+il	212		XF86WebCam	
+il	213		XF86AudioPreset	
+il	215		XF86Mail	
+il	216		XF86Messenger	
+il	217		XF86Search	
+il	218		XF86Go	
+il	219		XF86Finance	
+il	220		XF86Game	
+il	221		XF86Shop	
+il	223		Cancel	
+il	224		XF86MonBrightnessDown	
+il	225		XF86MonBrightnessUp	
+il	226		XF86AudioMedia	
+il	227		XF86Display	
+il	228		XF86KbdLightOnOff	
+il	229		XF86KbdBrightnessDown	
+il	230		XF86KbdBrightnessUp	
+il	231		XF86Send	
+il	232		XF86Reply	
+il	233		XF86MailForward	
+il	234		XF86Save	
+il	235		XF86Documents	
+il	236		XF86Battery	
+il	237		XF86Bluetooth	
+il	238		XF86WLAN	
+il	239		XF86UWB	
+il	241		XF86Next_VMode	
+il	242		XF86Prev_VMode	
+il	243		XF86MonBrightnessCycle	
+il	244		XF86BrightnessAuto	
+il	245		XF86DisplayOff	
+il	246		XF86WWAN	
+il	247		XF86RFKill	
+br	1		Escape	
+br	2	1	1	1
+br	3	2	2	2
+br	4	3	3	3
+br	5	4	4	4
+br	6	5	5	5
+br	7	6	6	6
+br	8	7	7	7
+br	9	8	8	8
+br	10	9	9	9
+br	11	0	0	0
+br	12	-	minus	
+br	13	=	equal	
+br	14		BackSpace	
+br	15		Tab	
+br	16	q	q	
+br	17	w	w	
+br	18	e	e	
+br	19	r	r	
+br	20	t	t	
+br	21	y	y	
+br	22	u	u	
+br	23	i	i	
+br	24	o	o	
+br	25	p	p	
+br	26		dead_acute	
+br	27	[	bracketleft	
+br	28		Return	
+br	29		Control_L	
+br	30	a	a	
+br	31	s	s	
+br	32	d	d	
+br	33	f	f	
+br	34	g	g	
+br	35	h	h	
+br	36	j	j	
+br	37	k	k	
+br	38	l	l	
+br	39	ç	ccedilla	
+br	40		dead_tilde	
+br	41	'	apostrophe	
+br	42		Shift_L	
+br	43	]	bracketright	
+br	44	z	z	
+br	45	x	x	
+br	46	c	c	
+br	47	v	v	
+br	48	b	b	
+br	49	n	n	
+br	50	m	m	
+br	51	,	comma	
+br	52	.	period	
+br	53	;	semicolon	
+br	54		Shift_R	
+br	55	*	KP_Multiply	
+br	56		Alt_L	
+br	57	 	space	
+br	58		Caps_Lock	
+br	59		F1	
+br	60		F2	
+br	61		F3	
+br	62		F4	
+br	63		F5	
+br	64		F6	
+br	65		F7	
+br	66		F8	
+br	67		F9	
+br	68		F10	
+br	69		Num_Lock	
+br	70		Scroll_Lock	
+br	71		KP_Home	7
+br	72		KP_Up	8
+br	73		KP_Prior	9
+br	74	-	KP_Subtract	
+br	75		KP_Left	4
+br	76		KP_Begin	5
+br	77		KP_Right	6
+br	78	+	KP_Add	
+br	79		KP_End	1
+br	80		KP_Down	2
+br	81		KP_Next	3
+br	82		KP_Insert	0
+br	83		KP_Delete	
+br	84		ISO_Level3_Shift	
+br	85		F24	
+br	86	\	backslash	
+br	87		F11	
+br	88		F12	
+br	89	/	slash	
+br	90		Katakana	
+br	91		Hiragana	
+br	92		Henkan_Mode	
+br	93		Hiragana_Katakana	
+br	94		Muhenkan	
+br	96		KP_Enter	
+br	97		Control_R	
+br	98	/	KP_Divide	
+br	99		Print	
+br	100		ISO_Level3_Shift	
+br	101		Linefeed	
+br	102		Home	
+br	103		Up	
+br	104		Prior	
+br	105		Left	
+br	106		Right	
+br	107		End	
+br	108		Down	
+br	109		Next	
+br	110		Insert	
+br	111		Delete	
+br	113		XF86AudioMute	
+br	114		XF86AudioLowerVolume	
+br	115		XF86AudioRaiseVolume	
+br	116		XF86PowerOff	
+br	117	=	KP_Equal	
+br	118	±	plusminus	
+br	119		Pause	
+br	120		XF86LaunchA	
+br	121	.	KP_Decimal	
+br	122		Hangul	
+br	123		Hangul_Hanja	
+br	125		Super_L	
+br	126		Super_R	
+br	127		Menu	
+br	128		Cancel	
+br	129		Redo	
+br	130		SunProps	
+br	131		Undo	
+br	132		SunFront	
+br	133		XF86Copy	
+br	134		XF86Open	
+br	135		XF86Paste	
+br	136		Find	
+br	137		XF86Cut	
+br	138		Help	
+br	139		XF86MenuKB	
+br	140		XF86Calculator	
+br	142		XF86Sleep	
+br	143		XF86WakeUp	
+br	144		XF86Explorer	
+br	145		XF86Send	
+br	147		XF86Xfer	
+br	148		XF86Launch1	
+br	149		XF86Launch2	
+br	150		XF86WWW	
+br	151		XF86DOS	
+br	152		XF86ScreenSaver	
+br	153		XF86RotateWindows	
+br	154		XF86TaskPane	
+br	155		XF86Mail	
+br	156		XF86Favorites	
+br	157		XF86MyComputer	
+br	158		XF86Back	
+br	159		XF86Forward	
+br	161		XF86Eject	
+br	162		XF86Eject	
+br	163		XF86AudioNext	
+br	164		XF86AudioPlay	
+br	165		XF86AudioPrev	
+br	166		XF86AudioStop	
+br	167		XF86AudioRecord	
+br	168		XF86AudioRewind	
+br	169		XF86Phone	
+br	171		XF86Tools	
+br	172		XF86HomePage	
+br	173		XF86Reload	
+br	174		XF86Close	
+br	177		XF86ScrollUp	
+br	178		XF86ScrollDown	
+br	179	(	parenleft	
+br	180	)	parenright	
+br	181		XF86New	
+br	182		Redo	
+br	183		XF86Tools	
+br	184		XF86Launch5	
+br	185		XF86Launch6	
+br	186		XF86Launch7	
+br	187		XF86Launch8	
+br	188		XF86Launch9	
+br	189		F19	
+br	190		XF86AudioMicMute	
+br	191		XF86TouchpadToggle	
+br	192		XF86TouchpadOn	
+br	193		F23	
+br	194		F24	
+br	195		ISO_Level5_Shift	
+br	200		XF86AudioPlay	
+br	201		XF86AudioPause	
+br	202		XF86Launch3	
+br	203		XF86Launch4	
+br	204		XF86LaunchB	
+br	205		XF86Suspend	
+br	206		XF86Close	
+br	207		XF86AudioPlay	
+br	208		XF86AudioForward	
+br	209		XF86AudioBassBoost	
+br	210		Print	
+br	212		XF86WebCam	
+br	213		XF86AudioPreset	
+br	215		XF86Mail	
+br	216		XF86Messenger	
+br	217		XF86Search	
+br	218		XF86Go	
+br	219		XF86Finance	
+br	220		XF86Game	
+br	221		XF86Shop	
+br	223		Cancel	
+br	224		XF86MonBrightnessDown	
+br	225		XF86MonBrightnessUp	
+br	226		XF86AudioMedia	
+br	227		XF86Display	
+br	228		XF86KbdLightOnOff	
+br	229		XF86KbdBrightnessDown	
+br	230		XF86KbdBrightnessUp	
+br	231		XF86Send	
+br	232		XF86Reply	
+br	233		XF86MailForward	
+br	234		XF86Save	
+br	235		XF86Documents	
+br	236		XF86Battery	
+br	237		XF86Bluetooth	
+br	238		XF86WLAN	
+br	239		XF86UWB	
+br	241		XF86Next_VMode	
+br	242		XF86Prev_VMode	
+br	243		XF86MonBrightnessCycle	
+br	244		XF86BrightnessAuto	
+br	245		XF86DisplayOff	
+br	246		XF86WWAN	
+br	247		XF86RFKill	
+jp	1		Escape	
+jp	2	1	1	1
+jp	3	2	2	2
+jp	4	3	3	3
+jp	5	4	4	4
+jp	6	5	5	5
+jp	7	6	6	6
+jp	8	7	7	7
+jp	9	8	8	8
+jp	10	9	9	9
+jp	11	0	0	0
+jp	12	-	minus	
+jp	13	^	asciicircum	
+jp	14		BackSpace	
+jp	15		Tab	
+jp	16	q	q	
+jp	17	w	w	
+jp	18	e	e	
+jp	19	r	r	
+jp	20	t	t	
+jp	21	y	y	
+jp	22	u	u	
+jp	23	i	i	
+jp	24	o	o	
+jp	25	p	p	
+jp	26	@	at	
+jp	27	[	bracketleft	
+jp	28		Return	
+jp	29		Control_L	
+jp	30	a	a	
+jp	31	s	s	
+jp	32	d	d	
+jp	33	f	f	
+jp	34	g	g	
+jp	35	h	h	
+jp	36	j	j	
+jp	37	k	k	
+jp	38	l	l	
+jp	39	;	semicolon	
+jp	40	:	colon	
+jp	41		Zenkaku_Hankaku	
+jp	42		Shift_L	
+jp	43	]	bracketright	
+jp	44	z	z	
+jp	45	x	x	
+jp	46	c	c	
+jp	47	v	v	
+jp	48	b	b	
+jp	49	n	n	
+jp	50	m	m	
+jp	51	,	comma	
+jp	52	.	period	
+jp	53	/	slash	
+jp	54		Shift_R	
+jp	55	*	KP_Multiply	
+jp	56		Alt_L	
+jp	57	 	space	
+jp	58		Eisu_toggle	
+jp	59		F1	
+jp	60		F2	
+jp	61		F3	
+jp	62		F4	
+jp	63		F5	
+jp	64		F6	
+jp	65		F7	
+jp	66		F8	
+jp	67		F9	
+jp	68		F10	
+jp	69		Num_Lock	
+jp	70		Scroll_Lock	
+jp	71		KP_Home	7
+jp	72		KP_Up	8
+jp	73		KP_Prior	9
+jp	74	-	KP_Subtract	
+jp	75		KP_Left	4
+jp	76		KP_Begin	5
+jp	77		KP_Right	6
+jp	78	+	KP_Add	
+jp	79		KP_End	1
+jp	80		KP_Down	2
+jp	81		KP_Next	3
+jp	82		KP_Insert	0
+jp	83		KP_Delete	
+jp	84		ISO_Level3_Shift	
+jp	85		F24	
+jp	86	<	less	
+jp	87		F11	
+jp	88		F12	
+jp	89	\	backslash	
+jp	90		Katakana	
+jp	91		Hiragana	
+jp	92		Henkan_Mode	
+jp	93		Hiragana_Katakana	
+jp	94		Muhenkan	
+jp	96		KP_Enter	
+jp	97		Control_R	
+jp	98	/	KP_Divide	
+jp	99		Print	
+jp	100		Alt_R	
+jp	101		Linefeed	
+jp	102		Home	
+jp	103		Up	
+jp	104		Prior	
+jp	105		Left	
+jp	106		Right	
+jp	107		End	
+jp	108		Down	
+jp	109		Next	
+jp	110		Insert	
+jp	111		Delete	
+jp	113		XF86AudioMute	
+jp	114		XF86AudioLowerVolume	
+jp	115		XF86AudioRaiseVolume	
+jp	116		XF86PowerOff	
+jp	117	=	KP_Equal	
+jp	118	±	plusminus	
+jp	119		Pause	
+jp	120		XF86LaunchA	
+jp	121	.	KP_Decimal	
+jp	122		Hangul	
+jp	123		Hangul_Hanja	
+jp	124	\	backslash	
+jp	125		Super_L	
+jp	126		Super_R	
+jp	127		Menu	
+jp	128		Cancel	
+jp	129		Redo	
+jp	130		SunProps	
+jp	131		Undo	
+jp	132		SunFront	
+jp	133		XF86Copy	
+jp	134		XF86Open	
+jp	135		XF86Paste	
+jp	136		Find	
+jp	137		XF86Cut	
+jp	138		Help	
+jp	139		XF86MenuKB	
+jp	140		XF86Calculator	
+jp	142		XF86Sleep	
+jp	143		XF86WakeUp	
+jp	144		XF86Explorer	
+jp	145		XF86Send	
+jp	147		XF86Xfer	
+jp	148		XF86Launch1	
+jp	149		XF86Launch2	
+jp	150		XF86WWW	
+jp	151		XF86DOS	
+jp	152		XF86ScreenSaver	
+jp	153		XF86RotateWindows	
+jp	154		XF86TaskPane	
+jp	155		XF86Mail	
+jp	156		XF86Favorites	
+jp	157		XF86MyComputer	
+jp	158		XF86Back	
+jp	159		XF86Forward	
+jp	161		XF86Eject	
+jp	162		XF86Eject	
+jp	163		XF86AudioNext	
+jp	164		XF86AudioPlay	
+jp	165		XF86AudioPrev	
+jp	166		XF86AudioStop	
+jp	167		XF86AudioRecord	
+jp	168		XF86AudioRewind	
+jp	169		XF86Phone	
+jp	171		XF86Tools	
+jp	172		XF86HomePage	
+jp	173		XF86Reload	
+jp	174		XF86Close	
+jp	177		XF86ScrollUp	
+jp	178		XF86ScrollDown	
+jp	179	(	parenleft	
+jp	180	)	parenright	
+jp	181		XF86New	
+jp	182		Redo	
+jp	183		XF86Tools	
+jp	184		XF86Launch5	
+jp	185		XF86Launch6	
+jp	186		XF86Launch7	
+jp	187		XF86Launch8	
+jp	188		XF86Launch9	
+jp	189		F19	
+jp	190		XF86AudioMicMute	
+jp	191		XF86TouchpadToggle	
+jp	192		XF86TouchpadOn	
+jp	193		F23	
+jp	194		F24	
+jp	195		ISO_Level5_Shift	
+jp	200		XF86AudioPlay	
+jp	201		XF86AudioPause	
+jp	202		XF86Launch3	
+jp	203		XF86Launch4	
+jp	204		XF86LaunchB	
+jp	205		XF86Suspend	
+jp	206		XF86Close	
+jp	207		XF86AudioPlay	
+jp	208		XF86AudioForward	
+jp	209		XF86AudioBassBoost	
+jp	210		Print	
+jp	212		XF86WebCam	
+jp	213		XF86AudioPreset	
+jp	215		XF86Mail	
+jp	216		XF86Messenger	
+jp	217		XF86Search	
+jp	218		XF86Go	
+jp	219		XF86Finance	
+jp	220		XF86Game	
+jp	221		XF86Shop	
+jp	223		Cancel	
+jp	224		XF86MonBrightnessDown	
+jp	225		XF86MonBrightnessUp	
+jp	226		XF86AudioMedia	
+jp	227		XF86Display	
+jp	228		XF86KbdLightOnOff	
+jp	229		XF86KbdBrightnessDown	
+jp	230		XF86KbdBrightnessUp	
+jp	231		XF86Send	
+jp	232		XF86Reply	
+jp	233		XF86MailForward	
+jp	234		XF86Save	
+jp	235		XF86Documents	
+jp	236		XF86Battery	
+jp	237		XF86Bluetooth	
+jp	238		XF86WLAN	
+jp	239		XF86UWB	
+jp	241		XF86Next_VMode	
+jp	242		XF86Prev_VMode	
+jp	243		XF86MonBrightnessCycle	
+jp	244		XF86BrightnessAuto	
+jp	245		XF86DisplayOff	
+jp	246		XF86WWAN	
+jp	247		XF86RFKill	
+kr	1		Escape	
+kr	2	1	1	1
+kr	3	2	2	2
+kr	4	3	3	3
+kr	5	4	4	4
+kr	6	5	5	5
+kr	7	6	6	6
+kr	8	7	7	7
+kr	9	8	8	8
+kr	10	9	9	9
+kr	11	0	0	0
+kr	12	-	minus	
+kr	13	=	equal	
+kr	14		BackSpace	
+kr	15		Tab	
+kr	16	q	q	
+kr	17	w	w	
+kr	18	e	e	
+kr	19	r	r	
+kr	20	t	t	
+kr	21	y	y	
+kr	22	u	u	
+kr	23	i	i	
+kr	24	o	o	
+kr	25	p	p	
+kr	26	[	bracketleft	
+kr	27	]	bracketright	
+kr	28		Return	
+kr	29		Control_L	
+kr	30	a	a	
+kr	31	s	s	
+kr	32	d	d	
+kr	33	f	f	
+kr	34	g	g	
+kr	35	h	h	
+kr	36	j	j	
+kr	37	k	k	
+kr	38	l	l	
+kr	39	;	semicolon	
+kr	40	'	apostrophe	
+kr	41	`	grave	
+kr	42		Shift_L	
+kr	43	\	backslash	
+kr	44	z	z	
+kr	45	x	x	
+kr	46	c	c	
+kr	47	v	v	
+kr	48	b	b	
+kr	49	n	n	
+kr	50	m	m	
+kr	51	,	comma	
+kr	52	.	period	
+kr	53	/	slash	
+kr	54		Shift_R	
+kr	55	*	KP_Multiply	
+kr	56		Alt_L	
+kr	57	 	space	
+kr	58		Caps_Lock	
+kr	59		F1	
+kr	60		F2	
+kr	61		F3	
+kr	62		F4	
+kr	63		F5	
+kr	64		F6	
+kr	65		F7	
+kr	66		F8	
+kr	67		F9	
+kr	68		F10	
+kr	69		Num_Lock	
+kr	70		Scroll_Lock	
+kr	71		KP_Home	7
+kr	72		KP_Up	8
+kr	73		KP_Prior	9
+kr	74	-	KP_Subtract	
+kr	75		KP_Left	4
+kr	76		KP_Begin	5
+kr	77		KP_Right	6
+kr	78	+	KP_Add	
+kr	79		KP_End	1
+kr	80		KP_Down	2
+kr	81		KP_Next	3
+kr	82		KP_Insert	0
+kr	83		KP_Delete	
+kr	84		ISO_Level3_Shift	
+kr	85		F24	
+kr	86	<	less	
+kr	87		F11	
+kr	88		F12	
+kr	90		Katakana	
+kr	91		Hiragana	
+kr	92		Henkan_Mode	
+kr	93		Hiragana_Katakana	
+kr	94		Muhenkan	
+kr	96		KP_Enter	
+kr	97		Control_R	
+kr	98	/	KP_Divide	
+kr	99		Print	
+kr	100		Alt_R	
+kr	101		Linefeed	
+kr	102		Home	
+kr	103		Up	
+kr	104		Prior	
+kr	105		Left	
+kr	106		Right	
+kr	107		End	
+kr	108		Down	
+kr	109		Next	
+kr	110		Insert	
+kr	111		Delete	
+kr	113		XF86AudioMute	
+kr	114		XF86AudioLowerVolume	
+kr	115		XF86AudioRaiseVolume	
+kr	116		XF86PowerOff	
+kr	117	=	KP_Equal	
+kr	118	±	plusminus	
+kr	119		Pause	
+kr	120		XF86LaunchA	
+kr	121	.	KP_Decimal	
+kr	122		Hangul	
+kr	123		Hangul_Hanja	
+kr	125		Super_L	
+kr	126		Super_R	
+kr	127		Menu	
+kr	128		Cancel	
+kr	129		Redo	
+kr	130		SunProps	
+kr	131		Undo	
+kr	132		SunFront	
+kr	133		XF86Copy	
+kr	134		XF86Open	
+kr	135		XF86Paste	
+kr	136		Find	
+kr	137		XF86Cut	
+kr	138		Help	
+kr	139		XF86MenuKB	
+kr	140		XF86Calculator	
+kr	142		XF86Sleep	
+kr	143		XF86WakeUp	
+kr	144		XF86Explorer	
+kr	145		XF86Send	
+kr	147		XF86Xfer	
+kr	148		XF86Launch1	
+kr	149		XF86Launch2	
+kr	150		XF86WWW	
+kr	151		XF86DOS	
+kr	152		XF86ScreenSaver	
+kr	153		XF86RotateWindows	
+kr	154		XF86TaskPane	
+kr	155		XF86Mail	
+kr	156		XF86Favorites	
+kr	157		XF86MyComputer	
+kr	158		XF86Back	
+kr	159		XF86Forward	
+kr	161		XF86Eject	
+kr	162		XF86Eject	
+kr	163		XF86AudioNext	
+kr	164		XF86AudioPlay	
+kr	165		XF86AudioPrev	
+kr	166		XF86AudioStop	
+kr	167		XF86AudioRecord	
+kr	168		XF86AudioRewind	
+kr	169		XF86Phone	
+kr	171		XF86Tools	
+kr	172		XF86HomePage	
+kr	173		XF86Reload	
+kr	174		XF86Close	
+kr	177		XF86ScrollUp	
+kr	178		XF86ScrollDown	
+kr	179	(	parenleft	
+kr	180	)	parenright	
+kr	181		XF86New	
+kr	182		Redo	
+kr	183		XF86Tools	
+kr	184		XF86Launch5	
+kr	185		XF86Launch6	
+kr	186		XF86Launch7	
+kr	187		XF86Launch8	
+kr	188		XF86Launch9	
+kr	189		F19	
+kr	190		XF86AudioMicMute	
+kr	191		XF86TouchpadToggle	
+kr	192		XF86TouchpadOn	
+kr	193		F23	
+kr	194		F24	
+kr	195		ISO_Level5_Shift	
+kr	200		XF86AudioPlay	
+kr	201		XF86AudioPause	
+kr	202		XF86Launch3	
+kr	203		XF86Launch4	
+kr	204		XF86LaunchB	
+kr	205		XF86Suspend	
+kr	206		XF86Close	
+kr	207		XF86AudioPlay	
+kr	208		XF86AudioForward	
+kr	209		XF86AudioBassBoost	
+kr	210		Print	
+kr	212		XF86WebCam	
+kr	213		XF86AudioPreset	
+kr	215		XF86Mail	
+kr	216		XF86Messenger	
+kr	217		XF86Search	
+kr	218		XF86Go	
+kr	219		XF86Finance	
+kr	220		XF86Game	
+kr	221		XF86Shop	
+kr	223		Cancel	
+kr	224		XF86MonBrightnessDown	
+kr	225		XF86MonBrightnessUp	
+kr	226		XF86AudioMedia	
+kr	227		XF86Display	
+kr	228		XF86KbdLightOnOff	
+kr	229		XF86KbdBrightnessDown	
+kr	230		XF86KbdBrightnessUp	
+kr	231		XF86Send	
+kr	232		XF86Reply	
+kr	233		XF86MailForward	
+kr	234		XF86Save	
+kr	235		XF86Documents	
+kr	236		XF86Battery	
+kr	237		XF86Bluetooth	
+kr	238		XF86WLAN	
+kr	239		XF86UWB	
+kr	241		XF86Next_VMode	
+kr	242		XF86Prev_VMode	
+kr	243		XF86MonBrightnessCycle	
+kr	244		XF86BrightnessAuto	
+kr	245		XF86DisplayOff	
+kr	246		XF86WWAN	
+kr	247		XF86RFKill	
+cn	1		Escape	
+cn	2	1	1	1
+cn	3	2	2	2
+cn	4	3	3	3
+cn	5	4	4	4
+cn	6	5	5	5
+cn	7	6	6	6
+cn	8	7	7	7
+cn	9	8	8	8
+cn	10	9	9	9
+cn	11	0	0	0
+cn	12	-	minus	
+cn	13	=	equal	
+cn	14		BackSpace	
+cn	15		Tab	
+cn	16	q	q	
+cn	17	w	w	
+cn	18	e	e	
+cn	19	r	r	
+cn	20	t	t	
+cn	21	y	y	
+cn	22	u	u	
+cn	23	i	i	
+cn	24	o	o	
+cn	25	p	p	
+cn	26	[	bracketleft	
+cn	27	]	bracketright	
+cn	28		Return	
+cn	29		Control_L	
+cn	30	a	a	
+cn	31	s	s	
+cn	32	d	d	
+cn	33	f	f	
+cn	34	g	g	
+cn	35	h	h	
+cn	36	j	j	
+cn	37	k	k	
+cn	38	l	l	
+cn	39	;	semicolon	
+cn	40	'	apostrophe	
+cn	41	`	grave	
+cn	42		Shift_L	
+cn	43	\	backslash	
+cn	44	z	z	
+cn	45	x	x	
+cn	46	c	c	
+cn	47	v	v	
+cn	48	b	b	
+cn	49	n	n	
+cn	50	m	m	
+cn	51	,	comma	
+cn	52	.	period	
+cn	53	/	slash	
+cn	54		Shift_R	
+cn	55	*	KP_Multiply	
+cn	56		Alt_L	
+cn	57	 	space	
+cn	58		Caps_Lock	
+cn	59		F1	
+cn	60		F2	
+cn	61		F3	
+cn	62		F4	
+cn	63		F5	
+cn	64		F6	
+cn	65		F7	
+cn	66		F8	
+cn	67		F9	
+cn	68		F10	
+cn	69		Num_Lock	
+cn	70		Scroll_Lock	
+cn	71		KP_Home	7
+cn	72		KP_Up	8
+cn	73		KP_Prior	9
+cn	74	-	KP_Subtract	
+cn	75		KP_Left	4
+cn	76		KP_Begin	5
+cn	77		KP_Right	6
+cn	78	+	KP_Add	
+cn	79		KP_End	1
+cn	80		KP_Down	2
+cn	81		KP_Next	3
+cn	82		KP_Insert	0
+cn	83		KP_Delete	
+cn	84		ISO_Level3_Shift	
+cn	85		F24	
+cn	86	<	less	
+cn	87		F11	
+cn	88		F12	
+cn	90		Katakana	
+cn	91		Hiragana	
+cn	92		Henkan_Mode	
+cn	93		Hiragana_Katakana	
+cn	94		Muhenkan	
+cn	96		KP_Enter	
+cn	97		Control_R	
+cn	98	/	KP_Divide	
+cn	99		Print	
+cn	100		Alt_R	
+cn	101		Linefeed	
+cn	102		Home	
+cn	103		Up	
+cn	104		Prior	
+cn	105		Left	
+cn	106		Right	
+cn	107		End	
+cn	108		Down	
+cn	109		Next	
+cn	110		Insert	
+cn	111		Delete	
+cn	113		XF86AudioMute	
+cn	114		XF86AudioLowerVolume	
+cn	115		XF86AudioRaiseVolume	
+cn	116		XF86PowerOff	
+cn	117	=	KP_Equal	
+cn	118	±	plusminus	
+cn	119		Pause	
+cn	120		XF86LaunchA	
+cn	121	.	KP_Decimal	
+cn	122		Hangul	
+cn	123		Hangul_Hanja	
+cn	125		Super_L	
+cn	126		Super_R	
+cn	127		Menu	
+cn	128		Cancel	
+cn	129		Redo	
+cn	130		SunProps	
+cn	131		Undo	
+cn	132		SunFront	
+cn	133		XF86Copy	
+cn	134		XF86Open	
+cn	135		XF86Paste	
+cn	136		Find	
+cn	137		XF86Cut	
+cn	138		Help	
+cn	139		XF86MenuKB	
+cn	140		XF86Calculator	
+cn	142		XF86Sleep	
+cn	143		XF86WakeUp	
+cn	144		XF86Explorer	
+cn	145		XF86Send	
+cn	147		XF86Xfer	
+cn	148		XF86Launch1	
+cn	149		XF86Launch2	
+cn	150		XF86WWW	
+cn	151		XF86DOS	
+cn	152		XF86ScreenSaver	
+cn	153		XF86RotateWindows	
+cn	154		XF86TaskPane	
+cn	155		XF86Mail	
+cn	156		XF86Favorites	
+cn	157		XF86MyComputer	
+cn	158		XF86Back	
+cn	159		XF86Forward	
+cn	161		XF86Eject	
+cn	162		XF86Eject	
+cn	163		XF86AudioNext	
+cn	164		XF86AudioPlay	
+cn	165		XF86AudioPrev	
+cn	166		XF86AudioStop	
+cn	167		XF86AudioRecord	
+cn	168		XF86AudioRewind	
+cn	169		XF86Phone	
+cn	171		XF86Tools	
+cn	172		XF86HomePage	
+cn	173		XF86Reload	
+cn	174		XF86Close	
+cn	177		XF86ScrollUp	
+cn	178		XF86ScrollDown	
+cn	179	(	parenleft	
+cn	180	)	parenright	
+cn	181		XF86New	
+cn	182		Redo	
+cn	183		XF86Tools	
+cn	184		XF86Launch5	
+cn	185		XF86Launch6	
+cn	186		XF86Launch7	
+cn	187		XF86Launch8	
+cn	188		XF86Launch9	
+cn	189		F19	
+cn	190		XF86AudioMicMute	
+cn	191		XF86TouchpadToggle	
+cn	192		XF86TouchpadOn	
+cn	193		F23	
+cn	194		F24	
+cn	195		ISO_Level5_Shift	
+cn	200		XF86AudioPlay	
+cn	201		XF86AudioPause	
+cn	202		XF86Launch3	
+cn	203		XF86Launch4	
+cn	204		XF86LaunchB	
+cn	205		XF86Suspend	
+cn	206		XF86Close	
+cn	207		XF86AudioPlay	
+cn	208		XF86AudioForward	
+cn	209		XF86AudioBassBoost	
+cn	210		Print	
+cn	212		XF86WebCam	
+cn	213		XF86AudioPreset	
+cn	215		XF86Mail	
+cn	216		XF86Messenger	
+cn	217		XF86Search	
+cn	218		XF86Go	
+cn	219		XF86Finance	
+cn	220		XF86Game	
+cn	221		XF86Shop	
+cn	223		Cancel	
+cn	224		XF86MonBrightnessDown	
+cn	225		XF86MonBrightnessUp	
+cn	226		XF86AudioMedia	
+cn	227		XF86Display	
+cn	228		XF86KbdLightOnOff	
+cn	229		XF86KbdBrightnessDown	
+cn	230		XF86KbdBrightnessUp	
+cn	231		XF86Send	
+cn	232		XF86Reply	
+cn	233		XF86MailForward	
+cn	234		XF86Save	
+cn	235		XF86Documents	
+cn	236		XF86Battery	
+cn	237		XF86Bluetooth	
+cn	238		XF86WLAN	
+cn	239		XF86UWB	
+cn	241		XF86Next_VMode	
+cn	242		XF86Prev_VMode	
+cn	243		XF86MonBrightnessCycle	
+cn	244		XF86BrightnessAuto	
+cn	245		XF86DisplayOff	
+cn	246		XF86WWAN	
+cn	247		XF86RFKill	
+in	1		Escape	
+in	2	१	U0967	
+in	3	२	U0968	
+in	4	३	U0969	
+in	5	४	U096A	
+in	6	५	U096B	
+in	7	६	U096C	
+in	8	७	U096D	
+in	9	८	U096E	
+in	10	९	U096F	
+in	11	०	U0966	
+in	12	-	minus	
+in	13	ृ	U0943	
+in	14		BackSpace	
+in	15		Tab	
+in	16	ौ	U094C	
+in	17	ै	U0948	
+in	18	ा	U093E	
+in	19	ी	U0940	
+in	20	ू	U0942	
+in	21	ब	U092C	
+in	22	ह	U0939	
+in	23	ग	U0917	
+in	24	द	U0926	
+in	25	ज	U091C	
+in	26	ड	U0921	
+in	27	़	U093C	
+in	28		Return	
+in	29		Control_L	
+in	30	ो	U094B	
+in	31	े	U0947	
+in	32	्	U094D	
+in	33	ि	U093F	
+in	34	ु	U0941	
+in	35	प	U092A	
+in	36	र	U0930	
+in	37	क	U0915	
+in	38	त	U0924	
+in	39	च	U091A	
+in	40	ट	U091F	
+in	41	ॊ	U094A	
+in	42		Shift_L	
+in	43	ॉ	U0949	
+in	44	ॆ	U0946	
+in	45	ं	U0902	
+in	46	म	U092E	
+in	47	न	U0928	
+in	48	व	U0935	
+in	49	ल	U0932	
+in	50	स	U0938	
+in	51	,	comma	
+in	52	.	period	
+in	53	य	U092F	
+in	54		Shift_R	
+in	55	*	KP_Multiply	
+in	56		Alt_L	
+in	57	 	space	
+in	58		Caps_Lock	
+in	59		F1	
+in	60		F2	
+in	61		F3	
+in	62		F4	
+in	63		F5	
+in	64		F6	
+in	65		F7	
+in	66		F8	
+in	67		F9	
+in	68		F10	
+in	69		Num_Lock	
+in	70		Scroll_Lock	
+in	71		KP_Home	7
+in	72		KP_Up	8
+in	73		KP_Prior	9
+in	74	-	KP_Subtract	
+in	75		KP_Left	4
+in	76		KP_Begin	5
+in	77		KP_Right	6
+in	78	+	KP_Add	
+in	79		KP_End	1
+in	80		KP_Down	2
+in	81		KP_Next	3
+in	82		KP_Insert	0
+in	83		KP_Delete	
+in	84		ISO_Level3_Shift	
+in	85		F24	
+in	86	<	less	
+in	87		F11	
+in	88		F12	
+in	90		Katakana	
+in	91		Hiragana	
+in	92		Henkan_Mode	
+in	93		Hiragana_Katakana	
+in	94		Muhenkan	
+in	96		KP_Enter	
+in	97		Control_R	
+in	98	/	KP_Divide	
+in	99		Print	
+in	100		ISO_Level3_Shift	
+in	101		Linefeed	
+in	102		Home	
+in	103		Up	
+in	104		Prior	
+in	105		Left	
+in	106		Right	
+in	107		End	
+in	108		Down	
+in	109		Next	
+in	110		Insert	
+in	111		Delete	
+in	113		XF86AudioMute	
+in	114		XF86AudioLowerVolume	
+in	115		XF86AudioRaiseVolume	
+in	116		XF86PowerOff	
+in	117	=	KP_Equal	
+in	118	±	plusminus	
+in	119		Pause	
+in	120		XF86LaunchA	
+in	121	.	KP_Decimal	
+in	122		Hangul	
+in	123		Hangul_Hanja	
+in	125		Super_L	
+in	126		Super_R	
+in	127		Menu	
+in	128		Cancel	
+in	129		Redo	
+in	130		SunProps	
+in	131		Undo	
+in	132		SunFront	
+in	133		XF86Copy	
+in	134		XF86Open	
+in	135		XF86Paste	
+in	136		Find	
+in	137		XF86Cut	
+in	138		Help	
+in	139		XF86MenuKB	
+in	140		XF86Calculator	
+in	142		XF86Sleep	
+in	143		XF86WakeUp	
+in	144		XF86Explorer	
+in	145		XF86Send	
+in	147		XF86Xfer	
+in	148		XF86Launch1	
+in	149		XF86Launch2	
+in	150		XF86WWW	
+in	151		XF86DOS	
+in	152		XF86ScreenSaver	
+in	153		XF86RotateWindows	
+in	154		XF86TaskPane	
+in	155		XF86Mail	
+in	156		XF86Favorites	
+in	157		XF86MyComputer	
+in	158		XF86Back	
+in	159		XF86Forward	
+in	161		XF86Eject	
+in	162		XF86Eject	
+in	163		XF86AudioNext	
+in	164		XF86AudioPlay	
+in	165		XF86AudioPrev	
+in	166		XF86AudioStop	
+in	167		XF86AudioRecord	
+in	168		XF86AudioRewind	
+in	169		XF86Phone	
+in	171		XF86Tools	
+in	172		XF86HomePage	
+in	173		XF86Reload	
+in	174		XF86Close	
+in	177		XF86ScrollUp	
+in	178		XF86ScrollDown	
+in	179	(	parenleft	
+in	180	)	parenright	
+in	181		XF86New	
+in	182		Redo	
+in	183		XF86Tools	
+in	184		XF86Launch5	
+in	185		XF86Launch6	
+in	186		XF86Launch7	
+in	187		XF86Launch8	
+in	188		XF86Launch9	
+in	189		F19	
+in	190		XF86AudioMicMute	
+in	191		XF86TouchpadToggle	
+in	192		XF86TouchpadOn	
+in	193		F23	
+in	194		F24	
+in	195		ISO_Level5_Shift	
+in	200		XF86AudioPlay	
+in	201		XF86AudioPause	
+in	202		XF86Launch3	
+in	203		XF86Launch4	
+in	204		XF86LaunchB	
+in	205		XF86Suspend	
+in	206		XF86Close	
+in	207		XF86AudioPlay	
+in	208		XF86AudioForward	
+in	209		XF86AudioBassBoost	
+in	210		Print	
+in	212		XF86WebCam	
+in	213		XF86AudioPreset	
+in	215		XF86Mail	
+in	216		XF86Messenger	
+in	217		XF86Search	
+in	218		XF86Go	
+in	219		XF86Finance	
+in	220		XF86Game	
+in	221		XF86Shop	
+in	223		Cancel	
+in	224		XF86MonBrightnessDown	
+in	225		XF86MonBrightnessUp	
+in	226		XF86AudioMedia	
+in	227		XF86Display	
+in	228		XF86KbdLightOnOff	
+in	229		XF86KbdBrightnessDown	
+in	230		XF86KbdBrightnessUp	
+in	231		XF86Send	
+in	232		XF86Reply	
+in	233		XF86MailForward	
+in	234		XF86Save	
+in	235		XF86Documents	
+in	236		XF86Battery	
+in	237		XF86Bluetooth	
+in	238		XF86WLAN	
+in	239		XF86UWB	
+in	241		XF86Next_VMode	
+in	242		XF86Prev_VMode	
+in	243		XF86MonBrightnessCycle	
+in	244		XF86BrightnessAuto	
+in	245		XF86DisplayOff	
+in	246		XF86WWAN	
+in	247		XF86RFKill	

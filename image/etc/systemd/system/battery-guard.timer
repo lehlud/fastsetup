@@ -1,0 +1,11 @@
+[Unit]
+Description=Check adapter power and battery reserve every minute
+
+[Timer]
+OnBootSec=60s
+OnUnitActiveSec=60s
+AccuracySec=1s
+Unit=battery-guard.service
+
+[Install]
+WantedBy=timers.target

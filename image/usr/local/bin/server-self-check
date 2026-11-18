@@ -1,0 +1,10 @@
+#!/bin/bash
+set -euo pipefail
+server_user=$(cat /etc/kiosk-server-user)
+server_uid=$(id -u "$server_user")
+runuser -u "$server_user" -- test -r /dev/kvm
+id -nG "$server_user" | tr ' ' '\n' | grep -qx kvm
+runuser -u "$server_user" -- virsh --connect qemu:///system list --all
+systemctl start "user@${server_uid}.service"
+runuser -u "$server_user" -- env XDG_RUNTIME_DIR="/run/user/$server_uid" podman info
+touch /var/lib/server-self-check.ok

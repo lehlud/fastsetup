@@ -1,0 +1,14 @@
+FROM registry.fedoraproject.org/fedora:44
+
+RUN dnf -y --setopt=timeout=30 --setopt=retries=3 upgrade --refresh \
+    && dnf -y --setopt=timeout=30 --setopt=retries=3 install \
+        livecd-tools-31.0-20.fc44 pykickstart \
+        shim-x64 grub2-efi-x64 grub2-efi-x64-cdboot kernel-core \
+        sbsigntools pesign xorriso mtools qemu-system-x86-core \
+        edk2-ovmf python3-virt-firmware \
+    && dnf clean all
+
+COPY build/container-entrypoint.sh /usr/local/bin/kiosk-builder
+RUN chmod 755 /usr/local/bin/kiosk-builder
+WORKDIR /work
+ENTRYPOINT ["/usr/local/bin/kiosk-builder"]

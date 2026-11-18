@@ -1,0 +1,22 @@
+#!/bin/bash
+set -euo pipefail
+umask 077
+export LANG=en_US.UTF-8 TZ=UTC
+export XDG_RUNTIME_DIR=/run/kiosk/wayland
+export WLR_RENDERER=pixman WLR_LIBINPUT_NO_DEVICES=0
+mkdir -p "$XDG_RUNTIME_DIR"
+chmod 700 "$XDG_RUNTIME_DIR"
+session_log=/var/log/kiosk-session.log
+exec 2>>"$session_log"
+# Apply the larger Linux console font now as well as through vconsole.conf.
+# A text-mode adapter may reject the font; retain its existing font in that case.
+setfont -C /dev/tty1 ter-v24n >>"$session_log" 2>&1 || :
+# There is deliberately no restart loop, including on compositor failure.
+rm -f /run/kiosk/layout /run/kiosk/vconsole-keymap
+export XKB_DEFAULT_LAYOUT=us XKB_DEFAULT_VARIANT=
+cage -- foot --config=/etc/xdg/foot/foot.ini /usr/local/bin/kbprobe
+test -s /run/kiosk/layout
+mapfile -t kiosk_map < <(python3 -c 'import json; d=json.load(open("/run/kiosk/layout")); print(d["layout"]); print(d["variant"])')
+export XKB_DEFAULT_LAYOUT="${kiosk_map[0]}" XKB_DEFAULT_VARIANT="${kiosk_map[1]:-}"
+loadkeys "$(cat /run/kiosk/vconsole-keymap)" >>"$session_log" 2>&1
+exec cage -- foot --config=/etc/xdg/foot/foot.ini /usr/local/bin/kiosk-install

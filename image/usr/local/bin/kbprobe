@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+import sys
+sys.path.insert(0, '/usr/local/lib')
+from kiosk.common import install_signals, log, poweroff
+from kiosk.keyboard import probe
+from kiosk.ui import KioskApp
+install_signals()
+try:
+    app = KioskApp(probe, on_abort=poweroff)
+    app.run(mouse=False)
+    if app.cancelled or app.failure:
+        poweroff()
+except Exception:
+    log('keyboard: unexpected failure; powering off')
+    poweroff()

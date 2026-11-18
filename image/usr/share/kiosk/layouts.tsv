@@ -1,0 +1,37 @@
+# id\txkb\tvariant\tvconsole\tlabel
+us	us	-	us	English US
+us-intl	us	intl	us-acentos	English US international
+gb	gb	-	uk	English UK
+de	de	-	de	German
+de-nodeadkeys	de	nodeadkeys	de-latin1-nodeadkeys	German without dead keys
+at	at	-	de	Austrian
+ch-de	ch	de	de_CH-latin1	Swiss German
+ch-fr	ch	fr	fr_CH-latin1	Swiss French
+fr	fr	-	fr	French
+fr-bepo	fr	bepo	fr-bepo	French Bepo
+es	es	-	es	Spanish
+it	it	-	it	Italian
+pt	pt	-	pt-latin1	Portuguese
+nl	nl	-	nl	Dutch
+be	be	-	be-latin1	Belgian
+dk	dk	-	dk	Danish
+no	no	-	no	Norwegian
+se	se	-	se-latin1	Swedish
+fi	fi	-	fi	Finnish
+pl	pl	-	pl	Polish
+cz	cz	-	cz	Czech
+sk	sk	-	sk-qwertz	Slovak
+hu	hu	-	hu	Hungarian
+ro	ro	-	ro	Romanian
+hr	hr	-	croat	Croatian
+si	si	-	slovene	Slovenian
+tr	tr	-	trq	Turkish
+ru	ru	-	ru	Russian
+ua	ua	-	ua	Ukrainian
+gr	gr	-	gr	Greek
+il	il	-	il	Hebrew
+br	br	-	br-abnt2	Brazilian
+jp	jp	-	jp106	Japanese
+kr	kr	-	us	Korean
+cn	cn	-	us	Chinese
+in	in	-	us	Indian

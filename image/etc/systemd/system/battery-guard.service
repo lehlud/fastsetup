@@ -1,0 +1,9 @@
+[Unit]
+Description=Battery UPS reserve guard
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/battery-limits guard
+UMask=0077
+TimeoutStartSec=45

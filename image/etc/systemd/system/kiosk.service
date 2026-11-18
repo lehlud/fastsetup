@@ -1,0 +1,34 @@
+[Unit]
+Description=Fedora installer kiosk
+After=systemd-user-sessions.service NetworkManager.service systemd-logind.service
+Wants=NetworkManager.service
+Conflicts=getty@tty1.service
+OnFailure=poweroff.target
+
+[Service]
+Type=simple
+User=root
+PAMName=login
+TTYPath=/dev/tty1
+StandardInput=tty
+StandardOutput=tty
+StandardError=journal
+TTYReset=yes
+TTYVHangup=yes
+TTYVTDisallocate=yes
+UtmpIdentifier=tty1
+Environment=XDG_SESSION_TYPE=wayland
+Environment=XDG_SEAT=seat0
+Environment=XDG_VTNR=1
+RuntimeDirectory=kiosk
+RuntimeDirectoryMode=0700
+ExecStart=/usr/local/bin/kiosk-session
+ExecStopPost=/usr/local/bin/kiosk-poweroff
+Restart=no
+KillMode=control-group
+TimeoutStopSec=2
+SendSIGKILL=yes
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

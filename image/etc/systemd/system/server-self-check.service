@@ -1,0 +1,13 @@
+[Unit]
+Description=Check installed server virtualization and containers
+After=network-online.target libvirtd.service
+Wants=network-online.target libvirtd.service
+ConditionPathExists=!/var/lib/server-self-check.ok
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/server-self-check
+TimeoutStartSec=120
+
+[Install]
+WantedBy=multi-user.target

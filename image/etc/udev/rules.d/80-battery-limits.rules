@@ -1,0 +1,1 @@
+ACTION=="add|change", SUBSYSTEM=="power_supply", ATTR{type}=="Battery", TAG+="systemd", ENV{SYSTEMD_WANTS}+="battery-limits.service"
