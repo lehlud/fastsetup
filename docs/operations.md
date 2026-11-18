@@ -41,6 +41,19 @@ Use `sudo server-config battery --mode full` to charge to 100% and `sudo server-
 
 OpenVPN requires a TUN client profile with inline credentials and server verification. Profile scripts, plugins, and external credential files are rejected. DNS settings pushed by OpenVPN do not change the target resolver. Use the local console to change VPN or network settings when those connections carry your SSH session.
 
+## Check laptop power policy
+
+The firmware can turn off the laptop display when the lid closes. In an SSH session, run `while true; date; sleep 1; end` in Fish and check that timestamps keep arriving with the lid closed. Repeat on AC and battery while the battery is above the UPS reserve.
+
+```sh
+systemd-analyze cat-config systemd/logind.conf
+systemd-analyze cat-config systemd/sleep.conf
+systemctl is-enabled sleep.target suspend.target hibernate.target \
+  hybrid-sleep.target suspend-then-hibernate.target
+```
+
+Check for `ignore` on all three lid settings and `no` on all four `Allow…` sleep settings. All five targets should report `masked`.
+
 ## Run guests on the installed server
 
 For a guest disk configured for a serial console, use q35 with KVM and the host CPU.

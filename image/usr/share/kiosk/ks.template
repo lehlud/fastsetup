@@ -153,7 +153,8 @@ subprocess.run(['chroot', str(root), 'systemctl', 'disable', 'virtqemud.socket',
 for unit in ('sshd.service', 'chronyd.service', 'NetworkManager.service', 'libvirtd.service',
              'podman.socket', 'fstrim.timer', 'battery-limits.timer', 'battery-guard.timer', 'server-self-check.service'):
     subprocess.run(['chroot', str(root), 'systemctl', 'enable', unit], check=True)
-for unit in ('sleep.target', 'suspend.target', 'hibernate.target', 'hybrid-sleep.target'):
+for unit in ('sleep.target', 'suspend.target', 'hibernate.target', 'hybrid-sleep.target',
+             'suspend-then-hibernate.target'):
     subprocess.run(['chroot', str(root), 'systemctl', 'mask', unit], check=True)
 # TLP is a fallback tool, not a competing boot-time policy daemon.
 subprocess.run(['chroot', str(root), 'systemctl', 'disable', 'tlp.service'], check=True)

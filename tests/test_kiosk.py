@@ -1,5 +1,6 @@
 import asyncio
 import base64
+from configparser import ConfigParser
 import importlib.util
 import json
 import os
@@ -23,6 +24,18 @@ def module(name, path):
 
 
 class RenderTests(unittest.TestCase):
+    def assert_sleep_policy(self, root):
+        logind = ConfigParser()
+        logind.read(root / 'etc/systemd/logind.conf.d/server-power.conf')
+        for name in ('HandleLidSwitch', 'HandleLidSwitchExternalPower', 'HandleLidSwitchDocked',
+                     'HandleSuspendKey', 'HandleSuspendKeyLongPress', 'HandleHibernateKey',
+                     'HandleHibernateKeyLongPress', 'IdleAction'):
+            self.assertEqual(logind['Login'][name], 'ignore', name)
+        sleep = ConfigParser()
+        sleep.read(root / 'etc/systemd/sleep.conf.d/90-no-sleep.conf')
+        for name in ('AllowSuspend', 'AllowHibernation', 'AllowHybridSleep', 'AllowSuspendThenHibernate'):
+            self.assertFalse(sleep['Sleep'].getboolean(name), name)
+
     def values(self):
         values = {key: '' for key in install.TOKENS}
         values.update(TZ='Europe/Berlin', HOSTNAME='calm-fox', USER='server', USERHASH='$6$salt$hash',
@@ -87,6 +100,7 @@ class RenderTests(unittest.TestCase):
             self.assertEqual(stat.S_IMODE(path.stat().st_mode), 0o755)
             self.assertTrue((root / 'etc/systemd/system/kiosk.service').is_file())
             self.assertTrue((root / 'usr/share/kiosk/target-payload.b64').is_file())
+            self.assert_sleep_policy(root)
 
     def test_target_post_script_compiles(self):
         template = (ROOT / 'image/usr/share/kiosk/ks.template').read_text()
@@ -119,6 +133,11 @@ class RenderTests(unittest.TestCase):
             self.assertFalse((root / 'usr/local/bin/kiosk-install').exists())
             self.assertIn('%wheel ALL=(ALL) ALL', (root / 'etc/sudoers.d/10-server-wheel').read_text())
             self.assertTrue(any('restorecon' in call.args[0] for call in run.call_args_list))
+            self.assert_sleep_policy(root)
+            masks = {call.args[0][-1] for call in run.call_args_list
+                     if call.args[0][:4] == ['chroot', str(root), 'systemctl', 'mask']}
+            self.assertEqual(masks, {'sleep.target', 'suspend.target', 'hibernate.target',
+                                     'hybrid-sleep.target', 'suspend-then-hibernate.target'})
 
     def test_hostname_rejects_kickstart_injection(self):
         for value in ('hello\nrootpw bad', '-host', 'a;foo', 'a'*42, 'UPPER'):

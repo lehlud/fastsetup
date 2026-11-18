@@ -95,7 +95,7 @@ systemctl enable kiosk.service battery-limits.timer battery-guard.timer
 systemctl add-wants local-fs.target tmp.mount
 systemctl disable tlp.service
 systemctl mask getty@.service serial-getty@.service console-getty.service getty@tty1.service
-systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target
 ln -sf /usr/lib/systemd/system/poweroff.target /etc/systemd/system/ctrl-alt-del.target
 mkdir -p /etc/systemd/system.conf.d /etc/dracut.conf.d
 cat > /etc/systemd/system.conf.d/kiosk.conf <<'EOF'

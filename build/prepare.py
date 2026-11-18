@@ -19,6 +19,7 @@ TARGET = [
     'etc/systemd/system/battery-guard.service', 'etc/systemd/system/battery-guard.timer',
     'etc/systemd/system/server-self-check.service', 'etc/udev/rules.d/80-battery-limits.rules',
     'etc/systemd/logind.conf.d/server-power.conf',
+    'etc/systemd/sleep.conf.d/90-no-sleep.conf',
 ]
 
 

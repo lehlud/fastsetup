@@ -41,6 +41,8 @@ sudo server-config network
 
 Use `sudo server-config battery` to inspect charge limits and UPS settings. On supported laptops, the default charge corridor is 45–55%. Use an adequately rated adapter. On mains the battery should rest near the upper limit and report `Not charging`. Continuous charging and discharging on mains indicates a fault. On confirmed adapter loss, the UPS guard shuts down below 20% by default.
 
+The live installer and server are configured to keep running with the lid closed on AC power, on battery, and while docked. Suspend and hibernation are disabled. See [laptop power checks](docs/operations.md#check-laptop-power-policy) for verification on hardware.
+
 ## Preview and test
 
 Run checks separately from the image build.
