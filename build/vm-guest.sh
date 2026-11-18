@@ -1,8 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 umask 077
-systemctl stop serial-getty@ttyS0.service
-exec > >(tee /dev/ttyS0) 2>&1
 
 finish() {
     status=$?
@@ -17,6 +15,12 @@ finish() {
     exit "$status"
 }
 trap finish EXIT
+
+systemctl stop serial-getty@ttyS0.service
+exec >/dev/ttyS0 2>&1
+# Suppress the boot timer so the serial log shows the compose progress.
+busctl --timeout=5 call org.freedesktop.systemd1 /org/freedesktop/systemd1 \
+    org.freedesktop.systemd1.Manager SetShowStatus s no || :
 
 mkdir -p /mnt/kiosk
 udevadm settle --timeout=30
@@ -35,5 +39,5 @@ dnf -y "${repos[@]}" upgrade shim-x64 grub2-efi-x64 grub2-efi-x64-cdboot kernel-
 if selinuxenabled; then
     setenforce 0
 fi
-echo 'Composing the live image; compose.log will be exported after the VM stops'
+echo 'Composing the live image'
 KIOSK_RPM_CACHE=/mnt/kiosk/rpms bash /mnt/kiosk/build/build-live.sh /mnt/kiosk/result

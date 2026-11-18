@@ -20,8 +20,8 @@ ksvalidator -v F44 "$build_dir/kiosk-live.flattened.ks"
 rpm -q livecd-tools shim-x64 grub2-efi-x64 kernel-core edk2-ovmf > "$build_dir/build-host.txt"
 cd "$build_dir"
 mkdir -p "$build_dir/tmp"
-python3 "$project_dir/build/create-live.py" --config="$build_dir/kiosk-live.flattened.ks" --fslabel=kiosk-live \
-    --releasever=44 --cache="${KIOSK_RPM_CACHE:-$build_dir/cache}" --tmpdir="$build_dir/tmp" > "$build_dir/compose.log" 2>&1
+python3 -u "$project_dir/build/create-live.py" --config="$build_dir/kiosk-live.flattened.ks" --fslabel=kiosk-live \
+    --releasever=44 --cache="${KIOSK_RPM_CACHE:-$build_dir/cache}" --tmpdir="$build_dir/tmp" 2>&1 | tee "$build_dir/compose.log"
 python3 "$project_dir/build/verify-iso.py" "$build_dir/kiosk-live.iso" "$build_dir/verification"
 sha256sum kiosk-live.iso > "$build_dir/kiosk-live.iso.sha256"
 echo "$build_dir/kiosk-live.iso"
