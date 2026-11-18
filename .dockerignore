@@ -1,4 +1,5 @@
 **
 !build/
 !build/Containerfile
+!build/Containerfile.vm
 !build/container-entrypoint.sh

@@ -101,11 +101,38 @@ class PortableBuilderTests(unittest.TestCase):
         fields = next(csv.reader([builder.mount('/path with spaces/a,b', '/source', True)]))
         self.assertEqual(fields, ['type=bind', 'source=/path with spaces/a,b', 'target=/source', 'readonly'])
 
-    def test_rootless_engines_are_rejected(self):
+    def test_rootless_engines_are_detected(self):
         for engine, response in (('docker', b'["name=rootless"]'), ('podman', b'true\n')):
             with self.subTest(engine=engine), patch.object(builder.subprocess, 'check_output', return_value=response):
-                with self.assertRaisesRegex(builder.BuildError, 'rootful'):
-                    builder.check_engine(engine)
+                self.assertTrue(builder.engine_is_rootless(engine))
+
+    def test_rootless_podman_automatically_selects_the_unprivileged_vm(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary) / 'artifacts'
+            def execute(command, **kwargs):
+                if command[1] == 'cp' and command[-1] == str(output):
+                    data = b'fake VM artifact'
+                    (output / 'kiosk-live.iso').write_bytes(data)
+                    (output / 'kiosk-live.iso.sha256').write_text(
+                        hashlib.sha256(data).hexdigest() + '  kiosk-live.iso\n')
+                return subprocess.CompletedProcess(command, 0)
+
+            with patch.object(builder.platform, 'system', return_value='Linux'), \
+                 patch.object(builder.subprocess, 'check_output', return_value=b'true\n'), \
+                 patch.object(builder.subprocess, 'run', side_effect=execute) as run, \
+                 patch('sys.stdout', new_callable=io.StringIO):
+                self.assertEqual(builder.main(['--engine', 'podman', str(output)]), 0)
+            build, create, upload, start, download, cleanup = [call.args[0] for call in run.call_args_list]
+            self.assertIn(str(ROOT / 'build/Containerfile.vm'), build)
+            self.assertNotIn('--platform', build)
+            self.assertEqual(create[-1], builder.VM_BUILDER_IMAGE)
+            self.assertIn('--cap-drop=all', create)
+            for restricted in ('--privileged', '--userns=host', '--device', '--mount'):
+                self.assertNotIn(restricted, create)
+            self.assertTrue(upload[-1].endswith(':/source'))
+            self.assertEqual(start[1:3], ['start', '--attach'])
+            self.assertTrue(download[-2].endswith(':/output/.'))
+            self.assertIn('--volumes', cleanup)
 
     def test_checksum_is_verified_after_export(self):
         with tempfile.TemporaryDirectory() as temporary:

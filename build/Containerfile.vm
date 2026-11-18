@@ -1,0 +1,16 @@
+FROM registry.fedoraproject.org/fedora:44
+
+RUN dnf -y --setopt=timeout=30 --setopt=retries=3 install \
+        curl e2fsprogs qemu-system-x86-core qemu-img xorriso \
+    && dnf clean all \
+    && install -d -m 1777 /work
+
+# Fedora Cloud Base 44, from Fedora-Cloud-44-1.7-x86_64-CHECKSUM.
+RUN curl --fail --silent --show-error --location --proto '=https' \
+        --connect-timeout 15 --max-time 600 --retry 2 \
+        https://dl.fedoraproject.org/pub/fedora/linux/releases/44/Cloud/x86_64/images/Fedora-Cloud-Base-Generic-44-1.7.x86_64.qcow2 \
+        --output /var/lib/kiosk-fedora.qcow2 \
+    && echo '28680fe5b371a5a82ebf43a31926e086a168e59949d03969c5093e7071f90b7f  /var/lib/kiosk-fedora.qcow2' | sha256sum -c -
+
+RUN mkdir -p /source /output
+ENTRYPOINT ["/bin/bash", "/source/build/vm-entrypoint.sh"]

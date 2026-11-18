@@ -6,10 +6,11 @@ A bootable USB installer that turns an x86_64 laptop into a headless Fedora 44 s
 
 ## Build
 
-Use Linux or macOS with Python 3.9+, Docker or rootful Podman, and Internet access. The engine needs privileged loop mounts, about 8 GB RAM and 35 GB free disk space. On Arm hosts it also needs x86_64 container emulation. The container supplies Fedora and QEMU.
+Use Linux or macOS with Python 3.9+, Docker or Podman, and Internet access. Allow about 8 GB RAM and 35 GB of free disk space for the engine. Rootless engines automatically build in a disposable Fedora VM. The container supplies QEMU, and software emulation makes this path slower. The direct, rootful build uses loop mounts and needs x86_64 container emulation on Arm hosts.
 
 ```sh
 python3 build/build.py
+python3 build/build.py --engine podman podman-out
 ```
 
 The build writes `out/kiosk-live.iso` and its SHA-256 checksum after checking the hybrid BIOS/UEFI image and Fedora boot binaries. Choose a fresh output directory for another build, for example `python3 build/build.py out-next`. See `builder.log` and `compose.log` in the output directory if the build fails.

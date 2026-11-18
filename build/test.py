@@ -34,8 +34,13 @@ def main(argv=None):
     engine = args.engine or next((name for name in ('docker', 'podman') if shutil.which(name)), None)
     if engine is None:
         raise builder.BuildError('Install Docker or Podman to run the ISO smoke test')
-    # The build creates this tools image. The test does not compose another ISO.
-    subprocess.run([engine, 'image', 'inspect', builder.BUILDER_IMAGE], stdout=subprocess.DEVNULL, check=True)
+    # A rootless build uses a different image. Prepare the smoke tools on demand.
+    probe = subprocess.run([engine, 'image', 'inspect', builder.BUILDER_IMAGE],
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    if probe.returncode:
+        subprocess.run([engine, 'build', '--pull', '--platform', 'linux/amd64',
+                        '--tag', builder.BUILDER_IMAGE, '--file', str(builder.ROOT / 'build/Containerfile'),
+                        str(builder.ROOT)], check=True)
     iso = args.iso.expanduser().resolve()
     output = (args.output or iso.parent / 'smoke').expanduser().resolve()
     if output.exists() and any(output.iterdir()):

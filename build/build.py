@@ -17,6 +17,7 @@ import uuid
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_DIRS = ('build', 'image')
 BUILDER_IMAGE = 'localhost/fedora-kiosk-builder:44'
+VM_BUILDER_IMAGE = 'localhost/fedora-kiosk-vm-builder:44'
 
 
 class BuildError(Exception):
@@ -63,7 +64,17 @@ def run_command(engine, source, output, uid, gid, name):
             BUILDER_IMAGE]
 
 
-def check_engine(engine):
+def vm_commands(engine, source, output, name):
+    # Copy over the engine connection, including remote Podman machines whose
+    # users and filesystems differ from those of the calling process.
+    return dict(create=[engine, 'create', '--name', name, '--cap-drop=all',
+                        '--security-opt', 'no-new-privileges', '--volume', '/work', VM_BUILDER_IMAGE],
+                upload=[engine, 'cp', f'{source}/.', f'{name}:/source'],
+                start=[engine, 'start', '--attach', name],
+                download=[engine, 'cp', f'{name}:/output/.', str(output)])
+
+
+def engine_is_rootless(engine):
     if engine == 'podman':
         query = [engine, 'info', '--format', '{{.Host.Security.Rootless}}']
     else:
@@ -72,9 +83,7 @@ def check_engine(engine):
         info = subprocess.check_output(query, stderr=subprocess.STDOUT, timeout=30).decode()
     except (OSError, subprocess.CalledProcessError, subprocess.TimeoutExpired):
         raise BuildError(f'{engine} unavailable; start its Linux engine and retry') from None
-    rootless = info.strip().lower() == 'true' if engine == 'podman' else 'rootless' in info.lower()
-    if rootless:
-        raise BuildError('Loop mounts require a rootful engine; select a rootful connection and retry')
+    return info.strip().lower() == 'true' if engine == 'podman' else 'rootless' in info.lower()
 
 
 def owner():
@@ -108,6 +117,7 @@ def main(argv=None):
                         help='empty artifact directory (default: out)')
     parser.add_argument('--engine', choices=('docker', 'podman'),
                         help='container CLI (default: first available, Docker preferred)')
+    parser.add_argument('--vm', action='store_true', help='use a disposable build VM (automatic with rootless engines)')
     parser.add_argument('--dry-run', action='store_true', help='show commands without downloading or running anything')
     args = parser.parse_args(argv)
     if platform.system() not in ('Linux', 'Darwin'):
@@ -122,17 +132,25 @@ def main(argv=None):
     if output == ROOT or any(output.is_relative_to(ROOT / name) for name in SOURCE_DIRS + ('tests',)):
         raise BuildError('Choose an output directory outside build/, image/ and tests/')
     uid, gid = owner()
-    build = [engine, 'build', '--pull', '--platform', 'linux/amd64', '--tag', BUILDER_IMAGE,
-             '--file', str(ROOT / 'build/Containerfile'), str(ROOT)]
-    if args.dry_run:
-        print(json.dumps(dict(build=build, run=run_command(engine, '<source snapshot>', str(output),
-                         uid, gid, '<unique build name>')), indent=2))
-        return 0
-    if output.exists() and any(output.iterdir()):
+    if not args.dry_run and output.exists() and any(output.iterdir()):
         raise BuildError('Use an empty output directory for each build')
-    check_engine(engine)
+    rootless = not args.dry_run and engine_is_rootless(engine)
+    use_vm = args.vm or rootless
+    image = VM_BUILDER_IMAGE if use_vm else BUILDER_IMAGE
+    containerfile = 'Containerfile.vm' if use_vm else 'Containerfile'
+    architecture = [] if use_vm else ['--platform', 'linux/amd64']
+    build = [engine, 'build', '--pull', *architecture, '--tag', image,
+             '--file', str(ROOT / 'build' / containerfile), str(ROOT)]
+
+    if args.dry_run:
+        snapshot, name = '<source snapshot>', '<unique build name>'
+        commands = vm_commands(engine, snapshot, output, name) if use_vm else {
+            'run': run_command(engine, snapshot, output, uid, gid, name)}
+        print(json.dumps(dict(build=build, **commands), indent=2))
+        return 0
     output.mkdir(parents=True, exist_ok=True)
-    print('Pulling the Fedora 44 builder and its tools', flush=True)
+    print('Pulling the Fedora 44 VM builder and its tools' if use_vm else
+          'Pulling the Fedora 44 builder and its tools', flush=True)
     subprocess.run(build, check=True)
     print(f'Building the ISO; follow {output / "builder.log"}', flush=True)
     name = 'fedora-kiosk-build-' + uuid.uuid4().hex[:16]
@@ -141,10 +159,21 @@ def main(argv=None):
     with tempfile.TemporaryDirectory(prefix='.kiosk-source-', dir=output.parent) as temporary:
         snapshot = Path(temporary).resolve()
         copy_source(ROOT, snapshot)
-        command = run_command(engine, snapshot, output, uid, gid, name)
         with (output / 'builder.log').open('wb') as log:
+            capture = dict(stdout=log, stderr=subprocess.STDOUT)
             try:
-                result = subprocess.run(command, stdout=log, stderr=subprocess.STDOUT)
+                if use_vm:
+                    commands = vm_commands(engine, snapshot, output, name)
+                    for step in ('create', 'upload'):
+                        subprocess.run(commands[step], check=True, **capture)
+                    result = subprocess.run(commands['start'], **capture)
+                    exported = subprocess.run(commands['download'], **capture)
+                    if exported.returncode and not result.returncode:
+                        result = exported
+                else:
+                    result = subprocess.run(run_command(engine, snapshot, output, uid, gid, name), **capture)
+            except subprocess.CalledProcessError as error:
+                raise BuildError(f'Could not prepare the build container; inspect {log.name}') from error
             finally:
                 # Remove only this invocation's container after interruption.
                 # It may already have been removed by --rm.
