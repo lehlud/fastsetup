@@ -99,6 +99,9 @@ class RenderTests(unittest.TestCase):
             self.assertEqual(path.read_bytes(), (ROOT / 'image/usr/local/bin/kiosk-install').read_bytes())
             self.assertEqual(stat.S_IMODE(path.stat().st_mode), 0o755)
             self.assertTrue((root / 'etc/systemd/system/kiosk.service').is_file())
+            foot = ConfigParser()
+            foot.read(root / 'etc/xdg/foot/foot.ini')
+            self.assertEqual(foot['key-bindings']['quit'], 'Control+Alt+Delete')
             self.assertTrue((root / 'usr/share/kiosk/target-payload.b64').is_file())
             self.assert_sleep_policy(root)
 
