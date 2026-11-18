@@ -1,8 +1,10 @@
 """Drive the real Textual screens, including the complete inert wizard."""
 import asyncio
 from html import unescape
+import json
 from pathlib import Path
 import sys
+import tempfile
 import threading
 import unittest
 from unittest.mock import patch
@@ -12,7 +14,7 @@ from textual.widgets import Checkbox, Input, OptionList, Static
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'image/usr/local/lib'))
-from kiosk import common, install, preview
+from kiosk import common, install, keyboard, preview
 from kiosk.ui import Back, BusyScreen, Field, FormScreen, KioskApp, MenuScreen, NoticeScreen, SSHAccessScreen
 
 
@@ -143,6 +145,44 @@ class TextualTests(unittest.IsolatedAsyncioTestCase):
         finally:
             release.set()
 
+    async def test_layout_correction_relaunches_before_setup_with_a_new_echo(self):
+        share = ROOT / 'image/usr/share/kiosk'
+        services = preview.DemoServices()
+        services.keyboard = keyboard.confirm
+        with tempfile.TemporaryDirectory() as directory:
+            runtime = Path(directory)
+            table = keyboard.load_table(share)
+            with patch.object(keyboard, 'RUN', runtime), patch.object(keyboard, 'SHARE', share), \
+                 patch.object(keyboard, 'load_table', return_value=table), \
+                 patch.object(keyboard.Path, 'glob', return_value=[]):
+                us = keyboard.layouts(share)[0]
+                keyboard.save_layout(us)
+                app = KioskApp(lambda ui: install.wizard(ui, services))
+                async with app.run_test(size=(80, 24)) as pilot:
+                    echo = await screen(pilot, FormScreen, 'Keyboard')
+                    self.assertIn('qazy', echo.rows[0])
+                    await pilot.press('enter')
+                    self.assertIn('Esc to change layout', str(echo.query_one('#error', Static).render()))
+                    await pilot.press('escape')
+                    await screen(pilot, MenuScreen, 'Keyboard')
+                    await pilot.press('escape')
+                    await screen(pilot, FormScreen, 'Keyboard')
+                    await pilot.press('escape')
+                    menu = await screen(pilot, MenuScreen, 'Keyboard')
+                    await pilot.press(*(['down'] * (menu.items.index('German') - menu.selected)), 'enter')
+                self.assertEqual(app.return_code, keyboard.RELOAD_LAYOUT)
+                layout = json.loads((runtime / 'layout').read_text())
+                self.assertEqual(layout['id'], 'de')
+                self.assertEqual((runtime / 'vconsole-keymap').read_text().strip(), layout['vconsole'])
+
+                app = KioskApp(lambda ui: install.wizard(ui, services))
+                async with app.run_test(size=(80, 24)) as pilot:
+                    echo = await screen(pilot, FormScreen, 'Keyboard')
+                    self.assertIn('qayz', echo.rows[0])
+                    await paste(pilot, 'qayz')
+                    await pilot.press('enter')
+                    await screen(pilot, FormScreen, 'Identity')
+
     async def test_full_preview_has_back_edit_and_one_exact_disk_confirmation(self):
         services = preview.DemoServices()
         app = KioskApp(lambda ui: install.wizard(ui, services))
@@ -167,6 +207,11 @@ class TextualTests(unittest.IsolatedAsyncioTestCase):
                 await screen(pilot, MenuScreen, 'Disk')
                 # The live USB is listed but the eligible SSD is selected by default.
                 self.assertEqual(app.screen.query_one(OptionList).highlighted, 1)
+                await pilot.press('up', 'enter')
+                locked = await screen(pilot, NoticeScreen, 'Disk')
+                self.assertIn('Live medium protected', locked.rows[0])
+                await pilot.press('enter')
+                await screen(pilot, MenuScreen, 'Disk')
                 await pilot.press('enter')
                 await screen(pilot, FormScreen, 'Account')
                 await paste(pilot, 'new-password', 'password')

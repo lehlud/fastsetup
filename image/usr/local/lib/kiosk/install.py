@@ -341,6 +341,8 @@ class LiveServices:
 async def wizard(ui, services=None):
     services = services or LiveServices()
     data = {'layout': await services.keyboard(ui)}
+    if data['layout'] is None:
+        return keyboard.RELOAD_LAYOUT
     drafts = {}
     stage, editing = 0, False
     review = len(STEPS)
@@ -396,6 +398,8 @@ async def wizard(ui, services=None):
                 stage -= 1
             else:
                 data['layout'] = await services.keyboard(ui)
+                if data['layout'] is None:
+                    return keyboard.RELOAD_LAYOUT
 
 
 def main():
@@ -405,6 +409,7 @@ def main():
         app.run(mouse=False)
         if app.failure:
             log('installer: aborted; inspect system state in recovery')
+            return 1
+        return app.return_code
     finally:
         Path('/tmp/kiosk.ks').unlink(missing_ok=True)
-        poweroff()

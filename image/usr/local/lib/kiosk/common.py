@@ -3,7 +3,6 @@ from pathlib import Path
 import re
 import signal
 import subprocess
-import sys
 import time
 
 SHARE = Path('/usr/share/kiosk')
@@ -46,13 +45,9 @@ def log(message):
 
 
 def poweroff(*_):
-    # ExecStopPost remains responsible if this process is killed or hangs.
-    for command in (['sync'], ['poweroff', '-i'], ['poweroff', '-f']):
-        try:
-            run(command, timeout=0.5, check=False)
-        except Failure:
-            pass
-    raise SystemExit(1)
+    # Exit immediately even if a raw input or network worker is still blocked.
+    # The service stops the whole control group before requesting power-off.
+    os._exit(1)
 
 
 def install_signals():

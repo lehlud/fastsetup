@@ -1,12 +1,41 @@
 """Cancellation must stop Anaconda; no real installer is ever launched here."""
 import asyncio
 from pathlib import Path
+import subprocess
 import sys
 import unittest
 from unittest.mock import AsyncMock, Mock, patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'image/usr/local/lib'))
 from kiosk import install
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+class ShutdownTests(unittest.TestCase):
+    def request_shutdown(self, status):
+        # Override commands in this shell only, so it cannot power off the host.
+        fixture = r'''
+set +o posix
+shutdown_status=$2
+function rm() { :; }
+function /usr/bin/timeout() {
+    printf '%s\n' "$*"
+    if [[ "$2" == /usr/bin/systemctl ]]; then return "$shutdown_status"; fi
+}
+function exec() { printf '%s\n' "$*"; }
+source "$1"
+'''
+        return subprocess.check_output(['bash', '-ec', fixture, 'fixture',
+                                        str(ROOT / 'image/usr/local/bin/kiosk-poweroff'), str(status)],
+                                       text=True).splitlines()
+
+    def test_accepted_shutdown_request_leaves_unmounting_to_systemd(self):
+        self.assertEqual(self.request_shutdown(0),
+                         ['1 /usr/bin/systemctl --no-block --check-inhibitors=no poweroff'])
+
+    def test_failed_shutdown_request_syncs_before_forced_fallback(self):
+        self.assertEqual(self.request_shutdown(124)[1:], ['0.5 /usr/bin/sync', '/usr/sbin/poweroff -f'])
 
 
 class InstallationRuntimeTests(unittest.IsolatedAsyncioTestCase):

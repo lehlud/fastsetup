@@ -14,6 +14,7 @@ MODIFIERS = {29, 42, 54, 56, 97, 100, 125, 126}
 IGNORED = MODIFIERS | {58, 69, 70}
 EVENT = struct.Struct('@llHHi')
 EVIOCGRAB = 0x40044590
+RELOAD_LAYOUT = 75  # Forwarded by foot and cage to kiosk-session.
 
 
 def layouts(share=SHARE):
@@ -139,7 +140,7 @@ def read_round(path, count, timeout=30):
         os.close(fd)
 
 
-async def shortlist(ui, options, country=None):
+async def shortlist(ui, options, country=None, *, current=None):
     # Hardware is only a hint. Never filter out a printed layout.
     hint = {7: 'de', 8: 'fr', 32: 'gb', 33: 'us'}.get(country)
     if hint is None:
@@ -152,8 +153,9 @@ async def shortlist(ui, options, country=None):
             except (OSError, UnicodeError):
                 pass
     options = sorted(options, key=lambda x: (x['id'] != hint, x['id'] != 'us'))
+    default = next((i for i, option in enumerate(options) if option['id'] == current), 0)
     return options[await ui.menu('Keyboard', [x['label'] for x in options],
-                                 context='Select the layout printed on the keycaps.')]
+                                 context='Select the layout printed on the keycaps.', default=default)]
 
 
 async def identify_layout(ui, options):
@@ -183,6 +185,13 @@ async def identify_layout(ui, options):
     return selected
 
 
+def save_layout(selected):
+    metadata = json.loads((SHARE / 'keymap-metadata.json').read_text())
+    RUN.mkdir(mode=0o700, parents=True, exist_ok=True)
+    private_write(RUN / 'layout', json.dumps(dict(selected, **metadata[selected['id']])))
+    private_write(RUN / 'vconsole-keymap', selected['vconsole'] + '\n')
+
+
 async def probe(ui):
     options = layouts()
     while True:
@@ -191,10 +200,7 @@ async def probe(ui):
             break
         except Back:
             continue
-    selected.update(json.loads((SHARE / 'keymap-metadata.json').read_text())[selected['id']])
-    RUN.mkdir(mode=0o700, parents=True, exist_ok=True)
-    private_write(RUN / 'layout', json.dumps(selected))
-    private_write(RUN / 'vconsole-keymap', selected['vconsole'] + '\n')
+    save_layout(selected)
 
 
 async def confirm(ui):
@@ -204,7 +210,18 @@ async def confirm(ui):
     target = ''.join(mapping.get(code, '') for code in (16, 30, 44, 21))
     if not target or len(target) < 3:
         target = '1234'
-    ui.screen('Keyboard', [target], context='Type this text and check the visible echo.')
-    await ui.read('Echo', '', valid=lambda value: value == target,
-                  error='Echo differs; retry or restart the stick to change layout', back=False)
-    return selected
+    while True:
+        ui.screen('Keyboard', [f"{selected['label']}  {target}"],
+                  context='Type the displayed text or press Esc to change layout.')
+        try:
+            await ui.read('Echo', '', valid=lambda value: value == target,
+                          error='Echo differs. Retry or press Esc to change layout')
+            return selected
+        except Back:
+            try:
+                replacement = await shortlist(ui, layouts(SHARE), current=selected['id'])
+            except Back:
+                continue
+            if replacement['id'] != selected['id']:
+                save_layout(replacement)
+                return None

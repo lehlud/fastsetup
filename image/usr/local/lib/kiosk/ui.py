@@ -411,8 +411,9 @@ class KioskApp(App):
         self.run_worker(self.run_workflow(), exit_on_error=False)
 
     async def run_workflow(self):
+        return_code = 0
         try:
-            await self.workflow(self.ui)
+            return_code = await self.workflow(self.ui) or 0
         except asyncio.CancelledError:
             return
         except Exception as error:
@@ -421,7 +422,7 @@ class KioskApp(App):
                                  'Cannot continue; inspect the live logs in recovery')
         # Installation state contains credentials; never return it to Textual's
         # optional return-value/debug rendering.
-        self.exit()
+        self.exit(return_code=return_code)
 
     def action_abort(self):
         self.cancelled = True

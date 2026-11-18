@@ -1,5 +1,8 @@
 #!/bin/bash
 # A unit stop, including an uncatchable SIGKILL, always reaches this hook.
-/usr/bin/timeout 0.5 /usr/bin/sync || :
-/usr/bin/timeout 0.5 /usr/sbin/poweroff -i || :
-/usr/sbin/poweroff -f
+rm -f /tmp/kiosk.ks
+# A successful request is asynchronous. Let systemd unmount the filesystems.
+if ! /usr/bin/timeout 1 /usr/bin/systemctl --no-block --check-inhibitors=no poweroff; then
+    /usr/bin/timeout 0.5 /usr/bin/sync || :
+    exec /usr/sbin/poweroff -f
+fi
