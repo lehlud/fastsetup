@@ -31,5 +31,9 @@ dnf -y "${repos[@]}" --refresh install \
     sbsigntools pesign xorriso mtools edk2-ovmf
 # Verification compares the ISO boot binaries to these installed RPM payloads.
 dnf -y "${repos[@]}" upgrade shim-x64 grub2-efi-x64 grub2-efi-x64-cdboot kernel-core
+# Allow setfiles to write contexts from the ISO's policy in this disposable VM.
+if selinuxenabled; then
+    setenforce 0
+fi
 echo 'Composing the live image; compose.log will be exported after the VM stops'
 KIOSK_RPM_CACHE=/mnt/kiosk/rpms bash /mnt/kiosk/build/build-live.sh /mnt/kiosk/result
