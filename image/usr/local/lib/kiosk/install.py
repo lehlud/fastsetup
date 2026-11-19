@@ -10,6 +10,7 @@ import subprocess
 
 from . import battery, keyboard, network, storage, vpn
 from .common import Failure, LOG, SHARE, install_signals, log, output, poweroff, private_write, run, valid_hostname
+from .install_progress import InstallProgress, read_progress
 from .target_policy import DEFAULT_UPDATES, REBOOT_LABELS
 from .ui import Back, BusyScreen, EDIT, Field, KioskApp
 
@@ -18,6 +19,7 @@ TOKENS = {'TZ', 'HOSTNAME', 'USER', 'USERHASH', 'DISKNAME', 'LAYOUT', 'VCKEYMAP'
           'SERVER_POLICY_B64'}
 
 STEPS = ['Identity', 'Network', 'Disk', 'Account', 'SSH access', 'VPN', 'Updates']
+INSTALL_IDLE_MINUTES = 15
 
 
 def b64(value):
@@ -273,24 +275,59 @@ def prepare_kickstart(data):
     return ks
 
 
-async def run_anaconda():
-    command = ['/usr/sbin/anaconda', '--cmdline', '--kickstart=/tmp/kiosk.ks', '--nosave=all']
-    env = dict(os.environ, LANG='en_US.UTF-8', TZ='UTC', ANACONDA_PRODUCTNAME='Fedora',
-               ANACONDA_PRODUCTVERSION='44', ANACONDA_ISFINAL='true')
-    proc = await asyncio.create_subprocess_exec(*command, stdin=subprocess.DEVNULL,
-                                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, env=env)
+async def run_anaconda(progress):
+    # Match Fedora's liveinst launcher. Shadow updates account files in the
+    # target before Anaconda labels them. The target policy is set by Kickstart.
+    enforcing = output(['/usr/sbin/getenforce'], timeout=5) == 'Enforcing'
+    if enforcing:
+        run(['/usr/sbin/setenforce', '0'], timeout=5)
     try:
-        return await asyncio.wait_for(proc.wait(), 1200)
-    except TimeoutError:
-        return -1
+        return await run_anaconda_process(progress)
     finally:
-        if proc.returncode is None:
-            proc.terminate()
-            try:
-                await asyncio.wait_for(proc.wait(), 2)
-            except TimeoutError:
-                proc.kill()
-                await proc.wait()
+        if enforcing:
+            run(['/usr/sbin/setenforce', '1'], timeout=5)
+
+
+async def run_anaconda_process(progress):
+    command = ['/usr/local/bin/kiosk-anaconda', '--cmdline', '--kickstart=/tmp/kiosk.ks', '--nosave=all']
+    env = dict(os.environ, LANG='en_US.UTF-8', LC_ALL='en_US.UTF-8', PYTHONUNBUFFERED='1',
+               TZ='UTC', ANACONDA_PRODUCTNAME='Fedora',
+               ANACONDA_PRODUCTVERSION='44', ANACONDA_ISFINAL='true')
+    try:
+        proc = await asyncio.create_subprocess_exec(*command, stdin=subprocess.DEVNULL,
+                                                   stdout=subprocess.PIPE, stderr=subprocess.STDOUT, env=env)
+    except OSError:
+        raise Failure('Anaconda could not start') from None
+    loop = asyncio.get_running_loop()
+    idle_seconds = INSTALL_IDLE_MINUTES * 60
+    reader = None
+    watch_activity = True
+    try:
+        async with asyncio.timeout(idle_seconds) as deadline:
+            def advance_deadline():
+                if watch_activity and not deadline.expired():
+                    deadline.reschedule(loop.time() + idle_seconds)
+
+            reader = asyncio.create_task(read_progress(proc.stdout, progress, advance_deadline))
+            status = await proc.wait()
+            await reader
+            return status
+    except TimeoutError:
+        raise Failure(f'Anaconda reported no progress for {INSTALL_IDLE_MINUTES} minutes') from None
+    finally:
+        watch_activity = False
+        try:
+            if proc.returncode is None:
+                proc.terminate()
+                try:
+                    await asyncio.wait_for(proc.wait(), 2)
+                except TimeoutError:
+                    proc.kill()
+                    await proc.wait()
+        finally:
+            if reader is not None:
+                reader.cancel()
+                await asyncio.gather(reader, return_exceptions=True)
 
 
 class LiveServices:
@@ -321,20 +358,30 @@ class LiveServices:
         except Failure as error:
             await ui.notice('Install Fedora', str(error))
             return False
-        screen = BusyScreen('Install Fedora', 'Installing Fedora')
+        screen = BusyScreen('Install Fedora', 'Starting Anaconda')
+        progress = InstallProgress(lambda message: setattr(screen, 'message', message))
+        status, reason = None, None
         await ui.app.push_screen(screen)
         try:
-            result = await run_anaconda()
+            status = await run_anaconda(progress)
+        except Failure as error:
+            reason = str(error)
         finally:
             if not ui.app.cancelled:
                 await ui.app.pop_screen()
-        if result:
-            log('anaconda: failed')
-            ui.screen('Installation failed', ['x Anaconda failed; inspect the live logs',
-                      '/tmp/anaconda.log', '/tmp/ks.error', '/tmp/packaging.log', str(LOG)])
-            await ui.read('Power off', 'Enter', back=False)
-        else:
+        if status == 0 and progress.completed:
             log('anaconda: completed')
+            return True
+        reason = reason or progress.failure(status)
+        log(f'anaconda: {reason} (status {status}, stage {progress.stage})')
+        rows = [f'x {reason}', f'  Last step  {progress.stage}']
+        if progress.missing:
+            rows.append('  Check      ' + ', '.join(progress.missing))
+        elif status is not None:
+            rows.append(f'  Exit status  {status}')
+        rows.extend(['/tmp/anaconda.log', '/tmp/ks.error', '/tmp/packaging.log', '/tmp/storage.log', str(LOG)])
+        ui.screen('Installation failed', rows)
+        await ui.read('Power off', 'Enter', back=False)
         return True
 
 

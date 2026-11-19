@@ -31,7 +31,9 @@ Select `/dev/vda` in the VM and wait for power-off before running the boot comma
 
 ## Recover the installer
 
-Closing or interrupting the kiosk powers off the live machine. An installation failure lists the logs and waits for Enter before shutdown. The live logs disappear at power-off.
+Closing or interrupting the kiosk powers off the live machine. During installation, the display shows Anaconda's current step and package counts when available. The installer reports a failure after 15 minutes without a new progress update. Note the error and last step before pressing Enter to power off. The live logs disappear at power-off.
+
+The live system uses SELinux permissive mode while Anaconda installs and labels the target. The installed server boots with SELinux enforcing.
 
 For a separate recovery boot, replace `systemd.unit=multi-user.target` with `systemd.unit=rescue.target` in the boot command line and add `systemd.mask=kiosk.service`. The live root password is locked, so `rd.break` or `init=/bin/bash` may be needed for a root shell. A frozen machine needs a physical reset.
 

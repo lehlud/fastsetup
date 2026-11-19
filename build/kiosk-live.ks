@@ -5,7 +5,7 @@ rootpw --lock
 selinux --enforcing
 firewall --enabled
 network --bootproto=dhcp --device=link --activate
-bootloader --timeout=0 --append="quiet loglevel=3 rd.systemd.show_status=false systemd.show_status=false systemd.unit=multi-user.target inst.nokill"
+bootloader --timeout=0 --append="quiet loglevel=3 rd.systemd.show_status=false systemd.show_status=false systemd.unit=multi-user.target"
 zerombr
 clearpart --all
 part / --size=8192 --fstype=ext4
@@ -45,6 +45,7 @@ grub2-pc-modules
 shim-x64
 efibootmgr
 mokutil
+libselinux-utils
 cage
 foot
 dejavu-sans-mono-fonts

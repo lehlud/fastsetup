@@ -26,6 +26,7 @@ ExecStart=/usr/local/bin/kiosk-session
 ExecStopPost=/usr/local/bin/kiosk-poweroff
 Restart=no
 KillMode=control-group
+OOMPolicy=continue
 TimeoutStopSec=2
 SendSIGKILL=yes
 UMask=0077

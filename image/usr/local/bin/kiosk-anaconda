@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+"""Run Anaconda's package installer with the live OS power policy."""
+import runpy
+
+from pyanaconda.core.configuration.anaconda import conf
+
+
+set_from_opts = conf.set_from_opts
+
+
+def set_kiosk_options(options):
+    set_from_opts(options)
+    # Anaconda 44 resets the system type on both calls to set_from_opts.
+    # --liveinst changes the payload and skips the supplied kickstart.
+    conf.set_from_files(['/etc/anaconda/conf.d/99-kiosk.conf'])
+    if conf.system.can_reboot or not conf.system.provides_system_bus:
+        raise RuntimeError('Anaconda live system policy did not load')
+
+
+conf.set_from_opts = set_kiosk_options
+runpy.run_path('/usr/sbin/anaconda', run_name='__main__')

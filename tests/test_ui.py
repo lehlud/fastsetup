@@ -37,6 +37,34 @@ async def paste(pilot, value, key=None):
 
 
 class TextualTests(unittest.IsolatedAsyncioTestCase):
+    async def test_anaconda_progress_and_unexpected_exit_stay_visible(self):
+        release = asyncio.Event()
+        result = []
+
+        async def backend(progress):
+            progress.consume('Installing kernel-core.x86_64 (25/100)')
+            await release.wait()
+            return 0
+
+        async def flow(ui):
+            result.append(await install.LiveServices.commit(ui, {}))
+
+        app = KioskApp(flow)
+        with patch.object(install, 'prepare_kickstart'), patch.object(install, 'run_anaconda', backend), \
+             patch('kiosk.install_progress.log'), patch.object(install, 'log'):
+            async with app.run_test(size=(80, 24)) as pilot:
+                busy = await screen(pilot, BusyScreen, 'Install Fedora')
+                busy.tick()
+                self.assertIn('Install 25/100 (25%)', str(busy.query_one('#progress', Static).render()))
+                release.set()
+                failure = await screen(pilot, NoticeScreen, 'Installation failed')
+                self.assertIn('exited before completing', failure.rows[0])
+                self.assertIn('Installing Fedora packages', failure.rows[1])
+                self.assertLessEqual(failure.query_one('.canvas').size.height, 12)
+                self.assertEqual(result, [])
+                await pilot.press('enter')
+        self.assertEqual(result, [True])
+
     def test_summary_keeps_long_values_visible_and_does_not_invent_battery_thresholds(self):
         data = dict(hostname='a' * 41, timezone='America/Argentina/ComodRivadavia', user='u' * 31,
                     layout=dict(label='German (no dead keys)'), net=dict(path='Ethernet'),

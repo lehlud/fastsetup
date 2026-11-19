@@ -2,7 +2,7 @@
 
 A bootable USB installer that turns an x86_64 laptop into a headless Fedora 44 server. The installer runs in one keyboard-operated terminal. The server comes with SSH, NetworkManager, Podman, KVM/libvirt, Fish, and battery protection.
 
-**Experimental.** The live installer has booted with Secure Boot in a VM. Full installation and hardware validation are pending.
+**Experimental.** Installation and first boot from the target disk have been verified with Secure Boot in a VM. Hardware validation is pending.
 
 ## Build
 
