@@ -9,10 +9,11 @@ import struct
 import subprocess
 
 from . import battery, keyboard, network, storage, vpn
-from .common import Failure, LOG, SHARE, install_signals, log, output, poweroff, private_write, run, valid_hostname
+from .common import Failure, SHARE, install_signals, log, output, poweroff, private_write, run, valid_hostname
 from .install_progress import InstallProgress, read_progress
+from .log_view import INSTALL_LOGS, log_pager, log_secrets
 from .target_policy import DEFAULT_UPDATES, REBOOT_LABELS
-from .ui import Back, BusyScreen, EDIT, Field, KioskApp
+from .ui import Back, BusyScreen, EDIT, Field, KioskApp, LogMenu
 
 TOKENS = {'TZ', 'HOSTNAME', 'USER', 'USERHASH', 'DISKNAME', 'LAYOUT', 'VCKEYMAP',
           'SSID_B64', 'PSK_B64', 'SSHKEYBLOCK', 'SSH_PASSWORD', 'NETWORK_B64', 'PAYLOAD_B64', 'BATTERY_B64',
@@ -251,10 +252,6 @@ async def summary(ui, data):
 
 def prepare_kickstart(data):
     disk, layout, net = data['disk'], data['layout'], data['net']
-    fresh = storage.inventory()
-    current = storage.validate_disk(disk['name'], fresh, storage.live_disks(fresh))
-    if storage.fingerprint(disk) != storage.fingerprint(current):
-        raise Failure('Disk changed; select and confirm it again')
     xlayout = layout['layout'] + (f" ({layout['variant']})" if layout['variant'] else '')
     user = data['user']
     values = dict(TZ=data['timezone'], HOSTNAME=data['hostname'], USER=user, USERHASH=data['hashed'],
@@ -271,6 +268,7 @@ def prepare_kickstart(data):
     ks = Path('/tmp/kiosk.ks')
     private_write(ks, render((SHARE / 'ks.template').read_text(), values))
     run(['ksvalidator', '-v', 'F44', str(ks)], timeout=15)
+    storage.prepare_target(disk)
     log('kickstart: validated; handoff')
     return ks
 
@@ -330,6 +328,28 @@ async def run_anaconda_process(progress):
                 await asyncio.gather(reader, return_exceptions=True)
 
 
+async def installation_failure(ui, rows, data):
+    paths = [path for path in INSTALL_LOGS if path.is_file()]
+    if not paths:
+        ui.screen('Installation failed', rows)
+        await ui.read('Power off', 'Enter', back=False)
+        return
+    secrets = log_secrets(data)
+    selected = 0
+    while True:
+        selected = await ui.dialog(LogMenu('Installation failed', [str(path) for path in paths], rows=rows,
+                                           default=selected, back=False, step=ui.step))
+        if selected is None:
+            return
+        try:
+            async with log_pager(paths[selected], secrets) as (command, environment):
+                result = ui.run_editor(command, env=environment)
+                if result.returncode == 2:
+                    ui.app.action_abort()  # less -K exits with status 2 on Ctrl-C.
+        except (OSError, Failure):
+            await ui.notice('Log file', 'Log is unavailable')
+
+
 class LiveServices:
     keyboard = staticmethod(keyboard.confirm)
     identity = staticmethod(identity)
@@ -372,16 +392,20 @@ class LiveServices:
         if status == 0 and progress.completed:
             log('anaconda: completed')
             return True
+        progress.inspect_failure()
         reason = reason or progress.failure(status)
         log(f'anaconda: {reason} (status {status}, stage {progress.stage})')
-        rows = [f'x {reason}', f'  Last step  {progress.stage}']
+        # A storage report can include disk identifiers. Keep it on screen only.
+        rows = [f'x {progress.detail or reason}', f'  Last step  {progress.stage}']
         if progress.missing:
-            rows.append('  Check      ' + ', '.join(progress.missing))
-        elif status is not None:
+            checks = ', '.join(progress.missing)
+            log(f'anaconda: incomplete checks: {checks}')
+            rows.append(f'  Check      {checks}')
+        if 'Target disk' in progress.missing:
+            storage.log_target_layout(data['disk']['name'])
+        if status is not None:
             rows.append(f'  Exit status  {status}')
-        rows.extend(['/tmp/anaconda.log', '/tmp/ks.error', '/tmp/packaging.log', '/tmp/storage.log', str(LOG)])
-        ui.screen('Installation failed', rows)
-        await ui.read('Power off', 'Enter', back=False)
+        await installation_failure(ui, rows, data)
         return True
 
 

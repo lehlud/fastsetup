@@ -62,11 +62,14 @@ NetworkManager-wifi
 NetworkManager-tui
 wpa_supplicant
 iputils
+util-linux
 curl
 openssl
 openssh-clients
 python3
 python3-textual
+bat
+less
 neovim
 helix
 pykickstart

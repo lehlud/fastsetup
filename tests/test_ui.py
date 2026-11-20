@@ -1,5 +1,6 @@
 """Drive the real Textual screens, including the complete inert wizard."""
 import asyncio
+from contextlib import asynccontextmanager
 from html import unescape
 import json
 from pathlib import Path
@@ -7,7 +8,7 @@ import sys
 import tempfile
 import threading
 import unittest
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 from textual import events
 from textual.widgets import Checkbox, Input, OptionList, Static
@@ -15,7 +16,7 @@ from textual.widgets import Checkbox, Input, OptionList, Static
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'image/usr/local/lib'))
 from kiosk import common, install, keyboard, preview
-from kiosk.ui import Back, BusyScreen, Field, FormScreen, KioskApp, MenuScreen, NoticeScreen, SSHAccessScreen
+from kiosk.ui import Back, BusyScreen, Field, FormScreen, KioskApp, LogMenu, MenuScreen, NoticeScreen, SSHAccessScreen, UI
 
 
 async def screen(pilot, kind, title=None):
@@ -51,7 +52,7 @@ class TextualTests(unittest.IsolatedAsyncioTestCase):
 
         app = KioskApp(flow)
         with patch.object(install, 'prepare_kickstart'), patch.object(install, 'run_anaconda', backend), \
-             patch('kiosk.install_progress.log'), patch.object(install, 'log'):
+             patch('kiosk.install_progress.log'), patch.object(install, 'log'), patch.object(install, 'INSTALL_LOGS', ()):
             async with app.run_test(size=(80, 24)) as pilot:
                 busy = await screen(pilot, BusyScreen, 'Install Fedora')
                 busy.tick()
@@ -64,6 +65,40 @@ class TextualTests(unittest.IsolatedAsyncioTestCase):
                 self.assertEqual(result, [])
                 await pilot.press('enter')
         self.assertEqual(result, [True])
+
+    async def test_install_failure_can_browse_logs_without_hiding_the_diagnostic(self):
+        completed = []
+        opened = []
+
+        @asynccontextmanager
+        async def pager(path, secrets):
+            opened.append((path.name, 'private-pass' in secrets))
+            yield ['pager'], {'LESSSECURE': '1'}
+
+        async def flow(ui):
+            await install.installation_failure(ui, ['x Check the selected disk', '  Last step  Storage',
+                                                    '  Check      Target disk', '  Exit status  1'],
+                                               {'net': {'psk': 'private-pass'}})
+            completed.append(True)
+
+        with tempfile.TemporaryDirectory() as folder:
+            logs = [Path(folder) / f'log{i}' for i in range(6)]
+            for log in logs:
+                log.touch()
+            app = KioskApp(flow)
+            with patch.object(install, 'INSTALL_LOGS', logs), patch.object(install, 'log_pager', pager), \
+                 patch.object(UI, 'run_editor', return_value=Mock(returncode=0)) as run_pager:
+                async with app.run_test(size=(80, 24)) as pilot:
+                    failed = await screen(pilot, LogMenu, 'Installation failed')
+                    self.assertLessEqual(failed.query_one('.canvas').size.height, 12)
+                    await pilot.press('down', 'down', 'down', 'down', 'enter')
+                    returned = await screen(pilot, LogMenu, 'Installation failed')
+                    self.assertEqual(returned.page, 1)
+                    self.assertEqual(opened, [('log4', True)])
+                    run_pager.assert_called_once_with(['pager'], env={'LESSSECURE': '1'})
+                    self.assertFalse(completed)
+                    await pilot.press('escape')
+        self.assertEqual(completed, [True])
 
     def test_summary_keeps_long_values_visible_and_does_not_invent_battery_thresholds(self):
         data = dict(hostname='a' * 41, timezone='America/Argentina/ComodRivadavia', user='u' * 31,

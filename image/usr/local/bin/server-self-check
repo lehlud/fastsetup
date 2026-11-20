@@ -2,8 +2,26 @@
 set -euo pipefail
 server_user=$(cat /etc/kiosk-server-user)
 server_uid=$(id -u "$server_user")
-runuser -u "$server_user" -- test -r /dev/kvm
-id -nG "$server_user" | tr ' ' '\n' | grep -qx kvm
+if ! id -nG "$server_user" | tr ' ' '\n' | grep -qx kvm; then
+    echo 'The server user must belong to the kvm group.' >&2
+    exit 1
+fi
+runuser -u "$server_user" -- python3 - <<'PY'
+import errno
+import fcntl
+import os
+import sys
+
+try:
+    with open('/dev/kvm', 'r+b', buffering=0) as kvm:
+        vm = fcntl.ioctl(kvm, 0xAE01, 0)  # KVM_CREATE_VM on x86_64
+        os.close(vm)
+except OSError as error:
+    if error.errno in (errno.ENOENT, errno.ENODEV, errno.ENXIO):
+        sys.exit('KVM unavailable. Check VT-x or AMD-V in firmware, or nested virtualization.')
+    sys.exit(f'KVM could not create a VM as the server user ({error.strerror}).')
+print('KVM VM creation succeeded as the server user.')
+PY
 runuser -u "$server_user" -- virsh --connect qemu:///system list --all
 systemctl start "user@${server_uid}.service"
 runuser -u "$server_user" -- env XDG_RUNTIME_DIR="/run/user/$server_uid" podman info

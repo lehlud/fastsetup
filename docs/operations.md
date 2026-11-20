@@ -29,11 +29,15 @@ ssh -p 2222 server@127.0.0.1
 
 Select `/dev/vda` in the VM and wait for power-off before running the boot command. Use the account name and key configured during installation. For legacy BIOS pass `--bios --directory out/bios-vm` to both VM commands. After login, check `sudo mokutil --sb-state` on UEFI and `systemctl status server-self-check.service` on the installed server.
 
+`swapon --show` lists `/dev/zram0` at priority 100, sized to half the usable RAM. The installer also provisions `/var/swap/swapfile` at priority 10 on a dedicated Btrfs subvolume. The file uses one quarter of the free space after installation, capped at 16 GiB, and is skipped when less than 4 GiB is free.
+
 ## Recover the installer
 
-Closing or interrupting the kiosk powers off the live machine. During installation, the display shows Anaconda's current step and package counts when available. The installer reports a failure after 15 minutes without a new progress update. Note the error and last step before pressing Enter to power off. The live logs disappear at power-off.
+Closing or interrupting the kiosk powers off the live machine. During installation, the display shows Anaconda's current step and package counts when available. The installer reports a failure after 15 minutes without a new progress update. On failure, select a log with the arrow keys and open it with Enter. Use `/` to search and `q` to return. For a disk error, inspect `storage.log` and the target summary in `kiosk-install.log`. Use Esc on the failure screen to power off. The live logs disappear at power-off.
 
 The live system uses SELinux permissive mode while Anaconda installs and labels the target. The installed server boots with SELinux enforcing.
+
+The disk picker rejects read-only drives and members of active volumes that span multiple drives. After you confirm erasing a disk, the installer removes ISO signatures from that disk and its partitions so Anaconda can partition it. For a storage failure, note the specific reason above the Check line.
 
 For a separate recovery boot, replace `systemd.unit=multi-user.target` with `systemd.unit=rescue.target` in the boot command line and add `systemd.mask=kiosk.service`. The live root password is locked, so `rd.break` or `init=/bin/bash` may be needed for a root shell. A frozen machine needs a physical reset.
 
@@ -57,6 +61,8 @@ systemctl is-enabled sleep.target suspend.target hibernate.target \
 Check for `ignore` on all three lid settings and `no` on all four `Allow…` sleep settings. All five targets should report `masked`.
 
 ## Run guests on the installed server
+
+Fedora loads the KVM driver and assigns `/dev/kvm` to the `kvm` group. The installer adds the server account to that group. Hardware acceleration requires Intel VT-x or AMD-V enabled in firmware, or nested virtualization if Fedora itself runs as a guest. The first-boot check creates an empty KVM VM as the server account. Inspect its result with `journalctl -b -u server-self-check.service`.
 
 For a guest disk configured for a serial console, use q35 with KVM and the host CPU.
 

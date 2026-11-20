@@ -239,6 +239,16 @@ class MenuScreen(Dialog):
         self.dismiss(self.page * self.PAGE_SIZE + event.option_index)
 
 
+class LogMenu(MenuScreen):
+    PAGE_SIZE = 4
+
+    def footer(self, text=''):
+        return super().footer('Up/Down select   Enter open   Esc power off')
+
+    def action_back(self):
+        self.dismiss(None)
+
+
 class BusyScreen(Dialog):
     def __init__(self, title, message, **kwargs):
         super().__init__(title, back=False, **kwargs)

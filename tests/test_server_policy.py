@@ -8,7 +8,7 @@ from unittest.mock import AsyncMock, Mock, patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'image/usr/local/lib'))
-from kiosk import install, vpn
+from kiosk import install, target_policy, vpn
 from kiosk.common import Failure
 from kiosk.ui import KioskApp, MenuScreen
 import test_kiosk
@@ -102,6 +102,42 @@ def render_policy(profile=None, updates=None):
 
 
 class TargetPolicyTests(unittest.TestCase):
+    def test_swap_uses_half_ram_and_a_lower_priority_disk_file(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / 'etc').mkdir()
+            fstab = root / 'etc/fstab'
+            fstab.write_text('UUID=root / btrfs defaults 0 0\n')
+
+            def create(command, *, check):
+                if command[:3] == ['btrfs', 'subvolume', 'create']:
+                    Path(command[-1]).mkdir(parents=True)
+                if command[:3] == ['btrfs', 'filesystem', 'mkswapfile']:
+                    Path(command[-1]).touch()
+
+            with patch('kiosk.target_policy.os.statvfs', return_value=Mock(f_frsize=4096, f_bavail=16 * 1024**2)), \
+                 patch('kiosk.target_policy.subprocess.run', side_effect=create) as run:
+                target_policy.configure_swap(root)
+                target_policy.configure_swap(root)
+            self.assertIn('zram-size = ram / 2\nswap-priority = 100', (root / target_policy.ZRAM_CONFIG).read_text())
+            self.assertEqual(fstab.read_text().count('/var/swap/swapfile none swap defaults,pri=10,nofail'), 1)
+            self.assertEqual((root / 'var/swap/swapfile').stat().st_mode & 0o777, 0o600)
+            self.assertEqual(run.call_count, 4)
+            self.assertIn('16384M', run.call_args_list[1].args[0])
+
+    def test_swap_leaves_small_disks_space_for_the_system(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / 'etc').mkdir()
+            fstab = root / 'etc/fstab'
+            fstab.write_text('UUID=root / btrfs defaults 0 0\n')
+            with patch('kiosk.target_policy.os.statvfs', return_value=Mock(f_frsize=4096, f_bavail=500_000)), \
+                 patch('kiosk.target_policy.subprocess.run') as run, patch('builtins.print'):
+                target_policy.configure_swap(root)
+            self.assertTrue((root / target_policy.ZRAM_CONFIG).is_file())
+            self.assertEqual(fstab.read_text(), 'UUID=root / btrfs defaults 0 0\n')
+            run.assert_not_called()
+
     def test_post_configures_target_services_and_private_profiles(self):
         cases = [
             (None, install.DEFAULT_UPDATES, None, None),
@@ -118,7 +154,7 @@ class TargetPolicyTests(unittest.TestCase):
                 rendered = render_policy(profile, updates)
                 script = rendered.split('%post --nochroot --interpreter=/usr/bin/python3 --erroronfail\n')[1].rsplit('%end', 1)[0]
                 script = script.replace("root = Path('/mnt/sysroot')", f'root = Path({str(root)!r})')
-                with patch('subprocess.run') as commands:
+                with patch('subprocess.run') as commands, patch('kiosk.target_policy.configure_swap'):
                     exec(compile(script, 'server-policy-post.py', 'exec'), {})
                 args = [call.args[0] for call in commands.call_args_list]
                 config = (root / 'etc/dnf/automatic.conf').read_text()

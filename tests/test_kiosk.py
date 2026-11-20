@@ -122,12 +122,14 @@ class RenderTests(unittest.TestCase):
                       BATTERY_B64=install.b64('unsupported test hardware'))
         result = install.render((ROOT / 'image/usr/share/kiosk/ks.template').read_text(), values)
         script = result.split('%post --nochroot --interpreter=/usr/bin/python3 --erroronfail\n')[1].rsplit('%end', 1)[0]
-        with tempfile.TemporaryDirectory() as tmp, patch('subprocess.run') as run:
+        with tempfile.TemporaryDirectory() as tmp, patch('subprocess.run') as run, \
+             patch('kiosk.target_policy.configure_swap') as swap:
             root = Path(tmp)
             (root / 'etc/sudoers.d').mkdir(parents=True)
             (root / 'etc/libvirt').mkdir(parents=True)
             script = script.replace("root = Path('/mnt/sysroot')", 'root = Path(' + repr(tmp) + ')')
             exec(compile(script, 'test-target-post.py', 'exec'), {})
+            swap.assert_called_once_with(root)
             path = root / 'etc/NetworkManager/system-connections/kiosk.nmconnection'
             self.assertEqual(path.read_text(), profile)
             self.assertEqual(stat.S_IMODE(path.stat().st_mode), 0o600)
@@ -247,6 +249,78 @@ class DiskTests(unittest.TestCase):
             storage.validate_disk('/dev/nvme0n1', nodes, set())
         with self.assertRaisesRegex(common.Failure, 'mounted'):
             storage.validate_disk('/dev/sda', nodes, set())
+
+    def test_read_only_disk_is_rejected_before_confirmation(self):
+        nodes = self.nodes()
+        nodes['/dev/nvme0n1']['ro'] = True
+        with self.assertRaisesRegex(common.Failure, 'read-only'):
+            storage.validate_disk('/dev/nvme0n1', nodes, {'/dev/sda'})
+
+    def test_zram_is_not_a_target_even_if_linux_reports_it_as_a_large_disk(self):
+        nodes = self.nodes()
+        path = '/dev/zram0'
+        nodes[path] = dict(name=path, type='disk', size=8 * 1024**3)
+        self.assertFalse(storage.is_target_disk(nodes[path]))
+        with self.assertRaisesRegex(common.Failure, 'Invalid disk'):
+            storage.validate_disk(path, nodes, {'/dev/sda'})
+
+    def test_active_multi_disk_volume_is_rejected_even_without_a_mount(self):
+        nodes = self.nodes()
+        nodes['/dev/md-test'] = dict(name='/dev/md-test', type='raid1', mountpoints=[None])
+        slaves = [Path('/dev/nvme0n1'), Path('/dev/sda1')]
+        raid_slaves = Path('/sys/class/block/md-test/slaves')
+        with patch.object(Path, 'glob', autospec=True,
+                          side_effect=lambda path, pattern: slaves if path == raid_slaves else []):
+            with self.assertRaisesRegex(common.Failure, 'multi-disk'):
+                storage.validate_disk('/dev/nvme0n1', nodes, {'/dev/sda'})
+
+    def test_preparing_hybrid_iso_erases_the_disk_and_partition_signatures(self):
+        nodes = self.nodes()
+        target = nodes['/dev/nvme0n1']
+        target.update({'fstype': 'iso9660', 'disk-seq': 7})
+        nodes['/dev/sda'].update(fstype='iso9660')
+        partition = '/dev/nvme0n1p1'
+        nodes[partition] = dict(name=partition, type='part', pkname=target['name'], partn=1, fstype='iso9660')
+        nodes['/dev/nvme0n10'] = dict(name='/dev/nvme0n10', type='disk', fstype='iso9660')
+        disk_cleared = dict(nodes, **{target['name']: dict(target, fstype=None)})
+        partition_cleared = dict(disk_cleared, **{partition: dict(nodes[partition], fstype=None)})
+        with patch.object(storage, 'inventory', side_effect=(nodes, disk_cleared, partition_cleared)), \
+             patch.object(Path, 'resolve', side_effect=(Path(target['name']), Path(partition))), \
+             patch.object(storage, 'live_disks', return_value={'/dev/sda'}), \
+             patch.object(storage, 'run') as run, patch.object(storage, 'log'):
+            storage.prepare_target(target)
+        commands = [call.args[0] for call in run.call_args_list]
+        refresh = ['udevadm', 'trigger', '--action=change', '--settle', '--',
+                   '/sys/class/block/nvme0n1', '/sys/class/block/nvme0n1p1']
+        self.assertEqual(commands, [
+            ['wipefs', '--all', '--types', 'iso9660', '--lock=yes', '--', '/dev/disk/by-diskseq/7'], refresh,
+            ['wipefs', '--all', '--types', 'iso9660', '--lock=yes', '--', '/dev/disk/by-diskseq/7-part1'], refresh,
+        ])
+
+    def test_mounted_iso_partition_stays_untouched(self):
+        nodes = self.nodes()
+        target = nodes['/dev/nvme0n1']
+        nodes['/dev/nvme0n1p1'] = dict(name='/dev/nvme0n1p1', type='part', pkname=target['name'], partn=1,
+                                     fstype='iso9660', mountpoints=['/mnt/image'])
+        with patch.object(storage, 'inventory', return_value=nodes), \
+             patch.object(storage, 'live_disks', return_value={'/dev/sda'}), patch.object(storage, 'run') as run:
+            with self.assertRaisesRegex(common.Failure, 'mounted'):
+                storage.prepare_target(target)
+        run.assert_not_called()
+
+    def test_preparing_target_leaves_normal_live_and_changed_disks_untouched(self):
+        nodes = self.nodes()
+        target = nodes['/dev/nvme0n1']
+        target.update({'fstype': 'ext4', 'disk-seq': 7})
+        nodes['/dev/sda'].update(fstype='iso9660')
+        with patch.object(storage, 'inventory', return_value=nodes), \
+             patch.object(storage, 'live_disks', return_value={'/dev/sda'}), patch.object(storage, 'run') as run:
+            storage.prepare_target(target)
+            with self.assertRaisesRegex(common.Failure, 'protected'):
+                storage.prepare_target(nodes['/dev/sda'])
+            with self.assertRaisesRegex(common.Failure, 'Disk changed'):
+                storage.prepare_target(dict(target, **{'disk-seq': 8}))
+        run.assert_not_called()
 
     @patch('kiosk.storage.output')
     def test_unresolved_live_disk_fails_closed(self, output):

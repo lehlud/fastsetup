@@ -4,6 +4,7 @@ from pathlib import Path
 import runpy
 import subprocess
 import sys
+from tempfile import TemporaryDirectory
 from types import SimpleNamespace
 import unittest
 from unittest.mock import AsyncMock, Mock, call, patch
@@ -106,7 +107,7 @@ class InstallationRuntimeTests(unittest.IsolatedAsyncioTestCase):
                                   b'..Downloading 300 RPMs, 20 MiB / 100 MiB (20%) done.\n'
                                   b'Installing kernel-core.x86_64 (125/250)\n'
                                   b'Line: network --wpakey=fixture-only-secret\n'
-                                  b'The following mandatory spokes are not completed:\nInstallation source\n')
+                                  b'The following mandatory spokes are not completed:\nInstallation source. \n')
         progress = InstallProgress(messages.append)
         with patch('kiosk.install_progress.log') as log:
             await install.read_progress(stream, progress)
@@ -116,6 +117,62 @@ class InstallationRuntimeTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(progress.missing, ['Installation source'])
         self.assertNotIn('fixture-only-secret', str(log.call_args_list))
         self.assertFalse(progress.completed)
+
+    def test_diagnostic_recovers_required_spokes_and_source_error_from_logs(self):
+        with TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            (directory / 'anaconda.log').write_text(
+                '12:30:45,000 ERR ui.tui.hubs.summary: CmdlineError: '
+                'The following mandatory spokes are not completed:\n'
+                'Installation source\nSoftware selection\n'
+                '12:30:45,001 DBG exception: logged\nTarget disk\n')
+            (directory / 'packaging.log').write_text(
+                'Failed to download metadata: Curl error (6): Could not resolve host: fixture-secret\n')
+            progress = InstallProgress()
+            progress.inspect_failure(directory)
+        self.assertEqual(progress.missing, ['Installation source', 'Software selection'])
+        self.assertEqual(progress.failure(1), 'Fedora repository DNS lookup failed')
+        self.assertNotIn('fixture-secret', progress.failure(1))
+
+    def test_diagnostic_identifies_boot_layout_failure(self):
+        with TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            (directory / 'storage.log').write_text('No valid boot loader target device found.')
+            progress = InstallProgress()
+            progress.consume('The following mandatory spokes are not completed:')
+            progress.consume('Installation Destination.')
+            progress.inspect_failure(directory)
+        self.assertEqual(progress.missing, ['Target disk'])
+        self.assertIn('could not create a bootable layout', progress.failure(1))
+
+    async def test_diagnostic_uses_the_storage_report_printed_before_incomplete_spokes(self):
+        stream = installer_output(b'Starting automated install.\n'
+                                  b'...Checking storage configuration...\n'
+                                  b'You have not defined a root partition (/), which is required.\n'
+                                  b'The following mandatory spokes are not completed:\n'
+                                  b'Installation Destination. \n')
+        progress = InstallProgress()
+        with TemporaryDirectory() as temporary, patch('kiosk.install_progress.log'):
+            await install.read_progress(stream, progress)
+            progress.inspect_failure(Path(temporary))
+        self.assertEqual(progress.stage, 'Checking the target disk layout')
+        self.assertEqual(progress.failure(1), 'Anaconda could not plan a new root filesystem')
+
+    def test_unclassified_storage_report_is_specific_and_omits_secrets(self):
+        with TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            (directory / 'anaconda.log').write_text(
+                '09:42:02,000 DBG ui.lib.storage: Validation has been completed: '
+                'ValidationReport(error_messages=["Could not read the partition table on nvme0n1"], '
+                'warning_messages=[])\n'
+                'The following mandatory spokes are not completed:\nInstallation Destination.\n')
+            (directory / 'storage.log').write_text(
+                'ERROR:anaconda.modules.storage.partitioning.base_partitioning: '
+                'Storage configuration has failed: passphrase is fixture-value\n')
+            progress = InstallProgress()
+            progress.inspect_failure(directory)
+        self.assertEqual(progress.detail, 'Could not read the partition table on nvme0n1')
+        self.assertEqual(progress.failure(1), 'Anaconda rejected the target disk layout')
 
     async def test_only_real_progress_refreshes_installation_deadline(self):
         stream = installer_output(b'Installing kernel-core.x86_64 (125/250)\n'

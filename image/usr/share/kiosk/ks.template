@@ -26,6 +26,7 @@ poweroff
 @core
 kernel
 kernel-modules-extra
+zram-generator-defaults
 shim-x64
 grub2-efi-x64
 grub2-efi-x64-modules
@@ -69,6 +70,7 @@ tiwilink-firmware
 zd1211-firmware
 firewalld
 policycoreutils
+policycoreutils-python-utils
 sudo
 python3
 kbd
@@ -140,6 +142,7 @@ base64.b64decode('@@PSK_B64@@', validate=True)
 (root / 'etc/battery-limits-decision').write_bytes(base64.b64decode('@@BATTERY_B64@@'))
 (root / 'etc/kiosk-server-user').write_text('@@USER@@\n')
 (root / 'etc/vconsole.conf').write_text('KEYMAP=@@VCKEYMAP@@\nFONT=ter-v24n\n')
+target_policy.configure_swap(root)
 sudoers = root / 'etc/sudoers.d/10-server-wheel'
 sudoers.write_text('%wheel ALL=(ALL) ALL\n')
 sudoers.chmod(0o440)

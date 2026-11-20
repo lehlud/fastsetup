@@ -26,7 +26,7 @@ def materialize_policy(root, password_login):
     script = script.replace("root = Path('/mnt/sysroot')", 'root = Path(' + repr(str(root)) + ')')
     (root / 'etc/sudoers.d').mkdir(parents=True)
     (root / 'etc/libvirt').mkdir(parents=True)
-    with patch('subprocess.run'):
+    with patch('subprocess.run'), patch('kiosk.target_policy.configure_swap'):
         exec(compile(script, 'ssh-target-post.py', 'exec'), {})
     return root / 'etc/ssh/sshd_config.d/00-kiosk-auth.conf'
 

@@ -1,6 +1,7 @@
 """Files shared by Kickstart and the installed server's configuration command."""
 import os
 from pathlib import Path
+import subprocess
 import tempfile
 
 from .common import Failure
@@ -11,6 +12,9 @@ TIMER = 'dnf5-automatic.timer'
 UPDATE_CONFIG = 'etc/dnf/automatic.conf'
 UPDATE_SCHEDULE = f'etc/systemd/system/{TIMER}.d/10-server-schedule.conf'
 SSH_CONFIG = 'etc/ssh/sshd_config.d/00-kiosk-auth.conf'
+ZRAM_CONFIG = 'etc/systemd/zram-generator.conf.d/60-server.conf'
+MIB = 1024 ** 2
+DISK_SWAP_PATH = '/var/swap/swapfile'
 VPN_TARGETS = {
     'wireguard': ('etc/wireguard/kiosk-vpn.conf', 'wg-quick@kiosk-vpn.service', 'on-failure'),
     'openvpn': ('etc/openvpn/client/kiosk-vpn.conf', 'openvpn-client@kiosk-vpn.service', 'always'),
@@ -28,6 +32,37 @@ def write(path, content, mode=0o644):
         os.replace(temporary, path)
     finally:
         Path(temporary).unlink(missing_ok=True)
+
+
+def configure_swap(root):
+    write(root / ZRAM_CONFIG, '[zram0]\nzram-size = ram / 2\nswap-priority = 100\n')
+    fstab = root / 'etc/fstab'
+    entries = fstab.read_text()
+    if any(line.split()[:1] == [DISK_SWAP_PATH] for line in entries.splitlines()):
+        return
+    space = os.statvfs(root)
+    size_mib = min(16 * 1024, space.f_bavail * space.f_frsize // (4 * MIB))
+    if size_mib < 1024:
+        print('Disk swap skipped because less than 4 GiB is free')
+        return
+    swap = root / DISK_SWAP_PATH.lstrip('/')
+    if not swap.parent.exists():
+        subprocess.run(['btrfs', 'subvolume', 'create', str(swap.parent)], check=True)
+    swap.parent.chmod(0o700)
+    if not swap.exists():
+        temporary = swap.with_name('.swapfile')
+        temporary.unlink(missing_ok=True)
+        try:
+            subprocess.run(['btrfs', 'filesystem', 'mkswapfile', '--size', f'{size_mib}M', str(temporary)],
+                           check=True)
+            temporary.chmod(0o600)
+            temporary.replace(swap)
+        finally:
+            temporary.unlink(missing_ok=True)
+    subprocess.run(['chroot', str(root), 'semanage', 'fcontext', '-a', '-f', 'f', '-t', 'swapfile_t',
+                    DISK_SWAP_PATH], check=True)
+    subprocess.run(['chroot', str(root), 'restorecon', '-RF', str(Path(DISK_SWAP_PATH).parent)], check=True)
+    write(fstab, entries.rstrip('\n') + f'\n{DISK_SWAP_PATH} none swap defaults,pri=10,nofail 0 0\n')
 
 
 def write_updates(root, hours, reboot):
